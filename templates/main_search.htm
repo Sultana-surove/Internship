@@ -1,0 +1,4455 @@
+<!doctype html><p align=center><font size=+1 color=red></font></p>
+<p align=center><font size=+1 color=red></font></p>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel main search}</h2>
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN App_M_fieldblock}		
+	<div class="container {$fielddispclass_App_M}" data-fieldname="App_M">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main App_M}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_App_M}
+			</div>
+			<div class="col-md-4" >
+				{$App_M_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$App_M_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END App_M_fieldblock}
+	{BEGIN Req_M_fieldblock}		
+	<div class="container {$fielddispclass_Req_M}" data-fieldname="Req_M">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Req_M}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Req_M}
+			</div>
+			<div class="col-md-4" >
+				{$Req_M_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Req_M_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Req_M_fieldblock}
+	{BEGIN I_N_v_fieldblock}		
+	<div class="container {$fielddispclass_I_N_v}" data-fieldname="I_N_v">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main I_N_v}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_I_N_v}
+			</div>
+			<div class="col-md-4" >
+				{$I_N_v_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$I_N_v_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END I_N_v_fieldblock}
+	{BEGIN PFLI_fieldblock}		
+	<div class="container {$fielddispclass_PFLI}" data-fieldname="PFLI">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main PFLI}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PFLI}
+			</div>
+			<div class="col-md-4" >
+				{$PFLI_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PFLI_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PFLI_fieldblock}
+	{BEGIN St_Info_fieldblock}		
+	<div class="container {$fielddispclass_St_Info}" data-fieldname="St_Info">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main St_Info}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_St_Info}
+			</div>
+			<div class="col-md-4" >
+				{$St_Info_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$St_Info_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END St_Info_fieldblock}
+	{BEGIN BRI_fieldblock}		
+	<div class="container {$fielddispclass_BRI}" data-fieldname="BRI">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main BRI}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_BRI}
+			</div>
+			<div class="col-md-4" >
+				{$BRI_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$BRI_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END BRI_fieldblock}
+	{BEGIN FM_fieldblock}		
+	<div class="container {$fielddispclass_FM}" data-fieldname="FM">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main FM}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FM}
+			</div>
+			<div class="col-md-4" >
+				{$FM_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FM_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FM_fieldblock}
+	{BEGIN FA_fieldblock}		
+	<div class="container {$fielddispclass_FA}" data-fieldname="FA">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main FA}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FA}
+			</div>
+			<div class="col-md-4" >
+				{$FA_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FA_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FA_fieldblock}
+	{BEGIN Month_Sales_fieldblock}		
+	<div class="container {$fielddispclass_Month_Sales}" data-fieldname="Month_Sales">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Month_Sales}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Month_Sales}
+			</div>
+			<div class="col-md-4" >
+				{$Month_Sales_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Month_Sales_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Month_Sales_fieldblock}
+	{BEGIN M_S_Total_fieldblock}		
+	<div class="container {$fielddispclass_M_S_Total}" data-fieldname="M_S_Total">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main M_S_Total}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_M_S_Total}
+			</div>
+			<div class="col-md-4" >
+				{$M_S_Total_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$M_S_Total_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END M_S_Total_fieldblock}
+	{BEGIN Oth_Org_Loan_fieldblock}		
+	<div class="container {$fielddispclass_Oth_Org_Loan}" data-fieldname="Oth_Org_Loan">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Oth_Org_Loan}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Oth_Org_Loan}
+			</div>
+			<div class="col-md-4" >
+				{$Oth_Org_Loan_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Oth_Org_Loan_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Oth_Org_Loan_fieldblock}
+	{BEGIN Remitance_fieldblock}		
+	<div class="container {$fielddispclass_Remitance}" data-fieldname="Remitance">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Remitance}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Remitance}
+			</div>
+			<div class="col-md-4" >
+				{$Remitance_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Remitance_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Remitance_fieldblock}
+	{BEGIN MID_fieldblock}		
+	<div class="container {$fielddispclass_MID}" data-fieldname="MID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main MID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_MID}
+			</div>
+			<div class="col-md-4" >
+				{$MID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$MID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END MID_fieldblock}
+	{BEGIN ad_Date_fieldblock}		
+	<div class="container {$fielddispclass_ad_Date}" data-fieldname="ad_Date">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main ad_Date}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ad_Date}
+			</div>
+			<div class="col-md-4" >
+				{$ad_Date_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ad_Date_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ad_Date_fieldblock}
+	{BEGIN Prof_fieldblock}		
+	<div class="container {$fielddispclass_Prof}" data-fieldname="Prof">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Prof}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Prof}
+			</div>
+			<div class="col-md-4" >
+				{$Prof_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Prof_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Prof_fieldblock}
+	{BEGIN Br_Id_fieldblock}		
+	<div class="container {$fielddispclass_Br_Id}" data-fieldname="Br_Id">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Br_Id}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Br_Id}
+			</div>
+			<div class="col-md-4" >
+				{$Br_Id_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Br_Id_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Br_Id_fieldblock}
+	{BEGIN Br_name_fieldblock}		
+	<div class="container {$fielddispclass_Br_name}" data-fieldname="Br_name">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Br_name}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Br_name}
+			</div>
+			<div class="col-md-4" >
+				{$Br_name_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Br_name_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Br_name_fieldblock}
+	{BEGIN Area_fieldblock}		
+	<div class="container {$fielddispclass_Area}" data-fieldname="Area">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Area}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Area}
+			</div>
+			<div class="col-md-4" >
+				{$Area_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Area_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Area_fieldblock}
+	{BEGIN Region_fieldblock}		
+	<div class="container {$fielddispclass_Region}" data-fieldname="Region">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Region}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Region}
+			</div>
+			<div class="col-md-4" >
+				{$Region_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Region_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Region_fieldblock}
+	{BEGIN Mem_Name_fieldblock}		
+	<div class="container {$fielddispclass_Mem_Name}" data-fieldname="Mem_Name">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Mem_Name}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Mem_Name}
+			</div>
+			<div class="col-md-4" >
+				{$Mem_Name_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Mem_Name_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Mem_Name_fieldblock}
+	{BEGIN D_Birth_fieldblock}		
+	<div class="container {$fielddispclass_D_Birth}" data-fieldname="D_Birth">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main D_Birth}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_D_Birth}
+			</div>
+			<div class="col-md-4" >
+				{$D_Birth_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$D_Birth_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END D_Birth_fieldblock}
+	{BEGIN Age_fieldblock}		
+	<div class="container {$fielddispclass_Age}" data-fieldname="Age">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Age}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Age}
+			</div>
+			<div class="col-md-4" >
+				{$Age_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Age_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Age_fieldblock}
+	{BEGIN Mem_No_fieldblock}		
+	<div class="container {$fielddispclass_Mem_No}" data-fieldname="Mem_No">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Mem_No}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Mem_No}
+			</div>
+			<div class="col-md-4" >
+				{$Mem_No_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Mem_No_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Mem_No_fieldblock}
+	{BEGIN KYC_fieldblock}		
+	<div class="container {$fielddispclass_KYC}" data-fieldname="KYC">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main KYC}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_KYC}
+			</div>
+			<div class="col-md-4" >
+				{$KYC_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$KYC_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END KYC_fieldblock}
+	{BEGIN Father_fieldblock}		
+	<div class="container {$fielddispclass_Father}" data-fieldname="Father">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Father}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Father}
+			</div>
+			<div class="col-md-4" >
+				{$Father_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Father_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Father_fieldblock}
+	{BEGIN Mother_fieldblock}		
+	<div class="container {$fielddispclass_Mother}" data-fieldname="Mother">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Mother}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Mother}
+			</div>
+			<div class="col-md-4" >
+				{$Mother_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Mother_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Mother_fieldblock}
+	{BEGIN Sex_fieldblock}		
+	<div class="container {$fielddispclass_Sex}" data-fieldname="Sex">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Sex}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Sex}
+			</div>
+			<div class="col-md-4" >
+				{$Sex_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Sex_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Sex_fieldblock}
+	{BEGIN M_staus_fieldblock}		
+	<div class="container {$fielddispclass_M_staus}" data-fieldname="M_staus">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main M_staus}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_M_staus}
+			</div>
+			<div class="col-md-4" >
+				{$M_staus_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$M_staus_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END M_staus_fieldblock}
+	{BEGIN M_staus_other_fieldblock}		
+	<div class="container {$fielddispclass_M_staus_other}" data-fieldname="M_staus_other">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main M_staus_other}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_M_staus_other}
+			</div>
+			<div class="col-md-4" >
+				{$M_staus_other_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$M_staus_other_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END M_staus_other_fieldblock}
+	{BEGIN Ed_Backgr_fieldblock}		
+	<div class="container {$fielddispclass_Ed_Backgr}" data-fieldname="Ed_Backgr">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Ed_Backgr}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Ed_Backgr}
+			</div>
+			<div class="col-md-4" >
+				{$Ed_Backgr_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Ed_Backgr_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Ed_Backgr_fieldblock}
+	{BEGIN Ed_other_fieldblock}		
+	<div class="container {$fielddispclass_Ed_other}" data-fieldname="Ed_other">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Ed_other}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Ed_other}
+			</div>
+			<div class="col-md-4" >
+				{$Ed_other_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Ed_other_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Ed_other_fieldblock}
+	{BEGIN FTM_fieldblock}		
+	<div class="container {$fielddispclass_FTM}" data-fieldname="FTM">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main FTM}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FTM}
+			</div>
+			<div class="col-md-4" >
+				{$FTM_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FTM_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FTM_fieldblock}
+	{BEGIN FEM_fieldblock}		
+	<div class="container {$fielddispclass_FEM}" data-fieldname="FEM">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main FEM}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FEM}
+			</div>
+			<div class="col-md-4" >
+				{$FEM_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FEM_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FEM_fieldblock}
+	{BEGIN Pr_adr_fieldblock}		
+	<div class="container {$fielddispclass_Pr_adr}" data-fieldname="Pr_adr">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Pr_adr}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Pr_adr}
+			</div>
+			<div class="col-md-4" >
+				{$Pr_adr_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Pr_adr_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Pr_adr_fieldblock}
+	{BEGIN Per_adr_fieldblock}		
+	<div class="container {$fielddispclass_Per_adr}" data-fieldname="Per_adr">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Per_adr}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Per_adr}
+			</div>
+			<div class="col-md-4" >
+				{$Per_adr_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Per_adr_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Per_adr_fieldblock}
+	{BEGIN NID_fieldblock}		
+	<div class="container {$fielddispclass_NID}" data-fieldname="NID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main NID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_NID}
+			</div>
+			<div class="col-md-4" >
+				{$NID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$NID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END NID_fieldblock}
+	{BEGIN cell_no_fieldblock}		
+	<div class="container {$fielddispclass_cell_no}" data-fieldname="cell_no">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main cell_no}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_cell_no}
+			</div>
+			<div class="col-md-4" >
+				{$cell_no_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$cell_no_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END cell_no_fieldblock}
+	{BEGIN E_Tin_fieldblock}		
+	<div class="container {$fielddispclass_E_Tin}" data-fieldname="E_Tin">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main E_Tin}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_E_Tin}
+			</div>
+			<div class="col-md-4" >
+				{$E_Tin_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$E_Tin_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END E_Tin_fieldblock}
+	{BEGIN ENFMN_fieldblock}		
+	<div class="container {$fielddispclass_ENFMN}" data-fieldname="ENFMN">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main ENFMN}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ENFMN}
+			</div>
+			<div class="col-md-4" >
+				{$ENFMN_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ENFMN_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ENFMN_fieldblock}
+	{BEGIN ENFMN_Rel_fieldblock}		
+	<div class="container {$fielddispclass_ENFMN_Rel}" data-fieldname="ENFMN_Rel">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main ENFMN_Rel}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ENFMN_Rel}
+			</div>
+			<div class="col-md-4" >
+				{$ENFMN_Rel_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ENFMN_Rel_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ENFMN_Rel_fieldblock}
+	{BEGIN ALT_fieldblock}		
+	<div class="container {$fielddispclass_ALT}" data-fieldname="ALT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main ALT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ALT}
+			</div>
+			<div class="col-md-4" >
+				{$ALT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ALT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ALT_fieldblock}
+	{BEGIN MALT_fieldblock}		
+	<div class="container {$fielddispclass_MALT}" data-fieldname="MALT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main MALT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_MALT}
+			</div>
+			<div class="col-md-4" >
+				{$MALT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$MALT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END MALT_fieldblock}
+	{BEGIN LFC_fieldblock}		
+	<div class="container {$fielddispclass_LFC}" data-fieldname="LFC">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main LFC}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_LFC}
+			</div>
+			<div class="col-md-4" >
+				{$LFC_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$LFC_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END LFC_fieldblock}
+	{BEGIN LS_fieldblock}		
+	<div class="container {$fielddispclass_LS}" data-fieldname="LS">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main LS}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_LS}
+			</div>
+			<div class="col-md-4" >
+				{$LS_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$LS_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END LS_fieldblock}
+	{BEGIN SCH_fieldblock}		
+	<div class="container {$fielddispclass_SCH}" data-fieldname="SCH">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main SCH}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_SCH}
+			</div>
+			<div class="col-md-4" >
+				{$SCH_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$SCH_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END SCH_fieldblock}
+	{BEGIN SCL_fieldblock}		
+	<div class="container {$fielddispclass_SCL}" data-fieldname="SCL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main SCL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_SCL}
+			</div>
+			<div class="col-md-4" >
+				{$SCL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$SCL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END SCL_fieldblock}
+	{BEGIN Inst_Size_fieldblock}		
+	<div class="container {$fielddispclass_Inst_Size}" data-fieldname="Inst_Size">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Inst_Size}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Inst_Size}
+			</div>
+			<div class="col-md-4" >
+				{$Inst_Size_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Inst_Size_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Inst_Size_fieldblock}
+	{BEGIN Inst_Amt_fieldblock}		
+	<div class="container {$fielddispclass_Inst_Amt}" data-fieldname="Inst_Amt">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Inst_Amt}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Inst_Amt}
+			</div>
+			<div class="col-md-4" >
+				{$Inst_Amt_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Inst_Amt_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Inst_Amt_fieldblock}
+	{BEGIN B_name_fieldblock}		
+	<div class="container {$fielddispclass_B_name}" data-fieldname="B_name">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main B_name}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_B_name}
+			</div>
+			<div class="col-md-4" >
+				{$B_name_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$B_name_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END B_name_fieldblock}
+	{BEGIN B_Des_fieldblock}		
+	<div class="container {$fielddispclass_B_Des}" data-fieldname="B_Des">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main B_Des}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_B_Des}
+			</div>
+			<div class="col-md-4" >
+				{$B_Des_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$B_Des_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END B_Des_fieldblock}
+	{BEGIN B_Type_fieldblock}		
+	<div class="container {$fielddispclass_B_Type}" data-fieldname="B_Type">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main B_Type}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_B_Type}
+			</div>
+			<div class="col-md-4" >
+				{$B_Type_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$B_Type_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END B_Type_fieldblock}
+	{BEGIN Stabl_fieldblock}		
+	<div class="container {$fielddispclass_Stabl}" data-fieldname="Stabl">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Stabl}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Stabl}
+			</div>
+			<div class="col-md-4" >
+				{$Stabl_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Stabl_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Stabl_fieldblock}
+	{BEGIN Emp_No_fieldblock}		
+	<div class="container {$fielddispclass_Emp_No}" data-fieldname="Emp_No">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Emp_No}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Emp_No}
+			</div>
+			<div class="col-md-4" >
+				{$Emp_No_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Emp_No_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Emp_No_fieldblock}
+	{BEGIN Trade_Lic_fieldblock}		
+	<div class="container {$fielddispclass_Trade_Lic}" data-fieldname="Trade_Lic">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Trade_Lic}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Trade_Lic}
+			</div>
+			<div class="col-md-4" >
+				{$Trade_Lic_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Trade_Lic_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Trade_Lic_fieldblock}
+	{BEGIN Exp_Date_fieldblock}		
+	<div class="container {$fielddispclass_Exp_Date}" data-fieldname="Exp_Date">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Exp_Date}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Exp_Date}
+			</div>
+			<div class="col-md-4" >
+				{$Exp_Date_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Exp_Date_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Exp_Date_fieldblock}
+	{BEGIN Certifi_Payer_fieldblock}		
+	<div class="container {$fielddispclass_Certifi_Payer}" data-fieldname="Certifi_Payer">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Certifi_Payer}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Certifi_Payer}
+			</div>
+			<div class="col-md-4" >
+				{$Certifi_Payer_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Certifi_Payer_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Certifi_Payer_fieldblock}
+	{BEGIN B_style_fieldblock}		
+	<div class="container {$fielddispclass_B_style}" data-fieldname="B_style">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main B_style}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_B_style}
+			</div>
+			<div class="col-md-4" >
+				{$B_style_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$B_style_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END B_style_fieldblock}
+	{BEGIN B_Addr_fieldblock}		
+	<div class="container {$fielddispclass_B_Addr}" data-fieldname="B_Addr">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main B_Addr}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_B_Addr}
+			</div>
+			<div class="col-md-4" >
+				{$B_Addr_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$B_Addr_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END B_Addr_fieldblock}
+	{BEGIN Other_B_fieldblock}		
+	<div class="container {$fielddispclass_Other_B}" data-fieldname="Other_B">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Other_B}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Other_B}
+			</div>
+			<div class="col-md-4" >
+				{$Other_B_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Other_B_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Other_B_fieldblock}
+	{BEGIN M_name1_fieldblock}		
+	<div class="container {$fielddispclass_M_name1}" data-fieldname="M_name1">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main M_name1}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_M_name1}
+			</div>
+			<div class="col-md-4" >
+				{$M_name1_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$M_name1_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END M_name1_fieldblock}
+	{BEGIN M_Name2_fieldblock}		
+	<div class="container {$fielddispclass_M_Name2}" data-fieldname="M_Name2">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main M_Name2}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_M_Name2}
+			</div>
+			<div class="col-md-4" >
+				{$M_Name2_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$M_Name2_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END M_Name2_fieldblock}
+	{BEGIN M_Name3_fieldblock}		
+	<div class="container {$fielddispclass_M_Name3}" data-fieldname="M_Name3">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main M_Name3}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_M_Name3}
+			</div>
+			<div class="col-md-4" >
+				{$M_Name3_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$M_Name3_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END M_Name3_fieldblock}
+	{BEGIN Y_S_1_fieldblock}		
+	<div class="container {$fielddispclass_Y_S_1}" data-fieldname="Y_S_1">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Y_S_1}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Y_S_1}
+			</div>
+			<div class="col-md-4" >
+				{$Y_S_1_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Y_S_1_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Y_S_1_fieldblock}
+	{BEGIN Y_S_2_fieldblock}		
+	<div class="container {$fielddispclass_Y_S_2}" data-fieldname="Y_S_2">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Y_S_2}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Y_S_2}
+			</div>
+			<div class="col-md-4" >
+				{$Y_S_2_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Y_S_2_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Y_S_2_fieldblock}
+	{BEGIN Y_S_3_fieldblock}		
+	<div class="container {$fielddispclass_Y_S_3}" data-fieldname="Y_S_3">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Y_S_3}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Y_S_3}
+			</div>
+			<div class="col-md-4" >
+				{$Y_S_3_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Y_S_3_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Y_S_3_fieldblock}
+	{BEGIN Y_A_A1_fieldblock}		
+	<div class="container {$fielddispclass_Y_A_A1}" data-fieldname="Y_A_A1">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Y_A_A1}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Y_A_A1}
+			</div>
+			<div class="col-md-4" >
+				{$Y_A_A1_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Y_A_A1_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Y_A_A1_fieldblock}
+	{BEGIN Y_A_A2_fieldblock}		
+	<div class="container {$fielddispclass_Y_A_A2}" data-fieldname="Y_A_A2">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Y_A_A2}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Y_A_A2}
+			</div>
+			<div class="col-md-4" >
+				{$Y_A_A2_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Y_A_A2_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Y_A_A2_fieldblock}
+	{BEGIN Y_A_A3_fieldblock}		
+	<div class="container {$fielddispclass_Y_A_A3}" data-fieldname="Y_A_A3">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Y_A_A3}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Y_A_A3}
+			</div>
+			<div class="col-md-4" >
+				{$Y_A_A3_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Y_A_A3_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Y_A_A3_fieldblock}
+	{BEGIN Y_Sal1_fieldblock}		
+	<div class="container {$fielddispclass_Y_Sal1}" data-fieldname="Y_Sal1">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Y_Sal1}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Y_Sal1}
+			</div>
+			<div class="col-md-4" >
+				{$Y_Sal1_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Y_Sal1_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Y_Sal1_fieldblock}
+	{BEGIN Y_sal2_fieldblock}		
+	<div class="container {$fielddispclass_Y_sal2}" data-fieldname="Y_sal2">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Y_sal2}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Y_sal2}
+			</div>
+			<div class="col-md-4" >
+				{$Y_sal2_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Y_sal2_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Y_sal2_fieldblock}
+	{BEGIN Y_Sal3_fieldblock}		
+	<div class="container {$fielddispclass_Y_Sal3}" data-fieldname="Y_Sal3">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Y_Sal3}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Y_Sal3}
+			</div>
+			<div class="col-md-4" >
+				{$Y_Sal3_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Y_Sal3_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Y_Sal3_fieldblock}
+	{BEGIN Y_Y_T_fieldblock}		
+	<div class="container {$fielddispclass_Y_Y_T}" data-fieldname="Y_Y_T">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Y_Y_T}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Y_Y_T}
+			</div>
+			<div class="col-md-4" >
+				{$Y_Y_T_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Y_Y_T_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Y_Y_T_fieldblock}
+	{BEGIN Y_A_T_fieldblock}		
+	<div class="container {$fielddispclass_Y_A_T}" data-fieldname="Y_A_T">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Y_A_T}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Y_A_T}
+			</div>
+			<div class="col-md-4" >
+				{$Y_A_T_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Y_A_T_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Y_A_T_fieldblock}
+	{BEGIN Income_other_fieldblock}		
+	<div class="container {$fielddispclass_Income_other}" data-fieldname="Income_other">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Income_other}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Income_other}
+			</div>
+			<div class="col-md-4" >
+				{$Income_other_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Income_other_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Income_other_fieldblock}
+	{BEGIN Expen_9_fieldblock}		
+	<div class="container {$fielddispclass_Expen_9}" data-fieldname="Expen_9">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Expen_9}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Expen_9}
+			</div>
+			<div class="col-md-4" >
+				{$Expen_9_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Expen_9_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Expen_9_fieldblock}
+	{BEGIN Income_Expen_From_fieldblock}		
+	<div class="container {$fielddispclass_Income_Expen_From}" data-fieldname="Income_Expen_From">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Income_Expen_From}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Income_Expen_From}
+			</div>
+			<div class="col-md-4" >
+				{$Income_Expen_From_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Income_Expen_From_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Income_Expen_From_fieldblock}
+	{BEGIN Income_Expen_fieldblock}		
+	<div class="container {$fielddispclass_Income_Expen}" data-fieldname="Income_Expen">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Income_Expen}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Income_Expen}
+			</div>
+			<div class="col-md-4" >
+				{$Income_Expen_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Income_Expen_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Income_Expen_fieldblock}
+	{BEGIN Income1_fieldblock}		
+	<div class="container {$fielddispclass_Income1}" data-fieldname="Income1">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Income1}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Income1}
+			</div>
+			<div class="col-md-4" >
+				{$Income1_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Income1_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Income1_fieldblock}
+	{BEGIN Income2_fieldblock}		
+	<div class="container {$fielddispclass_Income2}" data-fieldname="Income2">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Income2}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Income2}
+			</div>
+			<div class="col-md-4" >
+				{$Income2_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Income2_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Income2_fieldblock}
+	{BEGIN Income_tot_fieldblock}		
+	<div class="container {$fielddispclass_Income_tot}" data-fieldname="Income_tot">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Income_tot}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Income_tot}
+			</div>
+			<div class="col-md-4" >
+				{$Income_tot_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Income_tot_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Income_tot_fieldblock}
+	{BEGIN Expen_1_fieldblock}		
+	<div class="container {$fielddispclass_Expen_1}" data-fieldname="Expen_1">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Expen_1}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Expen_1}
+			</div>
+			<div class="col-md-4" >
+				{$Expen_1_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Expen_1_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Expen_1_fieldblock}
+	{BEGIN Expen_2_fieldblock}		
+	<div class="container {$fielddispclass_Expen_2}" data-fieldname="Expen_2">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Expen_2}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Expen_2}
+			</div>
+			<div class="col-md-4" >
+				{$Expen_2_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Expen_2_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Expen_2_fieldblock}
+	{BEGIN Expen_3_fieldblock}		
+	<div class="container {$fielddispclass_Expen_3}" data-fieldname="Expen_3">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Expen_3}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Expen_3}
+			</div>
+			<div class="col-md-4" >
+				{$Expen_3_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Expen_3_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Expen_3_fieldblock}
+	{BEGIN Expen_4_fieldblock}		
+	<div class="container {$fielddispclass_Expen_4}" data-fieldname="Expen_4">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Expen_4}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Expen_4}
+			</div>
+			<div class="col-md-4" >
+				{$Expen_4_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Expen_4_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Expen_4_fieldblock}
+	{BEGIN Expen_5_fieldblock}		
+	<div class="container {$fielddispclass_Expen_5}" data-fieldname="Expen_5">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Expen_5}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Expen_5}
+			</div>
+			<div class="col-md-4" >
+				{$Expen_5_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Expen_5_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Expen_5_fieldblock}
+	{BEGIN Expen_6_fieldblock}		
+	<div class="container {$fielddispclass_Expen_6}" data-fieldname="Expen_6">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Expen_6}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Expen_6}
+			</div>
+			<div class="col-md-4" >
+				{$Expen_6_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Expen_6_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Expen_6_fieldblock}
+	{BEGIN Expen_7_fieldblock}		
+	<div class="container {$fielddispclass_Expen_7}" data-fieldname="Expen_7">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Expen_7}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Expen_7}
+			</div>
+			<div class="col-md-4" >
+				{$Expen_7_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Expen_7_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Expen_7_fieldblock}
+	{BEGIN Expen_8_fieldblock}		
+	<div class="container {$fielddispclass_Expen_8}" data-fieldname="Expen_8">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Expen_8}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Expen_8}
+			</div>
+			<div class="col-md-4" >
+				{$Expen_8_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Expen_8_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Expen_8_fieldblock}
+	{BEGIN Expen_tot_fieldblock}		
+	<div class="container {$fielddispclass_Expen_tot}" data-fieldname="Expen_tot">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Expen_tot}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Expen_tot}
+			</div>
+			<div class="col-md-4" >
+				{$Expen_tot_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Expen_tot_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Expen_tot_fieldblock}
+	{BEGIN F_Exp1_fieldblock}		
+	<div class="container {$fielddispclass_F_Exp1}" data-fieldname="F_Exp1">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main F_Exp1}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_F_Exp1}
+			</div>
+			<div class="col-md-4" >
+				{$F_Exp1_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$F_Exp1_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END F_Exp1_fieldblock}
+	{BEGIN F_Exp2_fieldblock}		
+	<div class="container {$fielddispclass_F_Exp2}" data-fieldname="F_Exp2">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main F_Exp2}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_F_Exp2}
+			</div>
+			<div class="col-md-4" >
+				{$F_Exp2_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$F_Exp2_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END F_Exp2_fieldblock}
+	{BEGIN F_Exp3_fieldblock}		
+	<div class="container {$fielddispclass_F_Exp3}" data-fieldname="F_Exp3">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main F_Exp3}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_F_Exp3}
+			</div>
+			<div class="col-md-4" >
+				{$F_Exp3_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$F_Exp3_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END F_Exp3_fieldblock}
+	{BEGIN F_Exp4_fieldblock}		
+	<div class="container {$fielddispclass_F_Exp4}" data-fieldname="F_Exp4">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main F_Exp4}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_F_Exp4}
+			</div>
+			<div class="col-md-4" >
+				{$F_Exp4_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$F_Exp4_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END F_Exp4_fieldblock}
+	{BEGIN F_Exptot_fieldblock}		
+	<div class="container {$fielddispclass_F_Exptot}" data-fieldname="F_Exptot">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main F_Exptot}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_F_Exptot}
+			</div>
+			<div class="col-md-4" >
+				{$F_Exptot_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$F_Exptot_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END F_Exptot_fieldblock}
+	{BEGIN T_Exp_Tot_fieldblock}		
+	<div class="container {$fielddispclass_T_Exp_Tot}" data-fieldname="T_Exp_Tot">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main T_Exp_Tot}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_T_Exp_Tot}
+			</div>
+			<div class="col-md-4" >
+				{$T_Exp_Tot_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$T_Exp_Tot_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END T_Exp_Tot_fieldblock}
+	{BEGIN Ano_inc_sour_fieldblock}		
+	<div class="container {$fielddispclass_Ano_inc_sour}" data-fieldname="Ano_inc_sour">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Ano_inc_sour}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Ano_inc_sour}
+			</div>
+			<div class="col-md-4" >
+				{$Ano_inc_sour_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Ano_inc_sour_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Ano_inc_sour_fieldblock}
+	{BEGIN Ano_inc_sour_month_fieldblock}		
+	<div class="container {$fielddispclass_Ano_inc_sour_month}" data-fieldname="Ano_inc_sour_month">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Ano_inc_sour_month}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Ano_inc_sour_month}
+			</div>
+			<div class="col-md-4" >
+				{$Ano_inc_sour_month_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Ano_inc_sour_month_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Ano_inc_sour_month_fieldblock}
+	{BEGIN Pre_L_Y_fieldblock}		
+	<div class="container {$fielddispclass_Pre_L_Y}" data-fieldname="Pre_L_Y">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Pre_L_Y}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Pre_L_Y}
+			</div>
+			<div class="col-md-4" >
+				{$Pre_L_Y_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Pre_L_Y_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Pre_L_Y_fieldblock}
+	{BEGIN L_O_Own_eqt_fieldblock}		
+	<div class="container {$fielddispclass_L_O_Own_eqt}" data-fieldname="L_O_Own_eqt">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main L_O_Own_eqt}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_L_O_Own_eqt}
+			</div>
+			<div class="col-md-4" >
+				{$L_O_Own_eqt_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$L_O_Own_eqt_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END L_O_Own_eqt_fieldblock}
+	{BEGIN RDRS_Loan_fieldblock}		
+	<div class="container {$fielddispclass_RDRS_Loan}" data-fieldname="RDRS_Loan">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main RDRS_Loan}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_RDRS_Loan}
+			</div>
+			<div class="col-md-4" >
+				{$RDRS_Loan_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$RDRS_Loan_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END RDRS_Loan_fieldblock}
+	{BEGIN Oth_Sourc_fieldblock}		
+	<div class="container {$fielddispclass_Oth_Sourc}" data-fieldname="Oth_Sourc">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Oth_Sourc}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Oth_Sourc}
+			</div>
+			<div class="col-md-4" >
+				{$Oth_Sourc_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Oth_Sourc_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Oth_Sourc_fieldblock}
+	{BEGIN Due_Purch_fieldblock}		
+	<div class="container {$fielddispclass_Due_Purch}" data-fieldname="Due_Purch">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Due_Purch}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Due_Purch}
+			</div>
+			<div class="col-md-4" >
+				{$Due_Purch_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Due_Purch_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Due_Purch_fieldblock}
+	{BEGIN LO_other1_fieldblock}		
+	<div class="container {$fielddispclass_LO_other1}" data-fieldname="LO_other1">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main LO_other1}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_LO_other1}
+			</div>
+			<div class="col-md-4" >
+				{$LO_other1_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$LO_other1_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END LO_other1_fieldblock}
+	{BEGIN LO_other2_fieldblock}		
+	<div class="container {$fielddispclass_LO_other2}" data-fieldname="LO_other2">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main LO_other2}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_LO_other2}
+			</div>
+			<div class="col-md-4" >
+				{$LO_other2_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$LO_other2_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END LO_other2_fieldblock}
+	{BEGIN TLO_fieldblock}		
+	<div class="container {$fielddispclass_TLO}" data-fieldname="TLO">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main TLO}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TLO}
+			</div>
+			<div class="col-md-4" >
+				{$TLO_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TLO_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TLO_fieldblock}
+	{BEGIN P_Asset_fieldblock}		
+	<div class="container {$fielddispclass_P_Asset}" data-fieldname="P_Asset">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main P_Asset}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_P_Asset}
+			</div>
+			<div class="col-md-4" >
+				{$P_Asset_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$P_Asset_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END P_Asset_fieldblock}
+	{BEGIN L_stor_P_fieldblock}		
+	<div class="container {$fielddispclass_L_stor_P}" data-fieldname="L_stor_P">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main L_stor_P}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_L_stor_P}
+			</div>
+			<div class="col-md-4" >
+				{$L_stor_P_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$L_stor_P_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END L_stor_P_fieldblock}
+	{BEGIN Invest_fieldblock}		
+	<div class="container {$fielddispclass_Invest}" data-fieldname="Invest">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Invest}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Invest}
+			</div>
+			<div class="col-md-4" >
+				{$Invest_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Invest_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Invest_fieldblock}
+	{BEGIN Due_sales_fieldblock}		
+	<div class="container {$fielddispclass_Due_sales}" data-fieldname="Due_sales">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Due_sales}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Due_sales}
+			</div>
+			<div class="col-md-4" >
+				{$Due_sales_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Due_sales_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Due_sales_fieldblock}
+	{BEGIN Adv_Pay_fieldblock}		
+	<div class="container {$fielddispclass_Adv_Pay}" data-fieldname="Adv_Pay">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Adv_Pay}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Adv_Pay}
+			</div>
+			<div class="col-md-4" >
+				{$Adv_Pay_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Adv_Pay_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Adv_Pay_fieldblock}
+	{BEGIN CashinHand_fieldblock}		
+	<div class="container {$fielddispclass_CashinHand}" data-fieldname="CashinHand">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main CashinHand}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CashinHand}
+			</div>
+			<div class="col-md-4" >
+				{$CashinHand_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CashinHand_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CashinHand_fieldblock}
+	{BEGIN CashAtBank_fieldblock}		
+	<div class="container {$fielddispclass_CashAtBank}" data-fieldname="CashAtBank">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main CashAtBank}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CashAtBank}
+			</div>
+			<div class="col-md-4" >
+				{$CashAtBank_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CashAtBank_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CashAtBank_fieldblock}
+	{BEGIN TAss_fieldblock}		
+	<div class="container {$fielddispclass_TAss}" data-fieldname="TAss">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main TAss}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TAss}
+			</div>
+			<div class="col-md-4" >
+				{$TAss_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TAss_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TAss_fieldblock}
+	{BEGIN FA1_fieldblock}		
+	<div class="container {$fielddispclass_FA1}" data-fieldname="FA1">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main FA1}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FA1}
+			</div>
+			<div class="col-md-4" >
+				{$FA1_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FA1_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FA1_fieldblock}
+	{BEGIN FA2_fieldblock}		
+	<div class="container {$fielddispclass_FA2}" data-fieldname="FA2">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main FA2}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FA2}
+			</div>
+			<div class="col-md-4" >
+				{$FA2_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FA2_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FA2_fieldblock}
+	{BEGIN FA3_fieldblock}		
+	<div class="container {$fielddispclass_FA3}" data-fieldname="FA3">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main FA3}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FA3}
+			</div>
+			<div class="col-md-4" >
+				{$FA3_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FA3_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FA3_fieldblock}
+	{BEGIN FA4_fieldblock}		
+	<div class="container {$fielddispclass_FA4}" data-fieldname="FA4">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main FA4}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FA4}
+			</div>
+			<div class="col-md-4" >
+				{$FA4_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FA4_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FA4_fieldblock}
+	{BEGIN FA5_fieldblock}		
+	<div class="container {$fielddispclass_FA5}" data-fieldname="FA5">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main FA5}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FA5}
+			</div>
+			<div class="col-md-4" >
+				{$FA5_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FA5_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FA5_fieldblock}
+	{BEGIN FAN1_fieldblock}		
+	<div class="container {$fielddispclass_FAN1}" data-fieldname="FAN1">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main FAN1}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FAN1}
+			</div>
+			<div class="col-md-4" >
+				{$FAN1_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FAN1_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FAN1_fieldblock}
+	{BEGIN FAN2_fieldblock}		
+	<div class="container {$fielddispclass_FAN2}" data-fieldname="FAN2">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main FAN2}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FAN2}
+			</div>
+			<div class="col-md-4" >
+				{$FAN2_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FAN2_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FAN2_fieldblock}
+	{BEGIN FAN3_fieldblock}		
+	<div class="container {$fielddispclass_FAN3}" data-fieldname="FAN3">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main FAN3}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FAN3}
+			</div>
+			<div class="col-md-4" >
+				{$FAN3_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FAN3_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FAN3_fieldblock}
+	{BEGIN FAN4_fieldblock}		
+	<div class="container {$fielddispclass_FAN4}" data-fieldname="FAN4">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main FAN4}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FAN4}
+			</div>
+			<div class="col-md-4" >
+				{$FAN4_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FAN4_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FAN4_fieldblock}
+	{BEGIN FAN5_fieldblock}		
+	<div class="container {$fielddispclass_FAN5}" data-fieldname="FAN5">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main FAN5}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FAN5}
+			</div>
+			<div class="col-md-4" >
+				{$FAN5_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FAN5_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FAN5_fieldblock}
+	{BEGIN FAU1_fieldblock}		
+	<div class="container {$fielddispclass_FAU1}" data-fieldname="FAU1">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main FAU1}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FAU1}
+			</div>
+			<div class="col-md-4" >
+				{$FAU1_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FAU1_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FAU1_fieldblock}
+	{BEGIN FAU2_fieldblock}		
+	<div class="container {$fielddispclass_FAU2}" data-fieldname="FAU2">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main FAU2}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FAU2}
+			</div>
+			<div class="col-md-4" >
+				{$FAU2_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FAU2_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FAU2_fieldblock}
+	{BEGIN FAU3_fieldblock}		
+	<div class="container {$fielddispclass_FAU3}" data-fieldname="FAU3">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main FAU3}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FAU3}
+			</div>
+			<div class="col-md-4" >
+				{$FAU3_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FAU3_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FAU3_fieldblock}
+	{BEGIN FAU4_fieldblock}		
+	<div class="container {$fielddispclass_FAU4}" data-fieldname="FAU4">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main FAU4}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FAU4}
+			</div>
+			<div class="col-md-4" >
+				{$FAU4_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FAU4_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FAU4_fieldblock}
+	{BEGIN FAU5_fieldblock}		
+	<div class="container {$fielddispclass_FAU5}" data-fieldname="FAU5">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main FAU5}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FAU5}
+			</div>
+			<div class="col-md-4" >
+				{$FAU5_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FAU5_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FAU5_fieldblock}
+	{BEGIN FAT1_fieldblock}		
+	<div class="container {$fielddispclass_FAT1}" data-fieldname="FAT1">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main FAT1}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FAT1}
+			</div>
+			<div class="col-md-4" >
+				{$FAT1_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FAT1_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FAT1_fieldblock}
+	{BEGIN FAT2_fieldblock}		
+	<div class="container {$fielddispclass_FAT2}" data-fieldname="FAT2">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main FAT2}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FAT2}
+			</div>
+			<div class="col-md-4" >
+				{$FAT2_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FAT2_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FAT2_fieldblock}
+	{BEGIN FAT3_fieldblock}		
+	<div class="container {$fielddispclass_FAT3}" data-fieldname="FAT3">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main FAT3}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FAT3}
+			</div>
+			<div class="col-md-4" >
+				{$FAT3_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FAT3_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FAT3_fieldblock}
+	{BEGIN FAT4_fieldblock}		
+	<div class="container {$fielddispclass_FAT4}" data-fieldname="FAT4">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main FAT4}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FAT4}
+			</div>
+			<div class="col-md-4" >
+				{$FAT4_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FAT4_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FAT4_fieldblock}
+	{BEGIN FAT5_fieldblock}		
+	<div class="container {$fielddispclass_FAT5}" data-fieldname="FAT5">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main FAT5}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FAT5}
+			</div>
+			<div class="col-md-4" >
+				{$FAT5_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FAT5_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FAT5_fieldblock}
+	{BEGIN FAR_fieldblock}		
+	<div class="container {$fielddispclass_FAR}" data-fieldname="FAR">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main FAR}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FAR}
+			</div>
+			<div class="col-md-4" >
+				{$FAR_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FAR_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FAR_fieldblock}
+	{BEGIN FATT_fieldblock}		
+	<div class="container {$fielddispclass_FATT}" data-fieldname="FATT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main FATT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FATT}
+			</div>
+			<div class="col-md-4" >
+				{$FATT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FATT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FATT_fieldblock}
+	{BEGIN CA_fieldblock}		
+	<div class="container {$fielddispclass_CA}" data-fieldname="CA">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main CA}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CA}
+			</div>
+			<div class="col-md-4" >
+				{$CA_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CA_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CA_fieldblock}
+	{BEGIN CA1_fieldblock}		
+	<div class="container {$fielddispclass_CA1}" data-fieldname="CA1">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main CA1}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CA1}
+			</div>
+			<div class="col-md-4" >
+				{$CA1_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CA1_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CA1_fieldblock}
+	{BEGIN CA2_fieldblock}		
+	<div class="container {$fielddispclass_CA2}" data-fieldname="CA2">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main CA2}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CA2}
+			</div>
+			<div class="col-md-4" >
+				{$CA2_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CA2_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CA2_fieldblock}
+	{BEGIN CA3_fieldblock}		
+	<div class="container {$fielddispclass_CA3}" data-fieldname="CA3">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main CA3}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CA3}
+			</div>
+			<div class="col-md-4" >
+				{$CA3_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CA3_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CA3_fieldblock}
+	{BEGIN CA4_fieldblock}		
+	<div class="container {$fielddispclass_CA4}" data-fieldname="CA4">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main CA4}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CA4}
+			</div>
+			<div class="col-md-4" >
+				{$CA4_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CA4_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CA4_fieldblock}
+	{BEGIN CA5_fieldblock}		
+	<div class="container {$fielddispclass_CA5}" data-fieldname="CA5">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main CA5}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CA5}
+			</div>
+			<div class="col-md-4" >
+				{$CA5_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CA5_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CA5_fieldblock}
+	{BEGIN CAN1_fieldblock}		
+	<div class="container {$fielddispclass_CAN1}" data-fieldname="CAN1">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main CAN1}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CAN1}
+			</div>
+			<div class="col-md-4" >
+				{$CAN1_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CAN1_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CAN1_fieldblock}
+	{BEGIN CAN2_fieldblock}		
+	<div class="container {$fielddispclass_CAN2}" data-fieldname="CAN2">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main CAN2}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CAN2}
+			</div>
+			<div class="col-md-4" >
+				{$CAN2_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CAN2_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CAN2_fieldblock}
+	{BEGIN CAN3_fieldblock}		
+	<div class="container {$fielddispclass_CAN3}" data-fieldname="CAN3">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main CAN3}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CAN3}
+			</div>
+			<div class="col-md-4" >
+				{$CAN3_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CAN3_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CAN3_fieldblock}
+	{BEGIN CAN4_fieldblock}		
+	<div class="container {$fielddispclass_CAN4}" data-fieldname="CAN4">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main CAN4}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CAN4}
+			</div>
+			<div class="col-md-4" >
+				{$CAN4_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CAN4_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CAN4_fieldblock}
+	{BEGIN CAN5_fieldblock}		
+	<div class="container {$fielddispclass_CAN5}" data-fieldname="CAN5">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main CAN5}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CAN5}
+			</div>
+			<div class="col-md-4" >
+				{$CAN5_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CAN5_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CAN5_fieldblock}
+	{BEGIN CAU1_fieldblock}		
+	<div class="container {$fielddispclass_CAU1}" data-fieldname="CAU1">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main CAU1}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CAU1}
+			</div>
+			<div class="col-md-4" >
+				{$CAU1_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CAU1_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CAU1_fieldblock}
+	{BEGIN CAU2_fieldblock}		
+	<div class="container {$fielddispclass_CAU2}" data-fieldname="CAU2">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main CAU2}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CAU2}
+			</div>
+			<div class="col-md-4" >
+				{$CAU2_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CAU2_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CAU2_fieldblock}
+	{BEGIN CAU3_fieldblock}		
+	<div class="container {$fielddispclass_CAU3}" data-fieldname="CAU3">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main CAU3}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CAU3}
+			</div>
+			<div class="col-md-4" >
+				{$CAU3_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CAU3_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CAU3_fieldblock}
+	{BEGIN CAU4_fieldblock}		
+	<div class="container {$fielddispclass_CAU4}" data-fieldname="CAU4">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main CAU4}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CAU4}
+			</div>
+			<div class="col-md-4" >
+				{$CAU4_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CAU4_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CAU4_fieldblock}
+	{BEGIN CAU5_fieldblock}		
+	<div class="container {$fielddispclass_CAU5}" data-fieldname="CAU5">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main CAU5}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CAU5}
+			</div>
+			<div class="col-md-4" >
+				{$CAU5_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CAU5_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CAU5_fieldblock}
+	{BEGIN CAT1_fieldblock}		
+	<div class="container {$fielddispclass_CAT1}" data-fieldname="CAT1">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main CAT1}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CAT1}
+			</div>
+			<div class="col-md-4" >
+				{$CAT1_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CAT1_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CAT1_fieldblock}
+	{BEGIN CAT2_fieldblock}		
+	<div class="container {$fielddispclass_CAT2}" data-fieldname="CAT2">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main CAT2}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CAT2}
+			</div>
+			<div class="col-md-4" >
+				{$CAT2_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CAT2_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CAT2_fieldblock}
+	{BEGIN CAT3_fieldblock}		
+	<div class="container {$fielddispclass_CAT3}" data-fieldname="CAT3">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main CAT3}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CAT3}
+			</div>
+			<div class="col-md-4" >
+				{$CAT3_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CAT3_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CAT3_fieldblock}
+	{BEGIN CAT4_fieldblock}		
+	<div class="container {$fielddispclass_CAT4}" data-fieldname="CAT4">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main CAT4}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CAT4}
+			</div>
+			<div class="col-md-4" >
+				{$CAT4_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CAT4_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CAT4_fieldblock}
+	{BEGIN CAT5_fieldblock}		
+	<div class="container {$fielddispclass_CAT5}" data-fieldname="CAT5">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main CAT5}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CAT5}
+			</div>
+			<div class="col-md-4" >
+				{$CAT5_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CAT5_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CAT5_fieldblock}
+	{BEGIN CAR_fieldblock}		
+	<div class="container {$fielddispclass_CAR}" data-fieldname="CAR">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main CAR}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CAR}
+			</div>
+			<div class="col-md-4" >
+				{$CAR_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CAR_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CAR_fieldblock}
+	{BEGIN CATT_fieldblock}		
+	<div class="container {$fielddispclass_CATT}" data-fieldname="CATT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main CATT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_CATT}
+			</div>
+			<div class="col-md-4" >
+				{$CATT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CATT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CATT_fieldblock}
+	{BEGIN FaCaTT_fieldblock}		
+	<div class="container {$fielddispclass_FaCaTT}" data-fieldname="FaCaTT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main FaCaTT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_FaCaTT}
+			</div>
+			<div class="col-md-4" >
+				{$FaCaTT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FaCaTT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FaCaTT_fieldblock}
+	{BEGIN RG_Name_fieldblock}		
+	<div class="container {$fielddispclass_RG_Name}" data-fieldname="RG_Name">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main RG_Name}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_RG_Name}
+			</div>
+			<div class="col-md-4" >
+				{$RG_Name_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$RG_Name_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END RG_Name_fieldblock}
+	{BEGIN RG_Father_fieldblock}		
+	<div class="container {$fielddispclass_RG_Father}" data-fieldname="RG_Father">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main RG_Father}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_RG_Father}
+			</div>
+			<div class="col-md-4" >
+				{$RG_Father_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$RG_Father_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END RG_Father_fieldblock}
+	{BEGIN RG_Pre_Add_fieldblock}		
+	<div class="container {$fielddispclass_RG_Pre_Add}" data-fieldname="RG_Pre_Add">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main RG_Pre_Add}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_RG_Pre_Add}
+			</div>
+			<div class="col-md-4" >
+				{$RG_Pre_Add_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$RG_Pre_Add_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END RG_Pre_Add_fieldblock}
+	{BEGIN RG_Per_Add_fieldblock}		
+	<div class="container {$fielddispclass_RG_Per_Add}" data-fieldname="RG_Per_Add">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main RG_Per_Add}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_RG_Per_Add}
+			</div>
+			<div class="col-md-4" >
+				{$RG_Per_Add_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$RG_Per_Add_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END RG_Per_Add_fieldblock}
+	{BEGIN RG_NID_fieldblock}		
+	<div class="container {$fielddispclass_RG_NID}" data-fieldname="RG_NID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main RG_NID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_RG_NID}
+			</div>
+			<div class="col-md-4" >
+				{$RG_NID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$RG_NID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END RG_NID_fieldblock}
+	{BEGIN RG_Cell_fieldblock}		
+	<div class="container {$fielddispclass_RG_Cell}" data-fieldname="RG_Cell">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main RG_Cell}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_RG_Cell}
+			</div>
+			<div class="col-md-4" >
+				{$RG_Cell_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$RG_Cell_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END RG_Cell_fieldblock}
+	{BEGIN RG_Year_fieldblock}		
+	<div class="container {$fielddispclass_RG_Year}" data-fieldname="RG_Year">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main RG_Year}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_RG_Year}
+			</div>
+			<div class="col-md-4" >
+				{$RG_Year_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$RG_Year_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END RG_Year_fieldblock}
+	{BEGIN RG_Occup_fieldblock}		
+	<div class="container {$fielddispclass_RG_Occup}" data-fieldname="RG_Occup">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main RG_Occup}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_RG_Occup}
+			</div>
+			<div class="col-md-4" >
+				{$RG_Occup_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$RG_Occup_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END RG_Occup_fieldblock}
+	{BEGIN RG_M_Income_fieldblock}		
+	<div class="container {$fielddispclass_RG_M_Income}" data-fieldname="RG_M_Income">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main RG_M_Income}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_RG_M_Income}
+			</div>
+			<div class="col-md-4" >
+				{$RG_M_Income_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$RG_M_Income_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END RG_M_Income_fieldblock}
+	{BEGIN RG_M_Exp_fieldblock}		
+	<div class="container {$fielddispclass_RG_M_Exp}" data-fieldname="RG_M_Exp">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main RG_M_Exp}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_RG_M_Exp}
+			</div>
+			<div class="col-md-4" >
+				{$RG_M_Exp_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$RG_M_Exp_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END RG_M_Exp_fieldblock}
+	{BEGIN RF_Name_fieldblock}		
+	<div class="container {$fielddispclass_RF_Name}" data-fieldname="RF_Name">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main RF_Name}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_RF_Name}
+			</div>
+			<div class="col-md-4" >
+				{$RF_Name_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$RF_Name_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END RF_Name_fieldblock}
+	{BEGIN RF_Father_fieldblock}		
+	<div class="container {$fielddispclass_RF_Father}" data-fieldname="RF_Father">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main RF_Father}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_RF_Father}
+			</div>
+			<div class="col-md-4" >
+				{$RF_Father_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$RF_Father_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END RF_Father_fieldblock}
+	{BEGIN RF_Pre_Add_fieldblock}		
+	<div class="container {$fielddispclass_RF_Pre_Add}" data-fieldname="RF_Pre_Add">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main RF_Pre_Add}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_RF_Pre_Add}
+			</div>
+			<div class="col-md-4" >
+				{$RF_Pre_Add_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$RF_Pre_Add_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END RF_Pre_Add_fieldblock}
+	{BEGIN RF_Per_Add_fieldblock}		
+	<div class="container {$fielddispclass_RF_Per_Add}" data-fieldname="RF_Per_Add">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main RF_Per_Add}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_RF_Per_Add}
+			</div>
+			<div class="col-md-4" >
+				{$RF_Per_Add_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$RF_Per_Add_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END RF_Per_Add_fieldblock}
+	{BEGIN RF_NID_fieldblock}		
+	<div class="container {$fielddispclass_RF_NID}" data-fieldname="RF_NID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main RF_NID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_RF_NID}
+			</div>
+			<div class="col-md-4" >
+				{$RF_NID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$RF_NID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END RF_NID_fieldblock}
+	{BEGIN RF_Cell_fieldblock}		
+	<div class="container {$fielddispclass_RF_Cell}" data-fieldname="RF_Cell">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main RF_Cell}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_RF_Cell}
+			</div>
+			<div class="col-md-4" >
+				{$RF_Cell_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$RF_Cell_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END RF_Cell_fieldblock}
+	{BEGIN RF_Age_fieldblock}		
+	<div class="container {$fielddispclass_RF_Age}" data-fieldname="RF_Age">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main RF_Age}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_RF_Age}
+			</div>
+			<div class="col-md-4" >
+				{$RF_Age_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$RF_Age_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END RF_Age_fieldblock}
+	{BEGIN RF_Relation_fieldblock}		
+	<div class="container {$fielddispclass_RF_Relation}" data-fieldname="RF_Relation">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main RF_Relation}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_RF_Relation}
+			</div>
+			<div class="col-md-4" >
+				{$RF_Relation_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$RF_Relation_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END RF_Relation_fieldblock}
+	{BEGIN RF_Occup_fieldblock}		
+	<div class="container {$fielddispclass_RF_Occup}" data-fieldname="RF_Occup">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main RF_Occup}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_RF_Occup}
+			</div>
+			<div class="col-md-4" >
+				{$RF_Occup_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$RF_Occup_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END RF_Occup_fieldblock}
+	{BEGIN RF_M_Income_fieldblock}		
+	<div class="container {$fielddispclass_RF_M_Income}" data-fieldname="RF_M_Income">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main RF_M_Income}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_RF_M_Income}
+			</div>
+			<div class="col-md-4" >
+				{$RF_M_Income_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$RF_M_Income_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END RF_M_Income_fieldblock}
+	{BEGIN RF_M_Exp_fieldblock}		
+	<div class="container {$fielddispclass_RF_M_Exp}" data-fieldname="RF_M_Exp">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main RF_M_Exp}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_RF_M_Exp}
+			</div>
+			<div class="col-md-4" >
+				{$RF_M_Exp_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$RF_M_Exp_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END RF_M_Exp_fieldblock}
+	{BEGIN ExDC_fieldblock}		
+	<div class="container {$fielddispclass_ExDC}" data-fieldname="ExDC">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main ExDC}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ExDC}
+			</div>
+			<div class="col-md-4" >
+				{$ExDC_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ExDC_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ExDC_fieldblock}
+	{BEGIN ExDC1_fieldblock}		
+	<div class="container {$fielddispclass_ExDC1}" data-fieldname="ExDC1">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main ExDC1}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ExDC1}
+			</div>
+			<div class="col-md-4" >
+				{$ExDC1_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ExDC1_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ExDC1_fieldblock}
+	{BEGIN ExDC2_fieldblock}		
+	<div class="container {$fielddispclass_ExDC2}" data-fieldname="ExDC2">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main ExDC2}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ExDC2}
+			</div>
+			<div class="col-md-4" >
+				{$ExDC2_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ExDC2_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ExDC2_fieldblock}
+	{BEGIN ExDC3_fieldblock}		
+	<div class="container {$fielddispclass_ExDC3}" data-fieldname="ExDC3">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main ExDC3}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ExDC3}
+			</div>
+			<div class="col-md-4" >
+				{$ExDC3_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ExDC3_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ExDC3_fieldblock}
+	{BEGIN ExDC4_fieldblock}		
+	<div class="container {$fielddispclass_ExDC4}" data-fieldname="ExDC4">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main ExDC4}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ExDC4}
+			</div>
+			<div class="col-md-4" >
+				{$ExDC4_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ExDC4_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ExDC4_fieldblock}
+	{BEGIN RDRSL_fieldblock}		
+	<div class="container {$fielddispclass_RDRSL}" data-fieldname="RDRSL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main RDRSL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_RDRSL}
+			</div>
+			<div class="col-md-4" >
+				{$RDRSL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$RDRSL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END RDRSL_fieldblock}
+	{BEGIN RDRSL1_fieldblock}		
+	<div class="container {$fielddispclass_RDRSL1}" data-fieldname="RDRSL1">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main RDRSL1}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_RDRSL1}
+			</div>
+			<div class="col-md-4" >
+				{$RDRSL1_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$RDRSL1_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END RDRSL1_fieldblock}
+	{BEGIN RDRSL2_fieldblock}		
+	<div class="container {$fielddispclass_RDRSL2}" data-fieldname="RDRSL2">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main RDRSL2}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_RDRSL2}
+			</div>
+			<div class="col-md-4" >
+				{$RDRSL2_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$RDRSL2_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END RDRSL2_fieldblock}
+	{BEGIN RDRSL3_fieldblock}		
+	<div class="container {$fielddispclass_RDRSL3}" data-fieldname="RDRSL3">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main RDRSL3}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_RDRSL3}
+			</div>
+			<div class="col-md-4" >
+				{$RDRSL3_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$RDRSL3_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END RDRSL3_fieldblock}
+	{BEGIN RDRSL4_fieldblock}		
+	<div class="container {$fielddispclass_RDRSL4}" data-fieldname="RDRSL4">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main RDRSL4}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_RDRSL4}
+			</div>
+			<div class="col-md-4" >
+				{$RDRSL4_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$RDRSL4_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END RDRSL4_fieldblock}
+	{BEGIN TRDRSL_fieldblock}		
+	<div class="container {$fielddispclass_TRDRSL}" data-fieldname="TRDRSL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main TRDRSL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TRDRSL}
+			</div>
+			<div class="col-md-4" >
+				{$TRDRSL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TRDRSL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TRDRSL_fieldblock}
+	{BEGIN T_RDRSL_fieldblock}		
+	<div class="container {$fielddispclass_T_RDRSL}" data-fieldname="T_RDRSL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main T_RDRSL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_T_RDRSL}
+			</div>
+			<div class="col-md-4" >
+				{$T_RDRSL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$T_RDRSL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END T_RDRSL_fieldblock}
+	{BEGIN OTL_fieldblock}		
+	<div class="container {$fielddispclass_OTL}" data-fieldname="OTL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main OTL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_OTL}
+			</div>
+			<div class="col-md-4" >
+				{$OTL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$OTL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END OTL_fieldblock}
+	{BEGIN OTL1_fieldblock}		
+	<div class="container {$fielddispclass_OTL1}" data-fieldname="OTL1">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main OTL1}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_OTL1}
+			</div>
+			<div class="col-md-4" >
+				{$OTL1_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$OTL1_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END OTL1_fieldblock}
+	{BEGIN OTL2_fieldblock}		
+	<div class="container {$fielddispclass_OTL2}" data-fieldname="OTL2">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main OTL2}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_OTL2}
+			</div>
+			<div class="col-md-4" >
+				{$OTL2_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$OTL2_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END OTL2_fieldblock}
+	{BEGIN OTL3_fieldblock}		
+	<div class="container {$fielddispclass_OTL3}" data-fieldname="OTL3">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main OTL3}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_OTL3}
+			</div>
+			<div class="col-md-4" >
+				{$OTL3_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$OTL3_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END OTL3_fieldblock}
+	{BEGIN OTL4_fieldblock}		
+	<div class="container {$fielddispclass_OTL4}" data-fieldname="OTL4">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main OTL4}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_OTL4}
+			</div>
+			<div class="col-md-4" >
+				{$OTL4_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$OTL4_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END OTL4_fieldblock}
+	{BEGIN TOTL_fieldblock}		
+	<div class="container {$fielddispclass_TOTL}" data-fieldname="TOTL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main TOTL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TOTL}
+			</div>
+			<div class="col-md-4" >
+				{$TOTL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TOTL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TOTL_fieldblock}
+	{BEGIN T_OTL_fieldblock}		
+	<div class="container {$fielddispclass_T_OTL}" data-fieldname="T_OTL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main T_OTL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_T_OTL}
+			</div>
+			<div class="col-md-4" >
+				{$T_OTL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$T_OTL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END T_OTL_fieldblock}
+	{BEGIN OFIW_fieldblock}		
+	<div class="container {$fielddispclass_OFIW}" data-fieldname="OFIW">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main OFIW}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_OFIW}
+			</div>
+			<div class="col-md-4" >
+				{$OFIW_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$OFIW_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END OFIW_fieldblock}
+	{BEGIN OFIW1_fieldblock}		
+	<div class="container {$fielddispclass_OFIW1}" data-fieldname="OFIW1">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main OFIW1}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_OFIW1}
+			</div>
+			<div class="col-md-4" >
+				{$OFIW1_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$OFIW1_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END OFIW1_fieldblock}
+	{BEGIN OFIW2_fieldblock}		
+	<div class="container {$fielddispclass_OFIW2}" data-fieldname="OFIW2">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main OFIW2}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_OFIW2}
+			</div>
+			<div class="col-md-4" >
+				{$OFIW2_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$OFIW2_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END OFIW2_fieldblock}
+	{BEGIN OFIW3_fieldblock}		
+	<div class="container {$fielddispclass_OFIW3}" data-fieldname="OFIW3">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main OFIW3}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_OFIW3}
+			</div>
+			<div class="col-md-4" >
+				{$OFIW3_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$OFIW3_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END OFIW3_fieldblock}
+	{BEGIN OFIW4_fieldblock}		
+	<div class="container {$fielddispclass_OFIW4}" data-fieldname="OFIW4">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main OFIW4}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_OFIW4}
+			</div>
+			<div class="col-md-4" >
+				{$OFIW4_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$OFIW4_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END OFIW4_fieldblock}
+	{BEGIN TOFIW_fieldblock}		
+	<div class="container {$fielddispclass_TOFIW}" data-fieldname="TOFIW">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main TOFIW}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TOFIW}
+			</div>
+			<div class="col-md-4" >
+				{$TOFIW_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TOFIW_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TOFIW_fieldblock}
+	{BEGIN T_OFIW_fieldblock}		
+	<div class="container {$fielddispclass_T_OFIW}" data-fieldname="T_OFIW">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main T_OFIW}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_T_OFIW}
+			</div>
+			<div class="col-md-4" >
+				{$T_OFIW_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$T_OFIW_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END T_OFIW_fieldblock}
+	{BEGIN OFAL_fieldblock}		
+	<div class="container {$fielddispclass_OFAL}" data-fieldname="OFAL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main OFAL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_OFAL}
+			</div>
+			<div class="col-md-4" >
+				{$OFAL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$OFAL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END OFAL_fieldblock}
+	{BEGIN OFAL1_fieldblock}		
+	<div class="container {$fielddispclass_OFAL1}" data-fieldname="OFAL1">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main OFAL1}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_OFAL1}
+			</div>
+			<div class="col-md-4" >
+				{$OFAL1_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$OFAL1_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END OFAL1_fieldblock}
+	{BEGIN OFAL2_fieldblock}		
+	<div class="container {$fielddispclass_OFAL2}" data-fieldname="OFAL2">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main OFAL2}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_OFAL2}
+			</div>
+			<div class="col-md-4" >
+				{$OFAL2_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$OFAL2_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END OFAL2_fieldblock}
+	{BEGIN OFAL3_fieldblock}		
+	<div class="container {$fielddispclass_OFAL3}" data-fieldname="OFAL3">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main OFAL3}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_OFAL3}
+			</div>
+			<div class="col-md-4" >
+				{$OFAL3_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$OFAL3_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END OFAL3_fieldblock}
+	{BEGIN OFAL4_fieldblock}		
+	<div class="container {$fielddispclass_OFAL4}" data-fieldname="OFAL4">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main OFAL4}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_OFAL4}
+			</div>
+			<div class="col-md-4" >
+				{$OFAL4_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$OFAL4_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END OFAL4_fieldblock}
+	{BEGIN TOFAL_fieldblock}		
+	<div class="container {$fielddispclass_TOFAL}" data-fieldname="TOFAL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main TOFAL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TOFAL}
+			</div>
+			<div class="col-md-4" >
+				{$TOFAL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TOFAL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TOFAL_fieldblock}
+	{BEGIN T_OFAL_fieldblock}		
+	<div class="container {$fielddispclass_T_OFAL}" data-fieldname="T_OFAL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main T_OFAL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_T_OFAL}
+			</div>
+			<div class="col-md-4" >
+				{$T_OFAL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$T_OFAL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END T_OFAL_fieldblock}
+	{BEGIN TPE_fieldblock}		
+	<div class="container {$fielddispclass_TPE}" data-fieldname="TPE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main TPE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TPE}
+			</div>
+			<div class="col-md-4" >
+				{$TPE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TPE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TPE_fieldblock}
+	{BEGIN TPE1_fieldblock}		
+	<div class="container {$fielddispclass_TPE1}" data-fieldname="TPE1">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main TPE1}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TPE1}
+			</div>
+			<div class="col-md-4" >
+				{$TPE1_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TPE1_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TPE1_fieldblock}
+	{BEGIN TPE2_fieldblock}		
+	<div class="container {$fielddispclass_TPE2}" data-fieldname="TPE2">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main TPE2}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TPE2}
+			</div>
+			<div class="col-md-4" >
+				{$TPE2_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TPE2_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TPE2_fieldblock}
+	{BEGIN TPE3_fieldblock}		
+	<div class="container {$fielddispclass_TPE3}" data-fieldname="TPE3">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main TPE3}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TPE3}
+			</div>
+			<div class="col-md-4" >
+				{$TPE3_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TPE3_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TPE3_fieldblock}
+	{BEGIN TPE4_fieldblock}		
+	<div class="container {$fielddispclass_TPE4}" data-fieldname="TPE4">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main TPE4}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TPE4}
+			</div>
+			<div class="col-md-4" >
+				{$TPE4_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TPE4_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TPE4_fieldblock}
+	{BEGIN TTPE_fieldblock}		
+	<div class="container {$fielddispclass_TTPE}" data-fieldname="TTPE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main TTPE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_TTPE}
+			</div>
+			<div class="col-md-4" >
+				{$TTPE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TTPE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TTPE_fieldblock}
+	{BEGIN T_TPE_fieldblock}		
+	<div class="container {$fielddispclass_T_TPE}" data-fieldname="T_TPE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main T_TPE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_T_TPE}
+			</div>
+			<div class="col-md-4" >
+				{$T_TPE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$T_TPE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END T_TPE_fieldblock}
+	{BEGIN OFEWHM_fieldblock}		
+	<div class="container {$fielddispclass_OFEWHM}" data-fieldname="OFEWHM">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main OFEWHM}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_OFEWHM}
+			</div>
+			<div class="col-md-4" >
+				{$OFEWHM_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$OFEWHM_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END OFEWHM_fieldblock}
+	{BEGIN PLAF_fieldblock}		
+	<div class="container {$fielddispclass_PLAF}" data-fieldname="PLAF">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main PLAF}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PLAF}
+			</div>
+			<div class="col-md-4" >
+				{$PLAF_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PLAF_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PLAF_fieldblock}
+	{BEGIN PLAT_fieldblock}		
+	<div class="container {$fielddispclass_PLAT}" data-fieldname="PLAT">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main PLAT}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_PLAT}
+			</div>
+			<div class="col-md-4" >
+				{$PLAT_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PLAT_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PLAT_fieldblock}
+	{BEGIN A_Y_A_fieldblock}		
+	<div class="container {$fielddispclass_A_Y_A}" data-fieldname="A_Y_A">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main A_Y_A}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_A_Y_A}
+			</div>
+			<div class="col-md-4" >
+				{$A_Y_A_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$A_Y_A_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END A_Y_A_fieldblock}
+	{BEGIN B_Y_A_fieldblock}		
+	<div class="container {$fielddispclass_B_Y_A}" data-fieldname="B_Y_A">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main B_Y_A}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_B_Y_A}
+			</div>
+			<div class="col-md-4" >
+				{$B_Y_A_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$B_Y_A_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END B_Y_A_fieldblock}
+	{BEGIN C_Y_A_fieldblock}		
+	<div class="container {$fielddispclass_C_Y_A}" data-fieldname="C_Y_A">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main C_Y_A}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_C_Y_A}
+			</div>
+			<div class="col-md-4" >
+				{$C_Y_A_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$C_Y_A_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END C_Y_A_fieldblock}
+	{BEGIN D_Y_A_fieldblock}		
+	<div class="container {$fielddispclass_D_Y_A}" data-fieldname="D_Y_A">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main D_Y_A}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_D_Y_A}
+			</div>
+			<div class="col-md-4" >
+				{$D_Y_A_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$D_Y_A_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END D_Y_A_fieldblock}
+	{BEGIN E_Y_A_fieldblock}		
+	<div class="container {$fielddispclass_E_Y_A}" data-fieldname="E_Y_A">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main E_Y_A}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_E_Y_A}
+			</div>
+			<div class="col-md-4" >
+				{$E_Y_A_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$E_Y_A_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END E_Y_A_fieldblock}
+	{BEGIN F_Y_A_fieldblock}		
+	<div class="container {$fielddispclass_F_Y_A}" data-fieldname="F_Y_A">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main F_Y_A}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_F_Y_A}
+			</div>
+			<div class="col-md-4" >
+				{$F_Y_A_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$F_Y_A_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END F_Y_A_fieldblock}
+	{BEGIN G_Y_A_fieldblock}		
+	<div class="container {$fielddispclass_G_Y_A}" data-fieldname="G_Y_A">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main G_Y_A}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_G_Y_A}
+			</div>
+			<div class="col-md-4" >
+				{$G_Y_A_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$G_Y_A_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END G_Y_A_fieldblock}
+	{BEGIN H_Y_A_fieldblock}		
+	<div class="container {$fielddispclass_H_Y_A}" data-fieldname="H_Y_A">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main H_Y_A}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_H_Y_A}
+			</div>
+			<div class="col-md-4" >
+				{$H_Y_A_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$H_Y_A_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END H_Y_A_fieldblock}
+	{BEGIN I_Y_A_fieldblock}		
+	<div class="container {$fielddispclass_I_Y_A}" data-fieldname="I_Y_A">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main I_Y_A}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_I_Y_A}
+			</div>
+			<div class="col-md-4" >
+				{$I_Y_A_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$I_Y_A_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END I_Y_A_fieldblock}
+	{BEGIN J_Y_A_fieldblock}		
+	<div class="container {$fielddispclass_J_Y_A}" data-fieldname="J_Y_A">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main J_Y_A}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_J_Y_A}
+			</div>
+			<div class="col-md-4" >
+				{$J_Y_A_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$J_Y_A_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END J_Y_A_fieldblock}
+	{BEGIN K_Y_A_fieldblock}		
+	<div class="container {$fielddispclass_K_Y_A}" data-fieldname="K_Y_A">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main K_Y_A}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_K_Y_A}
+			</div>
+			<div class="col-md-4" >
+				{$K_Y_A_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$K_Y_A_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END K_Y_A_fieldblock}
+	{BEGIN DSR_fieldblock}		
+	<div class="container {$fielddispclass_DSR}" data-fieldname="DSR">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main DSR}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DSR}
+			</div>
+			<div class="col-md-4" >
+				{$DSR_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DSR_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DSR_fieldblock}
+	{BEGIN DAR_fieldblock}		
+	<div class="container {$fielddispclass_DAR}" data-fieldname="DAR">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main DAR}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DAR}
+			</div>
+			<div class="col-md-4" >
+				{$DAR_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DAR_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DAR_fieldblock}
+	{BEGIN GPMR_fieldblock}		
+	<div class="container {$fielddispclass_GPMR}" data-fieldname="GPMR">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main GPMR}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_GPMR}
+			</div>
+			<div class="col-md-4" >
+				{$GPMR_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$GPMR_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END GPMR_fieldblock}
+	{BEGIN NPMR_fieldblock}		
+	<div class="container {$fielddispclass_NPMR}" data-fieldname="NPMR">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main NPMR}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_NPMR}
+			</div>
+			<div class="col-md-4" >
+				{$NPMR_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$NPMR_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END NPMR_fieldblock}
+	{BEGIN Remark_fieldblock}		
+	<div class="container {$fielddispclass_Remark}" data-fieldname="Remark">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Remark}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Remark}
+			</div>
+			<div class="col-md-4" >
+				{$Remark_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Remark_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Remark_fieldblock}
+	{BEGIN Cash_Flow_fieldblock}		
+	<div class="container {$fielddispclass_Cash_Flow}" data-fieldname="Cash_Flow">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label main Cash_Flow}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Cash_Flow}
+			</div>
+			<div class="col-md-4" >
+				{$Cash_Flow_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Cash_Flow_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Cash_Flow_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-4"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>Search</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>Reset</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>Back to list</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

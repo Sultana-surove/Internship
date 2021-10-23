@@ -1,0 +1,152 @@
+<!DOCTYPE html><p align=center><font size=+1 color=red></font></p>
+<p align=center><font size=+1 color=red></font></p>
+<HTML {$html_attrs}><HEAD> 
+<META http-equiv="X-UA-Compatible" content="IE=Edge"> 
+<META name="viewport" content="width=device-width, initial-scale=1.0"> 
+<TITLE>{$pagetitle}</TITLE> 
+<META http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<LINK href="styles/default.css" rel="stylesheet" type="text/css"> {BEGIN rtlCSS}<LINK href="styles/defaultRTL.css" rel="stylesheet" type="text/css">{END rtlCSS} {BEGIN styleCSSFiles}<LINK href="{$stylepath}" rel="stylesheet" type="text/css">{END styleCSSFiles} 
+<META name="GENERATOR" content="MSHTML 11.00.10570.1001">     
+</HEAD> 
+<BODY class="{$stylename} function-add" {$bodyattrs}>{BEGIN body}
+
+{$header} 
+<STYLE>
+			{$containerCss}
+		</STYLE>
+ 
+<DIV class="bs-top">
+{BEGIN container_addpage}<DIV class="container" data-container="addpage" data-pageid="{$pageid}" {$addpage_chiddenattr}>
+{BEGIN container_header}<DIV class="col-md-12" data-container="header" data-pageid="{$pageid}" {$header_chiddenattr}>
+{BEGIN addheader}<H2 data-brick="addheader" data-pageid="{$pageid}" {$addheader_hiddenattr}><FONT color="#000000" face="SutonnyMJ" size="6">
+{$pagetitlelabel main add}</FONT></H2>{END addheader}</DIV>
+{END container_header}{BEGIN container_message}<DIV class="col-md-12" data-container="message" data-pageid="{$pageid}" {$message_chiddenattr}>
+{BEGIN message_block}<DIV class="alert {$message_class}" role="alert" data-brick="message" data-pageid="{$pageid}" {$message_hiddenattr}>
+<H5>
+{$message}</H5>
+<DIV>{BEGIN back_button}<BUTTON class="btn btn-sm btn-default" {$backbutton_attrs}>Back to list</BUTTON> {END back_button}{BEGIN view_page_button}<BUTTON class="btn btn-sm btn-default" {$view_page_button_attrs}>View</BUTTON> {END view_page_button}{BEGIN edit_page_button}<BUTTON class="btn btn-sm btn-default" {$edit_page_button_attrs}>Edit</BUTTON> 
+{END edit_page_button}</DIV></DIV>{END message_block}</DIV>{END container_message}</DIV>
+{END container_addpage}{BEGIN container_fields}<DIV class=" " data-container="fields" data-pageid="{$pageid}" {$fields_chiddenattr}>
+<DIV role="form" data-brick="addfields" data-pageid="{$pageid}" {$addfields_hiddenattr}>
+<DIV class="container">
+{BEGIN ad_Date_fieldblock}<DIV class="col-md-3 form-group {$fielddispclass_ad_Date}" data-signal-error-for="ad_Date{$id}" data-fieldname="ad_Date"><LABEL class="control-label" for="{$labelfor_ad_Date}">{BEGIN ad_Date_label}<FONT face="SutonnyMJ"></FONT><FONT 
+face="SutonnyMJ" size="4"> 
+{$label main ad_Date}</FONT>{END ad_Date_label} </LABEL> 
+<DIV>
+{$ad_Date_editcontrol} 
+</DIV>
+<DIV class="help-block" data-helpfor="ad_Date">
+<DIV class="text-muted">
+{$tooltip main ad_Date} </DIV></DIV></DIV>
+{END ad_Date_fieldblock}{BEGIN Prof_fieldblock}<DIV class="col-md-3 form-group {$fielddispclass_Prof}" data-signal-error-for="Prof{$id}" data-fieldname="Prof"><LABEL class="control-label" for="{$labelfor_Prof}">{BEGIN Prof_label}<FONT face="SutonnyMJ"></FONT><FONT face="SutonnyMJ" 
+size="4"> 
+{$label main Prof}</FONT>{END Prof_label} 
+</LABEL> 
+<DIV>
+{$Prof_editcontrol} 
+</DIV>
+<DIV class="help-block" data-helpfor="Prof">
+<DIV class="text-muted">
+{$tooltip main Prof} </DIV></DIV></DIV>
+{END Prof_fieldblock}{BEGIN Br_Id_fieldblock}<DIV class="col-md-3 form-group {$fielddispclass_Br_Id}" data-signal-error-for="Br_Id{$id}" data-fieldname="Br_Id"><LABEL class="control-label" for="{$labelfor_Br_Id}">{BEGIN Br_Id_label}<FONT face="SutonnyMJ"></FONT><FONT face="SutonnyMJ" 
+size="4"> 
+{$label main Br_Id}</FONT>{END Br_Id_label} 
+</LABEL> 
+<DIV>
+{$Br_Id_editcontrol} 
+</DIV>
+<DIV class="help-block" data-helpfor="Br_Id">
+<DIV class="text-muted">
+{$tooltip main Br_Id} </DIV></DIV></DIV>
+{END Br_Id_fieldblock}{BEGIN Br_name_fieldblock}<DIV class="col-md-3 form-group {$fielddispclass_Br_name}" data-signal-error-for="Br_name{$id}" data-fieldname="Br_name"><LABEL class="control-label" for="{$labelfor_Br_name}">{BEGIN Br_name_label}<FONT face="SutonnyMJ"></FONT><FONT 
+face="SutonnyMJ" size="4"> 
+{$label main Br_name}</FONT>{END Br_name_label} 
+</LABEL> 
+<DIV>
+{$Br_name_editcontrol} 
+</DIV>
+<DIV class="help-block" data-helpfor="Br_name">
+<DIV class="text-muted">
+{$tooltip main Br_name} </DIV></DIV></DIV>
+{END Br_name_fieldblock}{BEGIN Area_fieldblock}<DIV class="col-md-3 form-group {$fielddispclass_Area}" data-signal-error-for="Area{$id}" data-fieldname="Area"><LABEL class="control-label" for="{$labelfor_Area}">{BEGIN Area_label}<FONT face="SutonnyMJ"></FONT><FONT face="SutonnyMJ" 
+size="4"> 
+{$label main Area}</FONT>{END Area_label} 
+</LABEL> 
+<DIV>
+{$Area_editcontrol} 
+</DIV>
+<DIV class="help-block" data-helpfor="Area">
+<DIV class="text-muted">
+{$tooltip main Area} </DIV></DIV></DIV>
+{END Area_fieldblock}{BEGIN Region_fieldblock}<DIV class="col-md-3 form-group {$fielddispclass_Region}" data-signal-error-for="Region{$id}" data-fieldname="Region"><LABEL class="control-label" for="{$labelfor_Region}">{BEGIN Region_label}<FONT face="Tahoma"></FONT><FONT face="Tahoma"><FONT 
+size="4"> </FONT><FONT size="2"> 
+{$label main Region}</FONT></FONT>{END Region_label} </LABEL> 
+<DIV>
+{$Region_editcontrol} 
+</DIV>
+<DIV class="help-block" data-helpfor="Region">
+<DIV class="text-muted">
+{$tooltip main Region} </DIV></DIV></DIV>
+{END Region_fieldblock}<DIV class="col-md-12">
+<DIV class="panel with-tabs panel-default form-tabs">
+<DIV class="panel-heading">
+{$tabgroup___1_header} </DIV>
+<DIV class="panel-body">
+{$TabGroup __1}&nbsp;	</DIV></DIV></DIV>
+<DIV class="col-md-12"></DIV>
+<DIV class="col-md-12"></DIV>
+<DIV class="col-md-12"></DIV>
+<DIV class="col-md-12"></DIV>
+<DIV class="col-md-12"></DIV>
+<DIV class="col-md-12"></DIV>
+<DIV class="col-md-12"></DIV>
+<DIV class="col-md-12"></DIV>
+<DIV class="col-md-12"></DIV>
+<DIV class="col-md-12"></DIV>
+<DIV class="col-md-12"></DIV>
+<DIV class="col-md-12"></DIV>
+<DIV class="col-md-12"></DIV>
+<DIV class="col-md-12"></DIV>
+<DIV class="col-md-12"></DIV>
+<DIV class="col-md-12"></DIV>
+<DIV class="col-md-12"></DIV></DIV>
+<DIV class="bs-2column">
+{BEGIN details_Req}<DIV class="bs-details" data-pageid="1">
+<DIV class="panel panel-info details-grid">
+<DIV class="panel-heading">
+<H4 class="panel-title"><FONT 
+face="SutonnyMJ" 
+size="5">mycvwikKvix</FONT></H4>
+<H4 class="panel-title"><SPAN>{BEGIN details_add_Req_link}<BUTTON class="btn btn-xs btn-info" type="button" {$details_add_Req_attrs}>Add 
+ new</BUTTON> {END details_add_Req_link}{BEGIN details_edit_Req_link}<BUTTON disabled class="btn btn-xs btn-info" type="button" {$details_edit_Req_attrs}>Edit</BUTTON> {END details_edit_Req_link}{BEGIN details_delete_Req_link}<BUTTON disabled class="btn btn-xs btn-info" type="button" {$details_delete_Req_attrs}>Delete</BUTTON> 
+{END details_delete_Req_link}{BEGIN saveall_Req_link}<BUTTON class="btn btn-xs btn-info" type="button" {$savealllink_Req_attrs} {$savealllink_Req_span}>Save 
+ all</BUTTON> {END saveall_Req_link}{BEGIN cancelall_Req_link}<BUTTON class="btn btn-xs btn-info" type="button" {$cancelalllink_Req_attrs} {$cancelalllink_Req_span}>Cancel</BUTTON> 
+{END cancelall_Req_link}</SPAN> </H4></DIV>
+<DIV class="panel-body">
+{$displayDetailTable_Req} </DIV></DIV></DIV>{END details_Req}</DIV>
+<DIV class="container"></DIV>
+<DIV class="bs-2column">
+{BEGIN details_Approv}<DIV class="bs-details" data-pageid="1">
+<DIV class="panel panel-info details-grid">
+<DIV class="panel-heading">
+<H4 class="panel-title"><FONT face="SutonnyMJ" size="5">Aby‡gv`bKvix</FONT></H4>
+<H4 class="panel-title"><SPAN>{BEGIN details_add_Approv_link}<BUTTON class="btn btn-xs btn-info" type="button" {$details_add_Approv_attrs}>Add 
+ new</BUTTON> {END details_add_Approv_link}{BEGIN details_edit_Approv_link}<BUTTON disabled class="btn btn-xs btn-info" type="button" {$details_edit_Approv_attrs}>Edit</BUTTON> {END details_edit_Approv_link}{BEGIN details_delete_Approv_link}<BUTTON disabled class="btn btn-xs btn-info" type="button" {$details_delete_Approv_attrs}>Delete</BUTTON> 
+{END details_delete_Approv_link}{BEGIN saveall_Approv_link}<BUTTON class="btn btn-xs btn-info" type="button" {$savealllink_Approv_attrs} {$savealllink_Approv_span}>Save 
+ all</BUTTON> {END saveall_Approv_link}{BEGIN cancelall_Approv_link}<BUTTON class="btn btn-xs btn-info" type="button" {$cancelalllink_Approv_attrs} {$cancelalllink_Approv_span}>Cancel</BUTTON> 
+{END cancelall_Approv_link}</SPAN> </H4></DIV>
+<DIV class="panel-body">
+{$displayDetailTable_Approv} </DIV></DIV></DIV>{END details_Approv}</DIV>
+<DIV class="container"></DIV></DIV></DIV>
+{END container_fields}{BEGIN container_bottombuttons}<DIV class="container" data-container="bottombuttons" data-pageid="{$pageid}" {$bottombuttons_chiddenattr}>
+{BEGIN container_buttons}<DIV class="form-group" data-container="buttons" data-pageid="{$pageid}" {$buttons_chiddenattr}>
+{BEGIN container_leftbuttons}<DIV class="col-md-4" data-container="leftbuttons" data-pageid="{$pageid}" {$leftbuttons_chiddenattr}>{BEGIN addbuttons}{BEGIN save_button}<BUTTON class="btn btn-primary" {$savebutton_attrs}>Save</BUTTON> {END save_button}{BEGIN reset_button}<BUTTON class="btn btn-default" id="resetButton{$id}">Reset</BUTTON> {END reset_button}{BEGIN back_button}<BUTTON class="btn btn-default" id="backButton{$id}">Back to 
+ list</BUTTON> {END back_button}{BEGIN cancel_button}<A class="btn btn-default" id="cancelButton{$id}" href="#">Cancel</A>{END cancel_button}{END addbuttons} 
+</DIV>{END container_leftbuttons}</DIV>{END container_buttons}</DIV>{END container_bottombuttons}</DIV>
+<DIV class="bs-middle">
+<DIV class="bs-topmiddle"></DIV>
+<DIV class="bs-left" {$blockattr_left}></DIV> 
+<DIV class="bs-center"></DIV> 
+<DIV class="bs-right"></DIV></DIV>
+<DIV class="bs-bottom"></DIV>
+{$footer}{END body} </BODY></HTML>

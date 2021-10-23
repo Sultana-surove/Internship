@@ -1,0 +1,6122 @@
+<!doctype html><p align=center><font size=+1 color=red></font></p>
+<p align=center><font size=+1 color=red></font></p>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-list" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default ">					
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-header   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-navcontrolled bs-hidden-xs" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main horizontal}
+
+{END menu_block}
+
+
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN more_list}
+<div {$morebutton_hiddenattr} data-pageid="{$pageid}" data-brick="morebutton" class="btn-group bs-navsection">
+	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="glyphicon glyphicon-cog"></span>
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu">
+		
+				{BEGIN exportselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$exportselectedlink_attrs} {$exportselectedlink_span} >Export selected</a></li>
+		{END exportselected_link}
+		
+				{BEGIN deleteselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>Delete selected</a></li>
+		{END deleteselected_link}
+		
+				<li role="separator" class="divider"></li>	
+
+				{BEGIN asearch_link}
+		<li><a href="main_search.php" {$advsearchlink_attrs}>Advanced search</a></li>
+		{END asearch_link}
+
+				{BEGIN searchPanelTopButtons}
+		<li><a href=# id="showOptPanel{$id}">Show search panel</a></li>
+		{END searchPanelTopButtons}	
+		
+				
+				<li role="separator" class="divider"></li>	
+		
+				
+				{BEGIN export_link}
+		<li><a target="_blank" href="main_export.php"  {$exportlink_attrs}>Export results</a></li>
+		{END export_link}
+
+				{BEGIN import_link}
+		<li><a href="main_import.php?{$crosstable_attrs}"  {$importlink_attrs}>Import</a></li>
+		{END import_link}
+
+				
+	</ul>  
+</div>
+
+{END more_list}
+
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>Login</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>Log out</a></li>
+		{END logoutbutton}
+		
+
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+
+
+
+
+{BEGIN container_more_1}
+<div {$more_1_chiddenattr} data-pageid="{$pageid}" data-container="more_1" class=" navbar-right navbar-form   "> 
+
+{BEGIN searchform_block}
+<span {$search_hiddenattr} data-pageid="{$pageid}" data-brick="search" class="form-group">
+
+ <div  class="input-group">
+{BEGIN searchform_text}
+	<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<span class="input-group-btn">
+	{BEGIN searchform_showall}
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Show all">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+	{BEGIN searchform_search}
+	<button {$searchbutton_attrs} class="btn btn-primary" >
+		<span class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>
+{END searchform_block}
+
+
+
+</div>
+{END container_more_1}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+
+{BEGIN container_breadcrumbs}
+<div {$breadcrumbs_chiddenattr} data-pageid="{$pageid}" data-container="breadcrumbs" class="    "> 
+
+
+
+
+{BEGIN container_bc}
+<div {$bc_chiddenattr} data-pageid="{$pageid}" data-container="bc" class="    "> 
+
+{BEGIN breadcrumbs}
+<ol class="breadcrumb">
+<li ><a href="{$home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumbs}
+
+
+
+</div>
+{END container_bc}
+
+
+
+
+
+
+</div>
+{END container_breadcrumbs}
+
+
+
+
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+
+{BEGIN container_left}
+<div {$left_chiddenattr} data-pageid="{$pageid}" data-container="left" class="    "> 
+
+{BEGIN searchPanel}
+<div {$searchpanel_hiddenattr} data-pageid="{$pageid}" data-brick="searchpanel" class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} >
+	<!-- Search panel content -->
+	
+	<div class="panel-heading">
+		<div class="btn-group" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Search in
+			<span class="caret"></span>
+			</button>
+		</div>
+
+		
+		<div class="btn-group searchpanel-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Show options</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>all conditions</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>any condition</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>hide</a></li>
+			</ul>
+		</div>
+	
+		
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+
+
+	</div>
+	
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>Search</button>
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>Show all</button>
+	</div>
+</div>
+
+
+{END searchPanel}
+
+
+
+
+</div>
+{END container_left}
+
+
+			</div>
+			<div class="bs-center bs-screenwidth bs-minwidth">
+				
+
+{BEGIN container_messagerow}
+<div {$messagerow_chiddenattr} data-pageid="{$pageid}" data-container="messagerow" class="row rnr-rowcontainer ">
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-12 "> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">{$message}</div>
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+</div>{END container_messagerow}
+
+
+
+{BEGIN container_gridcontrols}
+<div {$gridcontrols_chiddenattr} data-pageid="{$pageid}" data-container="gridcontrols" class="row rnr-rowcontainer bs-navcontrolled bs-hidden-xs">
+
+
+
+
+{BEGIN container_add_delete}
+<div {$add_delete_chiddenattr} data-pageid="{$pageid}" data-container="add_delete" class=" bottom-margin  col-md-6 "> 
+
+{BEGIN newrecord_controls_block}
+		{BEGIN add_link}
+		<a {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$addlink_attrs}>Add new</a>
+	{END add_link}
+
+	
+{END newrecord_controls_block}
+
+
+{BEGIN record_controls_block}
+<span {$recordcontrol_hiddenattr} data-pageid="{$pageid}" data-brick="recordcontrol">
+		{BEGIN deleteselected_link}
+	<button type="button" class="btn btn-default" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled>Delete</button>
+	{END deleteselected_link}
+		</span>
+
+{END record_controls_block}
+
+
+
+</div>
+{END container_add_delete}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo}
+<div {$gridinfo_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo" class=" bottom-margin pull-right text-right col-md-6 "> 
+
+{BEGIN details_found}
+<span {$details_found_hiddenattr} data-pageid="{$pageid}" data-brick="details_found" class="form-inline form-inline-always">
+	{$records_indicator}
+	<span>
+	{BEGIN recordspp_block}
+			{$recsPerPage}
+	{END recordspp_block}
+	</span>
+</span>
+{END details_found}
+
+
+{BEGIN print_friendly}
+<span {$printpanel_hiddenattr} data-pageid="{$pageid}" data-brick="printpanel" class="bs-printpanel" id="printpanelblock{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="Print-friendly page">
+		<span class="glyphicon glyphicon-print" ></span>
+		<span class="caret"></span>
+    </button>
+	<ul class="dropdown-menu pull-right" >
+		<li>
+			<div class="container-fluid" id="print_friendly_scope{$id}">
+				<div class="row">
+					<div class="col-md-4">Scope:</div>
+										{BEGIN print_friendly_all}
+					<div class="col-md-8">
+						<label for="printAll{$id}">
+							<input type="radio" id="printAll{$id}" data-href="main_print.php?all=1&amp;{$crosstable_attrs}" name="printScope">
+							Print all pages
+						</label>
+					</div>
+					{END print_friendly_all}
+				</div>
+				<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printPage{$id}">
+							<input type="radio" id="printPage{$id}" data-href="main_print.php?{$crosstable_attrs}" name="printScope" checked>
+							Print this page
+						</label>
+					</div>
+				</div>
+								<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printSelection{$id}" style="color: gray;">
+							<input type="radio" id="printSelection{$id}" name="printScope" disabled="disabled">
+							Print selected
+						</label>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+
+				<li>			
+		{BEGIN print_details}
+			<div class="rnr-printdetails">
+				<label for="printDetailsToggler{$id}">
+					<input type="checkbox" id="printDetailsToggler{$id}">
+					Print details
+				</label>
+				<div class="rnr-printdetailstables"  id="printdetailstables{$id}" style="display:none;">
+					{BEGIN print_details_asset_des}
+						
+							<div class="rnr-printdetialstable">
+								<label for="printDetailsasset_des{$id}">
+									<input type="checkbox" value="asset_des" id="printDetailsasset_des{$id}" checked>
+									Asset Des
+								</label>
+							</div>
+					{END print_details_asset_des}
+					{BEGIN print_details_FM_Income}
+						
+							<div class="rnr-printdetialstable">
+								<label for="printDetailsFM_Income{$id}">
+									<input type="checkbox" value="FM_Income" id="printDetailsFM_Income{$id}" checked>
+									FM Income
+								</label>
+							</div>
+					{END print_details_FM_Income}
+					{BEGIN print_details_Approv}
+						
+							<div class="rnr-printdetialstable">
+								<label for="printDetailsApprov{$id}">
+									<input type="checkbox" value="Approv" id="printDetailsApprov{$id}" checked>
+									Approv
+								</label>
+							</div>
+					{END print_details_Approv}
+					{BEGIN print_details_inv_risk}
+						
+							<div class="rnr-printdetialstable">
+								<label for="printDetailsinv_risk{$id}">
+									<input type="checkbox" value="inv_risk" id="printDetailsinv_risk{$id}" checked>
+									Inv-risk
+								</label>
+							</div>
+					{END print_details_inv_risk}
+					{BEGIN print_details_Org_info}
+						
+							<div class="rnr-printdetialstable">
+								<label for="printDetailsOrg_info{$id}">
+									<input type="checkbox" value="Org_info" id="printDetailsOrg_info{$id}" checked>
+									Org Info
+								</label>
+							</div>
+					{END print_details_Org_info}
+					{BEGIN print_details_St_Info}
+						
+							<div class="rnr-printdetialstable">
+								<label for="printDetailsSt_Info{$id}">
+									<input type="checkbox" value="St_Info" id="printDetailsSt_Info{$id}" checked>
+									St Info
+								</label>
+							</div>
+					{END print_details_St_Info}
+					{BEGIN print_details_Req}
+						
+							<div class="rnr-printdetialstable">
+								<label for="printDetailsReq{$id}">
+									<input type="checkbox" value="Req" id="printDetailsReq{$id}" checked>
+									Req
+								</label>
+							</div>
+					{END print_details_Req}
+					{BEGIN print_details_Remitance}
+						
+							<div class="rnr-printdetialstable">
+								<label for="printDetailsRemitance{$id}">
+									<input type="checkbox" value="Remitance" id="printDetailsRemitance{$id}" checked>
+									Remitance
+								</label>
+							</div>
+					{END print_details_Remitance}
+					{BEGIN print_details_BRI}
+						
+							<div class="rnr-printdetialstable">
+								<label for="printDetailsBRI{$id}">
+									<input type="checkbox" value="BRI" id="printDetailsBRI{$id}" checked>
+									BRI
+								</label>
+							</div>
+					{END print_details_BRI}
+					{BEGIN print_details_PFLI}
+						
+							<div class="rnr-printdetialstable">
+								<label for="printDetailsPFLI{$id}">
+									<input type="checkbox" value="PFLI" id="printDetailsPFLI{$id}" checked>
+									PFLI
+								</label>
+							</div>
+					{END print_details_PFLI}
+					{BEGIN print_details_Month_sales}
+						
+							<div class="rnr-printdetialstable">
+								<label for="printDetailsMonth_sales{$id}">
+									<input type="checkbox" value="Month_sales" id="printDetailsMonth_sales{$id}" checked>
+									Month Sales
+								</label>
+							</div>
+					{END print_details_Month_sales}
+				</div>
+			</div>
+		{END print_details}
+		</li>
+		<li class="divider" role="separator"></li>
+
+				<li>	
+			<div class="rnr-printdetails">
+				<label for="printPerPage{$id}">
+											Records Per Page:
+				</label>
+				<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+		<li class="rnr-printbutton">				
+			<button type="button" class="btn btn-primary" id="print_friendly_button{$id}" >Print</button>			
+		</li>
+	</ul>	
+</span>
+
+{END print_friendly}
+
+
+
+
+</div>
+{END container_gridinfo}
+
+
+
+
+
+
+</div>{END container_gridcontrols}
+
+
+
+{BEGIN container_center}
+<div {$center_chiddenattr} data-pageid="{$pageid}" data-container="center" class="    "> 
+
+
+
+
+{BEGIN container_grid}
+<div {$grid_chiddenattr} data-pageid="{$pageid}" data-container="grid" class="bs-grid    "> 
+
+{BEGIN grid_block}
+	<style>
+	.bs-gridcell[data-field=MID]:before {
+		content: "{$label main MID}";
+	}
+	.bs-gridcell[data-field=ad_Date]:before {
+		content: "{$label main ad_Date}";
+	}
+	.bs-gridcell[data-field=Prof]:before {
+		content: "{$label main Prof}";
+	}
+	.bs-gridcell[data-field=Br_Id]:before {
+		content: "{$label main Br_Id}";
+	}
+	.bs-gridcell[data-field=Br_name]:before {
+		content: "{$label main Br_name}";
+	}
+	.bs-gridcell[data-field=Area]:before {
+		content: "{$label main Area}";
+	}
+	.bs-gridcell[data-field=Region]:before {
+		content: "{$label main Region}";
+	}
+	.bs-gridcell[data-field=Mem_Name]:before {
+		content: "{$label main Mem_Name}";
+	}
+	.bs-gridcell[data-field=D_Birth]:before {
+		content: "{$label main D_Birth}";
+	}
+	.bs-gridcell[data-field=Age]:before {
+		content: "{$label main Age}";
+	}
+	.bs-gridcell[data-field=Mem_No]:before {
+		content: "{$label main Mem_No}";
+	}
+	.bs-gridcell[data-field=KYC]:before {
+		content: "{$label main KYC}";
+	}
+	.bs-gridcell[data-field=Father]:before {
+		content: "{$label main Father}";
+	}
+	.bs-gridcell[data-field=Mother]:before {
+		content: "{$label main Mother}";
+	}
+	.bs-gridcell[data-field=Sex]:before {
+		content: "{$label main Sex}";
+	}
+	.bs-gridcell[data-field=M_staus]:before {
+		content: "{$label main M_staus}";
+	}
+	.bs-gridcell[data-field=M_staus_other]:before {
+		content: "{$label main M_staus_other}";
+	}
+	.bs-gridcell[data-field=Ed_Backgr]:before {
+		content: "{$label main Ed_Backgr}";
+	}
+	.bs-gridcell[data-field=Ed_other]:before {
+		content: "{$label main Ed_other}";
+	}
+	.bs-gridcell[data-field=FTM]:before {
+		content: "{$label main FTM}";
+	}
+	.bs-gridcell[data-field=FEM]:before {
+		content: "{$label main FEM}";
+	}
+	.bs-gridcell[data-field=Pr_adr]:before {
+		content: "{$label main Pr_adr}";
+	}
+	.bs-gridcell[data-field=Per_adr]:before {
+		content: "{$label main Per_adr}";
+	}
+	.bs-gridcell[data-field=NID]:before {
+		content: "{$label main NID}";
+	}
+	.bs-gridcell[data-field=cell_no]:before {
+		content: "{$label main cell_no}";
+	}
+	.bs-gridcell[data-field=E_Tin]:before {
+		content: "{$label main E_Tin}";
+	}
+	.bs-gridcell[data-field=ENFMN]:before {
+		content: "{$label main ENFMN}";
+	}
+	.bs-gridcell[data-field=ENFMN_Rel]:before {
+		content: "{$label main ENFMN_Rel}";
+	}
+	.bs-gridcell[data-field=ALT]:before {
+		content: "{$label main ALT}";
+	}
+	.bs-gridcell[data-field=MALT]:before {
+		content: "{$label main MALT}";
+	}
+	.bs-gridcell[data-field=LFC]:before {
+		content: "{$label main LFC}";
+	}
+	.bs-gridcell[data-field=LS]:before {
+		content: "{$label main LS}";
+	}
+	.bs-gridcell[data-field=SCH]:before {
+		content: "{$label main SCH}";
+	}
+	.bs-gridcell[data-field=SCL]:before {
+		content: "{$label main SCL}";
+	}
+	.bs-gridcell[data-field=Inst_Size]:before {
+		content: "{$label main Inst_Size}";
+	}
+	.bs-gridcell[data-field=Inst_Amt]:before {
+		content: "{$label main Inst_Amt}";
+	}
+	.bs-gridcell[data-field=B_name]:before {
+		content: "{$label main B_name}";
+	}
+	.bs-gridcell[data-field=B_Des]:before {
+		content: "{$label main B_Des}";
+	}
+	.bs-gridcell[data-field=B_Type]:before {
+		content: "{$label main B_Type}";
+	}
+	.bs-gridcell[data-field=Stabl]:before {
+		content: "{$label main Stabl}";
+	}
+	.bs-gridcell[data-field=Emp_No]:before {
+		content: "{$label main Emp_No}";
+	}
+	.bs-gridcell[data-field=Trade_Lic]:before {
+		content: "{$label main Trade_Lic}";
+	}
+	.bs-gridcell[data-field=Exp_Date]:before {
+		content: "{$label main Exp_Date}";
+	}
+	.bs-gridcell[data-field=Certifi_Payer]:before {
+		content: "{$label main Certifi_Payer}";
+	}
+	.bs-gridcell[data-field=B_style]:before {
+		content: "{$label main B_style}";
+	}
+	.bs-gridcell[data-field=B_Addr]:before {
+		content: "{$label main B_Addr}";
+	}
+	.bs-gridcell[data-field=Other_B]:before {
+		content: "{$label main Other_B}";
+	}
+	.bs-gridcell[data-field=FM]:before {
+		content: "{$label main FM}";
+	}
+	.bs-gridcell[data-field=Remitance]:before {
+		content: "{$label main Remitance}";
+	}
+	.bs-gridcell[data-field=Oth_Org_Loan]:before {
+		content: "{$label main Oth_Org_Loan}";
+	}
+	.bs-gridcell[data-field=M_S_Total]:before {
+		content: "{$label main M_S_Total}";
+	}
+	.bs-gridcell[data-field=Month_Sales]:before {
+		content: "{$label main Month_Sales}";
+	}
+	.bs-gridcell[data-field=M_name1]:before {
+		content: "{$label main M_name1}";
+	}
+	.bs-gridcell[data-field=M_Name2]:before {
+		content: "{$label main M_Name2}";
+	}
+	.bs-gridcell[data-field=M_Name3]:before {
+		content: "{$label main M_Name3}";
+	}
+	.bs-gridcell[data-field=Y_S_1]:before {
+		content: "{$label main Y_S_1}";
+	}
+	.bs-gridcell[data-field=Y_S_2]:before {
+		content: "{$label main Y_S_2}";
+	}
+	.bs-gridcell[data-field=Y_S_3]:before {
+		content: "{$label main Y_S_3}";
+	}
+	.bs-gridcell[data-field=Y_A_A1]:before {
+		content: "{$label main Y_A_A1}";
+	}
+	.bs-gridcell[data-field=Y_A_A2]:before {
+		content: "{$label main Y_A_A2}";
+	}
+	.bs-gridcell[data-field=Y_A_A3]:before {
+		content: "{$label main Y_A_A3}";
+	}
+	.bs-gridcell[data-field=Y_Sal1]:before {
+		content: "{$label main Y_Sal1}";
+	}
+	.bs-gridcell[data-field=Y_sal2]:before {
+		content: "{$label main Y_sal2}";
+	}
+	.bs-gridcell[data-field=Y_Sal3]:before {
+		content: "{$label main Y_Sal3}";
+	}
+	.bs-gridcell[data-field=Y_Y_T]:before {
+		content: "{$label main Y_Y_T}";
+	}
+	.bs-gridcell[data-field=Y_A_T]:before {
+		content: "{$label main Y_A_T}";
+	}
+	.bs-gridcell[data-field=Income_Expen]:before {
+		content: "{$label main Income_Expen}";
+	}
+	.bs-gridcell[data-field=Income_Expen_From]:before {
+		content: "{$label main Income_Expen_From}";
+	}
+	.bs-gridcell[data-field=Income1]:before {
+		content: "{$label main Income1}";
+	}
+	.bs-gridcell[data-field=Income_other]:before {
+		content: "{$label main Income_other}";
+	}
+	.bs-gridcell[data-field=Income2]:before {
+		content: "{$label main Income2}";
+	}
+	.bs-gridcell[data-field=Income_tot]:before {
+		content: "{$label main Income_tot}";
+	}
+	.bs-gridcell[data-field=Expen_1]:before {
+		content: "{$label main Expen_1}";
+	}
+	.bs-gridcell[data-field=Expen_2]:before {
+		content: "{$label main Expen_2}";
+	}
+	.bs-gridcell[data-field=Expen_3]:before {
+		content: "{$label main Expen_3}";
+	}
+	.bs-gridcell[data-field=Expen_4]:before {
+		content: "{$label main Expen_4}";
+	}
+	.bs-gridcell[data-field=Expen_5]:before {
+		content: "{$label main Expen_5}";
+	}
+	.bs-gridcell[data-field=Expen_6]:before {
+		content: "{$label main Expen_6}";
+	}
+	.bs-gridcell[data-field=Expen_7]:before {
+		content: "{$label main Expen_7}";
+	}
+	.bs-gridcell[data-field=Expen_8]:before {
+		content: "{$label main Expen_8}";
+	}
+	.bs-gridcell[data-field=Expen_9]:before {
+		content: "{$label main Expen_9}";
+	}
+	.bs-gridcell[data-field=Expen_tot]:before {
+		content: "{$label main Expen_tot}";
+	}
+	.bs-gridcell[data-field=F_Exp1]:before {
+		content: "{$label main F_Exp1}";
+	}
+	.bs-gridcell[data-field=F_Exp2]:before {
+		content: "{$label main F_Exp2}";
+	}
+	.bs-gridcell[data-field=F_Exp3]:before {
+		content: "{$label main F_Exp3}";
+	}
+	.bs-gridcell[data-field=F_Exp4]:before {
+		content: "{$label main F_Exp4}";
+	}
+	.bs-gridcell[data-field=F_Exptot]:before {
+		content: "{$label main F_Exptot}";
+	}
+	.bs-gridcell[data-field=T_Exp_Tot]:before {
+		content: "{$label main T_Exp_Tot}";
+	}
+	.bs-gridcell[data-field=Ano_inc_sour]:before {
+		content: "{$label main Ano_inc_sour}";
+	}
+	.bs-gridcell[data-field=Ano_inc_sour_month]:before {
+		content: "{$label main Ano_inc_sour_month}";
+	}
+	.bs-gridcell[data-field=Pre_L_Y]:before {
+		content: "{$label main Pre_L_Y}";
+	}
+	.bs-gridcell[data-field=L_O_Own_eqt]:before {
+		content: "{$label main L_O_Own_eqt}";
+	}
+	.bs-gridcell[data-field=RDRS_Loan]:before {
+		content: "{$label main RDRS_Loan}";
+	}
+	.bs-gridcell[data-field=Oth_Sourc]:before {
+		content: "{$label main Oth_Sourc}";
+	}
+	.bs-gridcell[data-field=Due_Purch]:before {
+		content: "{$label main Due_Purch}";
+	}
+	.bs-gridcell[data-field=LO_other1]:before {
+		content: "{$label main LO_other1}";
+	}
+	.bs-gridcell[data-field=LO_other2]:before {
+		content: "{$label main LO_other2}";
+	}
+	.bs-gridcell[data-field=TLO]:before {
+		content: "{$label main TLO}";
+	}
+	.bs-gridcell[data-field=P_Asset]:before {
+		content: "{$label main P_Asset}";
+	}
+	.bs-gridcell[data-field=L_stor_P]:before {
+		content: "{$label main L_stor_P}";
+	}
+	.bs-gridcell[data-field=Invest]:before {
+		content: "{$label main Invest}";
+	}
+	.bs-gridcell[data-field=Due_sales]:before {
+		content: "{$label main Due_sales}";
+	}
+	.bs-gridcell[data-field=Adv_Pay]:before {
+		content: "{$label main Adv_Pay}";
+	}
+	.bs-gridcell[data-field=CashinHand]:before {
+		content: "{$label main CashinHand}";
+	}
+	.bs-gridcell[data-field=CashAtBank]:before {
+		content: "{$label main CashAtBank}";
+	}
+	.bs-gridcell[data-field=TAss]:before {
+		content: "{$label main TAss}";
+	}
+	.bs-gridcell[data-field=FA]:before {
+		content: "{$label main FA}";
+	}
+	.bs-gridcell[data-field=FA1]:before {
+		content: "{$label main FA1}";
+	}
+	.bs-gridcell[data-field=FA2]:before {
+		content: "{$label main FA2}";
+	}
+	.bs-gridcell[data-field=FA3]:before {
+		content: "{$label main FA3}";
+	}
+	.bs-gridcell[data-field=FA4]:before {
+		content: "{$label main FA4}";
+	}
+	.bs-gridcell[data-field=FA5]:before {
+		content: "{$label main FA5}";
+	}
+	.bs-gridcell[data-field=FAN1]:before {
+		content: "{$label main FAN1}";
+	}
+	.bs-gridcell[data-field=FAN2]:before {
+		content: "{$label main FAN2}";
+	}
+	.bs-gridcell[data-field=FAN3]:before {
+		content: "{$label main FAN3}";
+	}
+	.bs-gridcell[data-field=FAN4]:before {
+		content: "{$label main FAN4}";
+	}
+	.bs-gridcell[data-field=FAN5]:before {
+		content: "{$label main FAN5}";
+	}
+	.bs-gridcell[data-field=FAU1]:before {
+		content: "{$label main FAU1}";
+	}
+	.bs-gridcell[data-field=FAU2]:before {
+		content: "{$label main FAU2}";
+	}
+	.bs-gridcell[data-field=FAU3]:before {
+		content: "{$label main FAU3}";
+	}
+	.bs-gridcell[data-field=FAU4]:before {
+		content: "{$label main FAU4}";
+	}
+	.bs-gridcell[data-field=FAU5]:before {
+		content: "{$label main FAU5}";
+	}
+	.bs-gridcell[data-field=FAT1]:before {
+		content: "{$label main FAT1}";
+	}
+	.bs-gridcell[data-field=FAT2]:before {
+		content: "{$label main FAT2}";
+	}
+	.bs-gridcell[data-field=FAT3]:before {
+		content: "{$label main FAT3}";
+	}
+	.bs-gridcell[data-field=FAT4]:before {
+		content: "{$label main FAT4}";
+	}
+	.bs-gridcell[data-field=FAT5]:before {
+		content: "{$label main FAT5}";
+	}
+	.bs-gridcell[data-field=FAR]:before {
+		content: "{$label main FAR}";
+	}
+	.bs-gridcell[data-field=FATT]:before {
+		content: "{$label main FATT}";
+	}
+	.bs-gridcell[data-field=CA]:before {
+		content: "{$label main CA}";
+	}
+	.bs-gridcell[data-field=CA1]:before {
+		content: "{$label main CA1}";
+	}
+	.bs-gridcell[data-field=CA2]:before {
+		content: "{$label main CA2}";
+	}
+	.bs-gridcell[data-field=CA3]:before {
+		content: "{$label main CA3}";
+	}
+	.bs-gridcell[data-field=CA4]:before {
+		content: "{$label main CA4}";
+	}
+	.bs-gridcell[data-field=CA5]:before {
+		content: "{$label main CA5}";
+	}
+	.bs-gridcell[data-field=CAN1]:before {
+		content: "{$label main CAN1}";
+	}
+	.bs-gridcell[data-field=CAN2]:before {
+		content: "{$label main CAN2}";
+	}
+	.bs-gridcell[data-field=CAN3]:before {
+		content: "{$label main CAN3}";
+	}
+	.bs-gridcell[data-field=CAN4]:before {
+		content: "{$label main CAN4}";
+	}
+	.bs-gridcell[data-field=CAN5]:before {
+		content: "{$label main CAN5}";
+	}
+	.bs-gridcell[data-field=CAU1]:before {
+		content: "{$label main CAU1}";
+	}
+	.bs-gridcell[data-field=CAU2]:before {
+		content: "{$label main CAU2}";
+	}
+	.bs-gridcell[data-field=CAU3]:before {
+		content: "{$label main CAU3}";
+	}
+	.bs-gridcell[data-field=CAU4]:before {
+		content: "{$label main CAU4}";
+	}
+	.bs-gridcell[data-field=CAU5]:before {
+		content: "{$label main CAU5}";
+	}
+	.bs-gridcell[data-field=CAT1]:before {
+		content: "{$label main CAT1}";
+	}
+	.bs-gridcell[data-field=CAT2]:before {
+		content: "{$label main CAT2}";
+	}
+	.bs-gridcell[data-field=CAT3]:before {
+		content: "{$label main CAT3}";
+	}
+	.bs-gridcell[data-field=CAT4]:before {
+		content: "{$label main CAT4}";
+	}
+	.bs-gridcell[data-field=CAT5]:before {
+		content: "{$label main CAT5}";
+	}
+	.bs-gridcell[data-field=CAR]:before {
+		content: "{$label main CAR}";
+	}
+	.bs-gridcell[data-field=CATT]:before {
+		content: "{$label main CATT}";
+	}
+	.bs-gridcell[data-field=FaCaTT]:before {
+		content: "{$label main FaCaTT}";
+	}
+	.bs-gridcell[data-field=BRI]:before {
+		content: "{$label main BRI}";
+	}
+	.bs-gridcell[data-field=RG_Name]:before {
+		content: "{$label main RG_Name}";
+	}
+	.bs-gridcell[data-field=RG_Father]:before {
+		content: "{$label main RG_Father}";
+	}
+	.bs-gridcell[data-field=RG_Pre_Add]:before {
+		content: "{$label main RG_Pre_Add}";
+	}
+	.bs-gridcell[data-field=RG_Per_Add]:before {
+		content: "{$label main RG_Per_Add}";
+	}
+	.bs-gridcell[data-field=RG_NID]:before {
+		content: "{$label main RG_NID}";
+	}
+	.bs-gridcell[data-field=RG_Cell]:before {
+		content: "{$label main RG_Cell}";
+	}
+	.bs-gridcell[data-field=RG_Year]:before {
+		content: "{$label main RG_Year}";
+	}
+	.bs-gridcell[data-field=RG_Occup]:before {
+		content: "{$label main RG_Occup}";
+	}
+	.bs-gridcell[data-field=RG_M_Income]:before {
+		content: "{$label main RG_M_Income}";
+	}
+	.bs-gridcell[data-field=RG_M_Exp]:before {
+		content: "{$label main RG_M_Exp}";
+	}
+	.bs-gridcell[data-field=RG_Pic]:before {
+		content: "{$label main RG_Pic}";
+	}
+	.bs-gridcell[data-field=RF_Name]:before {
+		content: "{$label main RF_Name}";
+	}
+	.bs-gridcell[data-field=RF_Father]:before {
+		content: "{$label main RF_Father}";
+	}
+	.bs-gridcell[data-field=RF_Pre_Add]:before {
+		content: "{$label main RF_Pre_Add}";
+	}
+	.bs-gridcell[data-field=RF_Per_Add]:before {
+		content: "{$label main RF_Per_Add}";
+	}
+	.bs-gridcell[data-field=RF_NID]:before {
+		content: "{$label main RF_NID}";
+	}
+	.bs-gridcell[data-field=RF_Cell]:before {
+		content: "{$label main RF_Cell}";
+	}
+	.bs-gridcell[data-field=RF_Age]:before {
+		content: "{$label main RF_Age}";
+	}
+	.bs-gridcell[data-field=RF_Relation]:before {
+		content: "{$label main RF_Relation}";
+	}
+	.bs-gridcell[data-field=RF_Occup]:before {
+		content: "{$label main RF_Occup}";
+	}
+	.bs-gridcell[data-field=RF_M_Income]:before {
+		content: "{$label main RF_M_Income}";
+	}
+	.bs-gridcell[data-field=RF_M_Exp]:before {
+		content: "{$label main RF_M_Exp}";
+	}
+	.bs-gridcell[data-field=RF_Pic]:before {
+		content: "{$label main RF_Pic}";
+	}
+	.bs-gridcell[data-field=ExDC]:before {
+		content: "{$label main ExDC}";
+	}
+	.bs-gridcell[data-field=ExDC1]:before {
+		content: "{$label main ExDC1}";
+	}
+	.bs-gridcell[data-field=ExDC2]:before {
+		content: "{$label main ExDC2}";
+	}
+	.bs-gridcell[data-field=ExDC3]:before {
+		content: "{$label main ExDC3}";
+	}
+	.bs-gridcell[data-field=ExDC4]:before {
+		content: "{$label main ExDC4}";
+	}
+	.bs-gridcell[data-field=RDRSL]:before {
+		content: "{$label main RDRSL}";
+	}
+	.bs-gridcell[data-field=RDRSL1]:before {
+		content: "{$label main RDRSL1}";
+	}
+	.bs-gridcell[data-field=RDRSL2]:before {
+		content: "{$label main RDRSL2}";
+	}
+	.bs-gridcell[data-field=RDRSL3]:before {
+		content: "{$label main RDRSL3}";
+	}
+	.bs-gridcell[data-field=RDRSL4]:before {
+		content: "{$label main RDRSL4}";
+	}
+	.bs-gridcell[data-field=TRDRSL]:before {
+		content: "{$label main TRDRSL}";
+	}
+	.bs-gridcell[data-field=T_RDRSL]:before {
+		content: "{$label main T_RDRSL}";
+	}
+	.bs-gridcell[data-field=OTL]:before {
+		content: "{$label main OTL}";
+	}
+	.bs-gridcell[data-field=OTL1]:before {
+		content: "{$label main OTL1}";
+	}
+	.bs-gridcell[data-field=OTL2]:before {
+		content: "{$label main OTL2}";
+	}
+	.bs-gridcell[data-field=OTL3]:before {
+		content: "{$label main OTL3}";
+	}
+	.bs-gridcell[data-field=OTL4]:before {
+		content: "{$label main OTL4}";
+	}
+	.bs-gridcell[data-field=TOTL]:before {
+		content: "{$label main TOTL}";
+	}
+	.bs-gridcell[data-field=T_OTL]:before {
+		content: "{$label main T_OTL}";
+	}
+	.bs-gridcell[data-field=OFIW]:before {
+		content: "{$label main OFIW}";
+	}
+	.bs-gridcell[data-field=OFIW1]:before {
+		content: "{$label main OFIW1}";
+	}
+	.bs-gridcell[data-field=OFIW2]:before {
+		content: "{$label main OFIW2}";
+	}
+	.bs-gridcell[data-field=OFIW3]:before {
+		content: "{$label main OFIW3}";
+	}
+	.bs-gridcell[data-field=OFIW4]:before {
+		content: "{$label main OFIW4}";
+	}
+	.bs-gridcell[data-field=TOFIW]:before {
+		content: "{$label main TOFIW}";
+	}
+	.bs-gridcell[data-field=T_OFIW]:before {
+		content: "{$label main T_OFIW}";
+	}
+	.bs-gridcell[data-field=OFAL]:before {
+		content: "{$label main OFAL}";
+	}
+	.bs-gridcell[data-field=OFAL1]:before {
+		content: "{$label main OFAL1}";
+	}
+	.bs-gridcell[data-field=OFAL2]:before {
+		content: "{$label main OFAL2}";
+	}
+	.bs-gridcell[data-field=OFAL3]:before {
+		content: "{$label main OFAL3}";
+	}
+	.bs-gridcell[data-field=OFAL4]:before {
+		content: "{$label main OFAL4}";
+	}
+	.bs-gridcell[data-field=TOFAL]:before {
+		content: "{$label main TOFAL}";
+	}
+	.bs-gridcell[data-field=T_OFAL]:before {
+		content: "{$label main T_OFAL}";
+	}
+	.bs-gridcell[data-field=TPE]:before {
+		content: "{$label main TPE}";
+	}
+	.bs-gridcell[data-field=TPE1]:before {
+		content: "{$label main TPE1}";
+	}
+	.bs-gridcell[data-field=TPE2]:before {
+		content: "{$label main TPE2}";
+	}
+	.bs-gridcell[data-field=TPE3]:before {
+		content: "{$label main TPE3}";
+	}
+	.bs-gridcell[data-field=TPE4]:before {
+		content: "{$label main TPE4}";
+	}
+	.bs-gridcell[data-field=TTPE]:before {
+		content: "{$label main TTPE}";
+	}
+	.bs-gridcell[data-field=T_TPE]:before {
+		content: "{$label main T_TPE}";
+	}
+	.bs-gridcell[data-field=OFEWHM]:before {
+		content: "{$label main OFEWHM}";
+	}
+	.bs-gridcell[data-field=PLAF]:before {
+		content: "{$label main PLAF}";
+	}
+	.bs-gridcell[data-field=PLAT]:before {
+		content: "{$label main PLAT}";
+	}
+	.bs-gridcell[data-field=A_Y_A]:before {
+		content: "{$label main A_Y_A}";
+	}
+	.bs-gridcell[data-field=B_Y_A]:before {
+		content: "{$label main B_Y_A}";
+	}
+	.bs-gridcell[data-field=C_Y_A]:before {
+		content: "{$label main C_Y_A}";
+	}
+	.bs-gridcell[data-field=D_Y_A]:before {
+		content: "{$label main D_Y_A}";
+	}
+	.bs-gridcell[data-field=E_Y_A]:before {
+		content: "{$label main E_Y_A}";
+	}
+	.bs-gridcell[data-field=F_Y_A]:before {
+		content: "{$label main F_Y_A}";
+	}
+	.bs-gridcell[data-field=G_Y_A]:before {
+		content: "{$label main G_Y_A}";
+	}
+	.bs-gridcell[data-field=H_Y_A]:before {
+		content: "{$label main H_Y_A}";
+	}
+	.bs-gridcell[data-field=I_Y_A]:before {
+		content: "{$label main I_Y_A}";
+	}
+	.bs-gridcell[data-field=J_Y_A]:before {
+		content: "{$label main J_Y_A}";
+	}
+	.bs-gridcell[data-field=K_Y_A]:before {
+		content: "{$label main K_Y_A}";
+	}
+	.bs-gridcell[data-field=DSR]:before {
+		content: "{$label main DSR}";
+	}
+	.bs-gridcell[data-field=DAR]:before {
+		content: "{$label main DAR}";
+	}
+	.bs-gridcell[data-field=GPMR]:before {
+		content: "{$label main GPMR}";
+	}
+	.bs-gridcell[data-field=NPMR]:before {
+		content: "{$label main NPMR}";
+	}
+	.bs-gridcell[data-field=Remark]:before {
+		content: "{$label main Remark}";
+	}
+	.bs-gridcell[data-field=Cash_Flow]:before {
+		content: "{$label main Cash_Flow}";
+	}
+	.bs-gridcell[data-field=St_Info]:before {
+		content: "{$label main St_Info}";
+	}
+	.bs-gridcell[data-field=PFLI]:before {
+		content: "{$label main PFLI}";
+	}
+	.bs-gridcell[data-field=I_N_v]:before {
+		content: "{$label main I_N_v}";
+	}
+	.bs-gridcell[data-field=Req_M]:before {
+		content: "{$label main Req_M}";
+	}
+	.bs-gridcell[data-field=App_M]:before {
+		content: "{$label main App_M}";
+	}
+</style>
+<table {$grid_hiddenattr} data-pageid="{$pageid}" data-brick="grid" class="table {$grid_classes} bs-flexgrid rnr-b-grid rnr-gridtable" cellpadding="0" >
+	<thead>
+										{BEGIN grid_header}
+								<tr class="rnr-toprow {$gridHeader_class}" >
+									{BEGIN record_header}
+									{BEGIN listIcons_column}
+									<th iEditCont="all">&nbsp;</th>
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}
+									<th class="">
+										<input type="checkbox" {$checkboxheader_attrs}>
+									</th>
+									{END checkbox_column}
+
+																		{BEGIN main_dtable_column}
+									<th >&nbsp;</th>
+									{END main_dtable_column}
+									
+									{BEGIN MID_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$MID_class}" data-field=MID>
+									{BEGIN MID_fieldheader}
+																				<span {$MID_orderlinkattrs}>
+											{$label main MID}
+										</span>
+									{END MID_fieldheader}
+									</th>
+									{END MID_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN ad_Date_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ad_Date_class}" data-field=ad_Date>
+									{BEGIN ad_Date_fieldheader}
+																				<span {$ad_Date_orderlinkattrs}>
+											{$label main ad_Date}
+										</span>
+									{END ad_Date_fieldheader}
+									</th>
+									{END ad_Date_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Prof_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Prof_class}" data-field=Prof>
+									{BEGIN Prof_fieldheader}
+																				<span {$Prof_orderlinkattrs}>
+											{$label main Prof}
+										</span>
+									{END Prof_fieldheader}
+									</th>
+									{END Prof_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Br_Id_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Br_Id_class}" data-field=Br_Id>
+									{BEGIN Br_Id_fieldheader}
+																				<span {$Br_Id_orderlinkattrs}>
+											{$label main Br_Id}
+										</span>
+									{END Br_Id_fieldheader}
+									</th>
+									{END Br_Id_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Br_name_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Br_name_class}" data-field=Br_name>
+									{BEGIN Br_name_fieldheader}
+																				<span {$Br_name_orderlinkattrs}>
+											{$label main Br_name}
+										</span>
+									{END Br_name_fieldheader}
+									</th>
+									{END Br_name_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Area_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Area_class}" data-field=Area>
+									{BEGIN Area_fieldheader}
+																				<span {$Area_orderlinkattrs}>
+											{$label main Area}
+										</span>
+									{END Area_fieldheader}
+									</th>
+									{END Area_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Region_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Region_class}" data-field=Region>
+									{BEGIN Region_fieldheader}
+																				<span {$Region_orderlinkattrs}>
+											{$label main Region}
+										</span>
+									{END Region_fieldheader}
+									</th>
+									{END Region_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Mem_Name_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Mem_Name_class}" data-field=Mem_Name>
+									{BEGIN Mem_Name_fieldheader}
+																				<span {$Mem_Name_orderlinkattrs}>
+											{$label main Mem_Name}
+										</span>
+									{END Mem_Name_fieldheader}
+									</th>
+									{END Mem_Name_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN D_Birth_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$D_Birth_class}" data-field=D_Birth>
+									{BEGIN D_Birth_fieldheader}
+																				<span {$D_Birth_orderlinkattrs}>
+											{$label main D_Birth}
+										</span>
+									{END D_Birth_fieldheader}
+									</th>
+									{END D_Birth_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Age_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Age_class}" data-field=Age>
+									{BEGIN Age_fieldheader}
+																				<span {$Age_orderlinkattrs}>
+											{$label main Age}
+										</span>
+									{END Age_fieldheader}
+									</th>
+									{END Age_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Mem_No_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Mem_No_class}" data-field=Mem_No>
+									{BEGIN Mem_No_fieldheader}
+																				<span {$Mem_No_orderlinkattrs}>
+											{$label main Mem_No}
+										</span>
+									{END Mem_No_fieldheader}
+									</th>
+									{END Mem_No_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN KYC_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$KYC_class}" data-field=KYC>
+									{BEGIN KYC_fieldheader}
+																				<span {$KYC_orderlinkattrs}>
+											{$label main KYC}
+										</span>
+									{END KYC_fieldheader}
+									</th>
+									{END KYC_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Father_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Father_class}" data-field=Father>
+									{BEGIN Father_fieldheader}
+																				<span {$Father_orderlinkattrs}>
+											{$label main Father}
+										</span>
+									{END Father_fieldheader}
+									</th>
+									{END Father_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Mother_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Mother_class}" data-field=Mother>
+									{BEGIN Mother_fieldheader}
+																				<span {$Mother_orderlinkattrs}>
+											{$label main Mother}
+										</span>
+									{END Mother_fieldheader}
+									</th>
+									{END Mother_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Sex_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Sex_class}" data-field=Sex>
+									{BEGIN Sex_fieldheader}
+																				<span {$Sex_orderlinkattrs}>
+											{$label main Sex}
+										</span>
+									{END Sex_fieldheader}
+									</th>
+									{END Sex_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN M_staus_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$M_staus_class}" data-field=M_staus>
+									{BEGIN M_staus_fieldheader}
+																				<span {$M_staus_orderlinkattrs}>
+											{$label main M_staus}
+										</span>
+									{END M_staus_fieldheader}
+									</th>
+									{END M_staus_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN M_staus_other_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$M_staus_other_class}" data-field=M_staus_other>
+									{BEGIN M_staus_other_fieldheader}
+																				<span {$M_staus_other_orderlinkattrs}>
+											{$label main M_staus_other}
+										</span>
+									{END M_staus_other_fieldheader}
+									</th>
+									{END M_staus_other_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Ed_Backgr_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Ed_Backgr_class}" data-field=Ed_Backgr>
+									{BEGIN Ed_Backgr_fieldheader}
+																				<span {$Ed_Backgr_orderlinkattrs}>
+											{$label main Ed_Backgr}
+										</span>
+									{END Ed_Backgr_fieldheader}
+									</th>
+									{END Ed_Backgr_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Ed_other_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Ed_other_class}" data-field=Ed_other>
+									{BEGIN Ed_other_fieldheader}
+																				<span {$Ed_other_orderlinkattrs}>
+											{$label main Ed_other}
+										</span>
+									{END Ed_other_fieldheader}
+									</th>
+									{END Ed_other_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN FTM_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$FTM_class}" data-field=FTM>
+									{BEGIN FTM_fieldheader}
+																				<span {$FTM_orderlinkattrs}>
+											{$label main FTM}
+										</span>
+									{END FTM_fieldheader}
+									</th>
+									{END FTM_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN FEM_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$FEM_class}" data-field=FEM>
+									{BEGIN FEM_fieldheader}
+																				<span {$FEM_orderlinkattrs}>
+											{$label main FEM}
+										</span>
+									{END FEM_fieldheader}
+									</th>
+									{END FEM_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Pr_adr_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Pr_adr_class}" data-field=Pr_adr>
+									{BEGIN Pr_adr_fieldheader}
+																				<span {$Pr_adr_orderlinkattrs}>
+											{$label main Pr_adr}
+										</span>
+									{END Pr_adr_fieldheader}
+									</th>
+									{END Pr_adr_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Per_adr_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Per_adr_class}" data-field=Per_adr>
+									{BEGIN Per_adr_fieldheader}
+																				<span {$Per_adr_orderlinkattrs}>
+											{$label main Per_adr}
+										</span>
+									{END Per_adr_fieldheader}
+									</th>
+									{END Per_adr_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN NID_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$NID_class}" data-field=NID>
+									{BEGIN NID_fieldheader}
+																				<span {$NID_orderlinkattrs}>
+											{$label main NID}
+										</span>
+									{END NID_fieldheader}
+									</th>
+									{END NID_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN cell_no_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$cell_no_class}" data-field=cell_no>
+									{BEGIN cell_no_fieldheader}
+																				<span {$cell_no_orderlinkattrs}>
+											{$label main cell_no}
+										</span>
+									{END cell_no_fieldheader}
+									</th>
+									{END cell_no_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN E_Tin_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$E_Tin_class}" data-field=E_Tin>
+									{BEGIN E_Tin_fieldheader}
+																				<span {$E_Tin_orderlinkattrs}>
+											{$label main E_Tin}
+										</span>
+									{END E_Tin_fieldheader}
+									</th>
+									{END E_Tin_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN ENFMN_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ENFMN_class}" data-field=ENFMN>
+									{BEGIN ENFMN_fieldheader}
+																				<span {$ENFMN_orderlinkattrs}>
+											{$label main ENFMN}
+										</span>
+									{END ENFMN_fieldheader}
+									</th>
+									{END ENFMN_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN ENFMN_Rel_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ENFMN_Rel_class}" data-field=ENFMN_Rel>
+									{BEGIN ENFMN_Rel_fieldheader}
+																				<span {$ENFMN_Rel_orderlinkattrs}>
+											{$label main ENFMN_Rel}
+										</span>
+									{END ENFMN_Rel_fieldheader}
+									</th>
+									{END ENFMN_Rel_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN ALT_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ALT_class}" data-field=ALT>
+									{BEGIN ALT_fieldheader}
+																				<span {$ALT_orderlinkattrs}>
+											{$label main ALT}
+										</span>
+									{END ALT_fieldheader}
+									</th>
+									{END ALT_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN MALT_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$MALT_class}" data-field=MALT>
+									{BEGIN MALT_fieldheader}
+																				<span {$MALT_orderlinkattrs}>
+											{$label main MALT}
+										</span>
+									{END MALT_fieldheader}
+									</th>
+									{END MALT_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN LFC_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$LFC_class}" data-field=LFC>
+									{BEGIN LFC_fieldheader}
+																				<span {$LFC_orderlinkattrs}>
+											{$label main LFC}
+										</span>
+									{END LFC_fieldheader}
+									</th>
+									{END LFC_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN LS_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$LS_class}" data-field=LS>
+									{BEGIN LS_fieldheader}
+																				<span {$LS_orderlinkattrs}>
+											{$label main LS}
+										</span>
+									{END LS_fieldheader}
+									</th>
+									{END LS_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN SCH_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$SCH_class}" data-field=SCH>
+									{BEGIN SCH_fieldheader}
+																				<span {$SCH_orderlinkattrs}>
+											{$label main SCH}
+										</span>
+									{END SCH_fieldheader}
+									</th>
+									{END SCH_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN SCL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$SCL_class}" data-field=SCL>
+									{BEGIN SCL_fieldheader}
+																				<span {$SCL_orderlinkattrs}>
+											{$label main SCL}
+										</span>
+									{END SCL_fieldheader}
+									</th>
+									{END SCL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Inst_Size_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Inst_Size_class}" data-field=Inst_Size>
+									{BEGIN Inst_Size_fieldheader}
+																				<span {$Inst_Size_orderlinkattrs}>
+											{$label main Inst_Size}
+										</span>
+									{END Inst_Size_fieldheader}
+									</th>
+									{END Inst_Size_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Inst_Amt_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Inst_Amt_class}" data-field=Inst_Amt>
+									{BEGIN Inst_Amt_fieldheader}
+																				<span {$Inst_Amt_orderlinkattrs}>
+											{$label main Inst_Amt}
+										</span>
+									{END Inst_Amt_fieldheader}
+									</th>
+									{END Inst_Amt_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN B_name_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$B_name_class}" data-field=B_name>
+									{BEGIN B_name_fieldheader}
+																				<span {$B_name_orderlinkattrs}>
+											{$label main B_name}
+										</span>
+									{END B_name_fieldheader}
+									</th>
+									{END B_name_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN B_Des_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$B_Des_class}" data-field=B_Des>
+									{BEGIN B_Des_fieldheader}
+																				<span {$B_Des_orderlinkattrs}>
+											{$label main B_Des}
+										</span>
+									{END B_Des_fieldheader}
+									</th>
+									{END B_Des_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN B_Type_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$B_Type_class}" data-field=B_Type>
+									{BEGIN B_Type_fieldheader}
+																				<span {$B_Type_orderlinkattrs}>
+											{$label main B_Type}
+										</span>
+									{END B_Type_fieldheader}
+									</th>
+									{END B_Type_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Stabl_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Stabl_class}" data-field=Stabl>
+									{BEGIN Stabl_fieldheader}
+																				<span {$Stabl_orderlinkattrs}>
+											{$label main Stabl}
+										</span>
+									{END Stabl_fieldheader}
+									</th>
+									{END Stabl_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Emp_No_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Emp_No_class}" data-field=Emp_No>
+									{BEGIN Emp_No_fieldheader}
+																				<span {$Emp_No_orderlinkattrs}>
+											{$label main Emp_No}
+										</span>
+									{END Emp_No_fieldheader}
+									</th>
+									{END Emp_No_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Trade_Lic_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Trade_Lic_class}" data-field=Trade_Lic>
+									{BEGIN Trade_Lic_fieldheader}
+																				<span {$Trade_Lic_orderlinkattrs}>
+											{$label main Trade_Lic}
+										</span>
+									{END Trade_Lic_fieldheader}
+									</th>
+									{END Trade_Lic_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Exp_Date_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Exp_Date_class}" data-field=Exp_Date>
+									{BEGIN Exp_Date_fieldheader}
+																				<span {$Exp_Date_orderlinkattrs}>
+											{$label main Exp_Date}
+										</span>
+									{END Exp_Date_fieldheader}
+									</th>
+									{END Exp_Date_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Certifi_Payer_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Certifi_Payer_class}" data-field=Certifi_Payer>
+									{BEGIN Certifi_Payer_fieldheader}
+																				<span {$Certifi_Payer_orderlinkattrs}>
+											{$label main Certifi_Payer}
+										</span>
+									{END Certifi_Payer_fieldheader}
+									</th>
+									{END Certifi_Payer_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN B_style_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$B_style_class}" data-field=B_style>
+									{BEGIN B_style_fieldheader}
+																				<span {$B_style_orderlinkattrs}>
+											{$label main B_style}
+										</span>
+									{END B_style_fieldheader}
+									</th>
+									{END B_style_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN B_Addr_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$B_Addr_class}" data-field=B_Addr>
+									{BEGIN B_Addr_fieldheader}
+																				<span {$B_Addr_orderlinkattrs}>
+											{$label main B_Addr}
+										</span>
+									{END B_Addr_fieldheader}
+									</th>
+									{END B_Addr_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Other_B_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Other_B_class}" data-field=Other_B>
+									{BEGIN Other_B_fieldheader}
+																				<span {$Other_B_orderlinkattrs}>
+											{$label main Other_B}
+										</span>
+									{END Other_B_fieldheader}
+									</th>
+									{END Other_B_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN M_name1_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$M_name1_class}" data-field=M_name1>
+									{BEGIN M_name1_fieldheader}
+																				<span {$M_name1_orderlinkattrs}>
+											{$label main M_name1}
+										</span>
+									{END M_name1_fieldheader}
+									</th>
+									{END M_name1_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN M_Name2_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$M_Name2_class}" data-field=M_Name2>
+									{BEGIN M_Name2_fieldheader}
+																				<span {$M_Name2_orderlinkattrs}>
+											{$label main M_Name2}
+										</span>
+									{END M_Name2_fieldheader}
+									</th>
+									{END M_Name2_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN M_Name3_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$M_Name3_class}" data-field=M_Name3>
+									{BEGIN M_Name3_fieldheader}
+																				<span {$M_Name3_orderlinkattrs}>
+											{$label main M_Name3}
+										</span>
+									{END M_Name3_fieldheader}
+									</th>
+									{END M_Name3_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Y_S_1_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Y_S_1_class}" data-field=Y_S_1>
+									{BEGIN Y_S_1_fieldheader}
+																				<span {$Y_S_1_orderlinkattrs}>
+											{$label main Y_S_1}
+										</span>
+									{END Y_S_1_fieldheader}
+									</th>
+									{END Y_S_1_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Y_S_2_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Y_S_2_class}" data-field=Y_S_2>
+									{BEGIN Y_S_2_fieldheader}
+																				<span {$Y_S_2_orderlinkattrs}>
+											{$label main Y_S_2}
+										</span>
+									{END Y_S_2_fieldheader}
+									</th>
+									{END Y_S_2_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Y_S_3_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Y_S_3_class}" data-field=Y_S_3>
+									{BEGIN Y_S_3_fieldheader}
+																				<span {$Y_S_3_orderlinkattrs}>
+											{$label main Y_S_3}
+										</span>
+									{END Y_S_3_fieldheader}
+									</th>
+									{END Y_S_3_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Y_A_A1_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Y_A_A1_class}" data-field=Y_A_A1>
+									{BEGIN Y_A_A1_fieldheader}
+																				<span {$Y_A_A1_orderlinkattrs}>
+											{$label main Y_A_A1}
+										</span>
+									{END Y_A_A1_fieldheader}
+									</th>
+									{END Y_A_A1_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Y_A_A2_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Y_A_A2_class}" data-field=Y_A_A2>
+									{BEGIN Y_A_A2_fieldheader}
+																				<span {$Y_A_A2_orderlinkattrs}>
+											{$label main Y_A_A2}
+										</span>
+									{END Y_A_A2_fieldheader}
+									</th>
+									{END Y_A_A2_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Y_A_A3_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Y_A_A3_class}" data-field=Y_A_A3>
+									{BEGIN Y_A_A3_fieldheader}
+																				<span {$Y_A_A3_orderlinkattrs}>
+											{$label main Y_A_A3}
+										</span>
+									{END Y_A_A3_fieldheader}
+									</th>
+									{END Y_A_A3_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Y_Sal1_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Y_Sal1_class}" data-field=Y_Sal1>
+									{BEGIN Y_Sal1_fieldheader}
+																				<span {$Y_Sal1_orderlinkattrs}>
+											{$label main Y_Sal1}
+										</span>
+									{END Y_Sal1_fieldheader}
+									</th>
+									{END Y_Sal1_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Y_sal2_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Y_sal2_class}" data-field=Y_sal2>
+									{BEGIN Y_sal2_fieldheader}
+																				<span {$Y_sal2_orderlinkattrs}>
+											{$label main Y_sal2}
+										</span>
+									{END Y_sal2_fieldheader}
+									</th>
+									{END Y_sal2_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Y_Sal3_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Y_Sal3_class}" data-field=Y_Sal3>
+									{BEGIN Y_Sal3_fieldheader}
+																				<span {$Y_Sal3_orderlinkattrs}>
+											{$label main Y_Sal3}
+										</span>
+									{END Y_Sal3_fieldheader}
+									</th>
+									{END Y_Sal3_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Y_Y_T_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Y_Y_T_class}" data-field=Y_Y_T>
+									{BEGIN Y_Y_T_fieldheader}
+																				<span {$Y_Y_T_orderlinkattrs}>
+											{$label main Y_Y_T}
+										</span>
+									{END Y_Y_T_fieldheader}
+									</th>
+									{END Y_Y_T_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Y_A_T_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Y_A_T_class}" data-field=Y_A_T>
+									{BEGIN Y_A_T_fieldheader}
+																				<span {$Y_A_T_orderlinkattrs}>
+											{$label main Y_A_T}
+										</span>
+									{END Y_A_T_fieldheader}
+									</th>
+									{END Y_A_T_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Income_Expen_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Income_Expen_class}" data-field=Income_Expen>
+									{BEGIN Income_Expen_fieldheader}
+																				<span {$Income_Expen_orderlinkattrs}>
+											{$label main Income_Expen}
+										</span>
+									{END Income_Expen_fieldheader}
+									</th>
+									{END Income_Expen_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Income_tot_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Income_tot_class}" data-field=Income_tot>
+									{BEGIN Income_tot_fieldheader}
+																				<span {$Income_tot_orderlinkattrs}>
+											{$label main Income_tot}
+										</span>
+									{END Income_tot_fieldheader}
+									</th>
+									{END Income_tot_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Expen_1_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Expen_1_class}" data-field=Expen_1>
+									{BEGIN Expen_1_fieldheader}
+																				<span {$Expen_1_orderlinkattrs}>
+											{$label main Expen_1}
+										</span>
+									{END Expen_1_fieldheader}
+									</th>
+									{END Expen_1_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Expen_2_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Expen_2_class}" data-field=Expen_2>
+									{BEGIN Expen_2_fieldheader}
+																				<span {$Expen_2_orderlinkattrs}>
+											{$label main Expen_2}
+										</span>
+									{END Expen_2_fieldheader}
+									</th>
+									{END Expen_2_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Expen_3_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Expen_3_class}" data-field=Expen_3>
+									{BEGIN Expen_3_fieldheader}
+																				<span {$Expen_3_orderlinkattrs}>
+											{$label main Expen_3}
+										</span>
+									{END Expen_3_fieldheader}
+									</th>
+									{END Expen_3_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Expen_4_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Expen_4_class}" data-field=Expen_4>
+									{BEGIN Expen_4_fieldheader}
+																				<span {$Expen_4_orderlinkattrs}>
+											{$label main Expen_4}
+										</span>
+									{END Expen_4_fieldheader}
+									</th>
+									{END Expen_4_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Expen_5_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Expen_5_class}" data-field=Expen_5>
+									{BEGIN Expen_5_fieldheader}
+																				<span {$Expen_5_orderlinkattrs}>
+											{$label main Expen_5}
+										</span>
+									{END Expen_5_fieldheader}
+									</th>
+									{END Expen_5_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Expen_6_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Expen_6_class}" data-field=Expen_6>
+									{BEGIN Expen_6_fieldheader}
+																				<span {$Expen_6_orderlinkattrs}>
+											{$label main Expen_6}
+										</span>
+									{END Expen_6_fieldheader}
+									</th>
+									{END Expen_6_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Expen_7_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Expen_7_class}" data-field=Expen_7>
+									{BEGIN Expen_7_fieldheader}
+																				<span {$Expen_7_orderlinkattrs}>
+											{$label main Expen_7}
+										</span>
+									{END Expen_7_fieldheader}
+									</th>
+									{END Expen_7_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Expen_8_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Expen_8_class}" data-field=Expen_8>
+									{BEGIN Expen_8_fieldheader}
+																				<span {$Expen_8_orderlinkattrs}>
+											{$label main Expen_8}
+										</span>
+									{END Expen_8_fieldheader}
+									</th>
+									{END Expen_8_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Expen_tot_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Expen_tot_class}" data-field=Expen_tot>
+									{BEGIN Expen_tot_fieldheader}
+																				<span {$Expen_tot_orderlinkattrs}>
+											{$label main Expen_tot}
+										</span>
+									{END Expen_tot_fieldheader}
+									</th>
+									{END Expen_tot_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN T_Exp_Tot_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$T_Exp_Tot_class}" data-field=T_Exp_Tot>
+									{BEGIN T_Exp_Tot_fieldheader}
+																				<span {$T_Exp_Tot_orderlinkattrs}>
+											{$label main T_Exp_Tot}
+										</span>
+									{END T_Exp_Tot_fieldheader}
+									</th>
+									{END T_Exp_Tot_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Ano_inc_sour_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Ano_inc_sour_class}" data-field=Ano_inc_sour>
+									{BEGIN Ano_inc_sour_fieldheader}
+																				<span {$Ano_inc_sour_orderlinkattrs}>
+											{$label main Ano_inc_sour}
+										</span>
+									{END Ano_inc_sour_fieldheader}
+									</th>
+									{END Ano_inc_sour_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Ano_inc_sour_month_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Ano_inc_sour_month_class}" data-field=Ano_inc_sour_month>
+									{BEGIN Ano_inc_sour_month_fieldheader}
+																				<span {$Ano_inc_sour_month_orderlinkattrs}>
+											{$label main Ano_inc_sour_month}
+										</span>
+									{END Ano_inc_sour_month_fieldheader}
+									</th>
+									{END Ano_inc_sour_month_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Expen_9_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Expen_9_class}" data-field=Expen_9>
+									{BEGIN Expen_9_fieldheader}
+																				<span {$Expen_9_orderlinkattrs}>
+											{$label main Expen_9}
+										</span>
+									{END Expen_9_fieldheader}
+									</th>
+									{END Expen_9_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Income_other_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Income_other_class}" data-field=Income_other>
+									{BEGIN Income_other_fieldheader}
+																				<span {$Income_other_orderlinkattrs}>
+											{$label main Income_other}
+										</span>
+									{END Income_other_fieldheader}
+									</th>
+									{END Income_other_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Income_Expen_From_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Income_Expen_From_class}" data-field=Income_Expen_From>
+									{BEGIN Income_Expen_From_fieldheader}
+																				<span {$Income_Expen_From_orderlinkattrs}>
+											{$label main Income_Expen_From}
+										</span>
+									{END Income_Expen_From_fieldheader}
+									</th>
+									{END Income_Expen_From_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN T_RDRSL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$T_RDRSL_class}" data-field=T_RDRSL>
+									{BEGIN T_RDRSL_fieldheader}
+																				<span {$T_RDRSL_orderlinkattrs}>
+											{$label main T_RDRSL}
+										</span>
+									{END T_RDRSL_fieldheader}
+									</th>
+									{END T_RDRSL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN FaCaTT_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$FaCaTT_class}" data-field=FaCaTT>
+									{BEGIN FaCaTT_fieldheader}
+																				<span {$FaCaTT_orderlinkattrs}>
+											{$label main FaCaTT}
+										</span>
+									{END FaCaTT_fieldheader}
+									</th>
+									{END FaCaTT_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CATT_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CATT_class}" data-field=CATT>
+									{BEGIN CATT_fieldheader}
+																				<span {$CATT_orderlinkattrs}>
+											{$label main CATT}
+										</span>
+									{END CATT_fieldheader}
+									</th>
+									{END CATT_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CAT5_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CAT5_class}" data-field=CAT5>
+									{BEGIN CAT5_fieldheader}
+																				<span {$CAT5_orderlinkattrs}>
+											{$label main CAT5}
+										</span>
+									{END CAT5_fieldheader}
+									</th>
+									{END CAT5_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CAT4_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CAT4_class}" data-field=CAT4>
+									{BEGIN CAT4_fieldheader}
+																				<span {$CAT4_orderlinkattrs}>
+											{$label main CAT4}
+										</span>
+									{END CAT4_fieldheader}
+									</th>
+									{END CAT4_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CAT3_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CAT3_class}" data-field=CAT3>
+									{BEGIN CAT3_fieldheader}
+																				<span {$CAT3_orderlinkattrs}>
+											{$label main CAT3}
+										</span>
+									{END CAT3_fieldheader}
+									</th>
+									{END CAT3_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CAT2_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CAT2_class}" data-field=CAT2>
+									{BEGIN CAT2_fieldheader}
+																				<span {$CAT2_orderlinkattrs}>
+											{$label main CAT2}
+										</span>
+									{END CAT2_fieldheader}
+									</th>
+									{END CAT2_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CAT1_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CAT1_class}" data-field=CAT1>
+									{BEGIN CAT1_fieldheader}
+																				<span {$CAT1_orderlinkattrs}>
+											{$label main CAT1}
+										</span>
+									{END CAT1_fieldheader}
+									</th>
+									{END CAT1_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CAU5_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CAU5_class}" data-field=CAU5>
+									{BEGIN CAU5_fieldheader}
+																				<span {$CAU5_orderlinkattrs}>
+											{$label main CAU5}
+										</span>
+									{END CAU5_fieldheader}
+									</th>
+									{END CAU5_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CAU4_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CAU4_class}" data-field=CAU4>
+									{BEGIN CAU4_fieldheader}
+																				<span {$CAU4_orderlinkattrs}>
+											{$label main CAU4}
+										</span>
+									{END CAU4_fieldheader}
+									</th>
+									{END CAU4_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CAU3_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CAU3_class}" data-field=CAU3>
+									{BEGIN CAU3_fieldheader}
+																				<span {$CAU3_orderlinkattrs}>
+											{$label main CAU3}
+										</span>
+									{END CAU3_fieldheader}
+									</th>
+									{END CAU3_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN FAU5_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$FAU5_class}" data-field=FAU5>
+									{BEGIN FAU5_fieldheader}
+																				<span {$FAU5_orderlinkattrs}>
+											{$label main FAU5}
+										</span>
+									{END FAU5_fieldheader}
+									</th>
+									{END FAU5_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CAU2_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CAU2_class}" data-field=CAU2>
+									{BEGIN CAU2_fieldheader}
+																				<span {$CAU2_orderlinkattrs}>
+											{$label main CAU2}
+										</span>
+									{END CAU2_fieldheader}
+									</th>
+									{END CAU2_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CAU1_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CAU1_class}" data-field=CAU1>
+									{BEGIN CAU1_fieldheader}
+																				<span {$CAU1_orderlinkattrs}>
+											{$label main CAU1}
+										</span>
+									{END CAU1_fieldheader}
+									</th>
+									{END CAU1_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CAN5_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CAN5_class}" data-field=CAN5>
+									{BEGIN CAN5_fieldheader}
+																				<span {$CAN5_orderlinkattrs}>
+											{$label main CAN5}
+										</span>
+									{END CAN5_fieldheader}
+									</th>
+									{END CAN5_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CAN4_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CAN4_class}" data-field=CAN4>
+									{BEGIN CAN4_fieldheader}
+																				<span {$CAN4_orderlinkattrs}>
+											{$label main CAN4}
+										</span>
+									{END CAN4_fieldheader}
+									</th>
+									{END CAN4_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CAN3_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CAN3_class}" data-field=CAN3>
+									{BEGIN CAN3_fieldheader}
+																				<span {$CAN3_orderlinkattrs}>
+											{$label main CAN3}
+										</span>
+									{END CAN3_fieldheader}
+									</th>
+									{END CAN3_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CAN2_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CAN2_class}" data-field=CAN2>
+									{BEGIN CAN2_fieldheader}
+																				<span {$CAN2_orderlinkattrs}>
+											{$label main CAN2}
+										</span>
+									{END CAN2_fieldheader}
+									</th>
+									{END CAN2_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CAN1_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CAN1_class}" data-field=CAN1>
+									{BEGIN CAN1_fieldheader}
+																				<span {$CAN1_orderlinkattrs}>
+											{$label main CAN1}
+										</span>
+									{END CAN1_fieldheader}
+									</th>
+									{END CAN1_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CA4_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CA4_class}" data-field=CA4>
+									{BEGIN CA4_fieldheader}
+																				<span {$CA4_orderlinkattrs}>
+											{$label main CA4}
+										</span>
+									{END CA4_fieldheader}
+									</th>
+									{END CA4_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CA3_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CA3_class}" data-field=CA3>
+									{BEGIN CA3_fieldheader}
+																				<span {$CA3_orderlinkattrs}>
+											{$label main CA3}
+										</span>
+									{END CA3_fieldheader}
+									</th>
+									{END CA3_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN FAT1_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$FAT1_class}" data-field=FAT1>
+									{BEGIN FAT1_fieldheader}
+																				<span {$FAT1_orderlinkattrs}>
+											{$label main FAT1}
+										</span>
+									{END FAT1_fieldheader}
+									</th>
+									{END FAT1_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CA2_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CA2_class}" data-field=CA2>
+									{BEGIN CA2_fieldheader}
+																				<span {$CA2_orderlinkattrs}>
+											{$label main CA2}
+										</span>
+									{END CA2_fieldheader}
+									</th>
+									{END CA2_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CA1_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CA1_class}" data-field=CA1>
+									{BEGIN CA1_fieldheader}
+																				<span {$CA1_orderlinkattrs}>
+											{$label main CA1}
+										</span>
+									{END CA1_fieldheader}
+									</th>
+									{END CA1_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CA_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CA_class}" data-field=CA>
+									{BEGIN CA_fieldheader}
+																				<span {$CA_orderlinkattrs}>
+											{$label main CA}
+										</span>
+									{END CA_fieldheader}
+									</th>
+									{END CA_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN FATT_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$FATT_class}" data-field=FATT>
+									{BEGIN FATT_fieldheader}
+																				<span {$FATT_orderlinkattrs}>
+											{$label main FATT}
+										</span>
+									{END FATT_fieldheader}
+									</th>
+									{END FATT_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN FAR_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$FAR_class}" data-field=FAR>
+									{BEGIN FAR_fieldheader}
+																				<span {$FAR_orderlinkattrs}>
+											{$label main FAR}
+										</span>
+									{END FAR_fieldheader}
+									</th>
+									{END FAR_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN FAT5_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$FAT5_class}" data-field=FAT5>
+									{BEGIN FAT5_fieldheader}
+																				<span {$FAT5_orderlinkattrs}>
+											{$label main FAT5}
+										</span>
+									{END FAT5_fieldheader}
+									</th>
+									{END FAT5_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CAR_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CAR_class}" data-field=CAR>
+									{BEGIN CAR_fieldheader}
+																				<span {$CAR_orderlinkattrs}>
+											{$label main CAR}
+										</span>
+									{END CAR_fieldheader}
+									</th>
+									{END CAR_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN FAT4_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$FAT4_class}" data-field=FAT4>
+									{BEGIN FAT4_fieldheader}
+																				<span {$FAT4_orderlinkattrs}>
+											{$label main FAT4}
+										</span>
+									{END FAT4_fieldheader}
+									</th>
+									{END FAT4_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN FAT3_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$FAT3_class}" data-field=FAT3>
+									{BEGIN FAT3_fieldheader}
+																				<span {$FAT3_orderlinkattrs}>
+											{$label main FAT3}
+										</span>
+									{END FAT3_fieldheader}
+									</th>
+									{END FAT3_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN FAT2_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$FAT2_class}" data-field=FAT2>
+									{BEGIN FAT2_fieldheader}
+																				<span {$FAT2_orderlinkattrs}>
+											{$label main FAT2}
+										</span>
+									{END FAT2_fieldheader}
+									</th>
+									{END FAT2_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TAss_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TAss_class}" data-field=TAss>
+									{BEGIN TAss_fieldheader}
+																				<span {$TAss_orderlinkattrs}>
+											{$label main TAss}
+										</span>
+									{END TAss_fieldheader}
+									</th>
+									{END TAss_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN FA1_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$FA1_class}" data-field=FA1>
+									{BEGIN FA1_fieldheader}
+																				<span {$FA1_orderlinkattrs}>
+											{$label main FA1}
+										</span>
+									{END FA1_fieldheader}
+									</th>
+									{END FA1_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN FA2_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$FA2_class}" data-field=FA2>
+									{BEGIN FA2_fieldheader}
+																				<span {$FA2_orderlinkattrs}>
+											{$label main FA2}
+										</span>
+									{END FA2_fieldheader}
+									</th>
+									{END FA2_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN FA3_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$FA3_class}" data-field=FA3>
+									{BEGIN FA3_fieldheader}
+																				<span {$FA3_orderlinkattrs}>
+											{$label main FA3}
+										</span>
+									{END FA3_fieldheader}
+									</th>
+									{END FA3_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN FA4_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$FA4_class}" data-field=FA4>
+									{BEGIN FA4_fieldheader}
+																				<span {$FA4_orderlinkattrs}>
+											{$label main FA4}
+										</span>
+									{END FA4_fieldheader}
+									</th>
+									{END FA4_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN FA5_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$FA5_class}" data-field=FA5>
+									{BEGIN FA5_fieldheader}
+																				<span {$FA5_orderlinkattrs}>
+											{$label main FA5}
+										</span>
+									{END FA5_fieldheader}
+									</th>
+									{END FA5_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN FAN1_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$FAN1_class}" data-field=FAN1>
+									{BEGIN FAN1_fieldheader}
+																				<span {$FAN1_orderlinkattrs}>
+											{$label main FAN1}
+										</span>
+									{END FAN1_fieldheader}
+									</th>
+									{END FAN1_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN FAN2_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$FAN2_class}" data-field=FAN2>
+									{BEGIN FAN2_fieldheader}
+																				<span {$FAN2_orderlinkattrs}>
+											{$label main FAN2}
+										</span>
+									{END FAN2_fieldheader}
+									</th>
+									{END FAN2_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN FAN3_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$FAN3_class}" data-field=FAN3>
+									{BEGIN FAN3_fieldheader}
+																				<span {$FAN3_orderlinkattrs}>
+											{$label main FAN3}
+										</span>
+									{END FAN3_fieldheader}
+									</th>
+									{END FAN3_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN FAN4_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$FAN4_class}" data-field=FAN4>
+									{BEGIN FAN4_fieldheader}
+																				<span {$FAN4_orderlinkattrs}>
+											{$label main FAN4}
+										</span>
+									{END FAN4_fieldheader}
+									</th>
+									{END FAN4_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN FAN5_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$FAN5_class}" data-field=FAN5>
+									{BEGIN FAN5_fieldheader}
+																				<span {$FAN5_orderlinkattrs}>
+											{$label main FAN5}
+										</span>
+									{END FAN5_fieldheader}
+									</th>
+									{END FAN5_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN FAU1_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$FAU1_class}" data-field=FAU1>
+									{BEGIN FAU1_fieldheader}
+																				<span {$FAU1_orderlinkattrs}>
+											{$label main FAU1}
+										</span>
+									{END FAU1_fieldheader}
+									</th>
+									{END FAU1_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN FAU2_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$FAU2_class}" data-field=FAU2>
+									{BEGIN FAU2_fieldheader}
+																				<span {$FAU2_orderlinkattrs}>
+											{$label main FAU2}
+										</span>
+									{END FAU2_fieldheader}
+									</th>
+									{END FAU2_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN FAU3_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$FAU3_class}" data-field=FAU3>
+									{BEGIN FAU3_fieldheader}
+																				<span {$FAU3_orderlinkattrs}>
+											{$label main FAU3}
+										</span>
+									{END FAU3_fieldheader}
+									</th>
+									{END FAU3_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN FAU4_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$FAU4_class}" data-field=FAU4>
+									{BEGIN FAU4_fieldheader}
+																				<span {$FAU4_orderlinkattrs}>
+											{$label main FAU4}
+										</span>
+									{END FAU4_fieldheader}
+									</th>
+									{END FAU4_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CA5_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CA5_class}" data-field=CA5>
+									{BEGIN CA5_fieldheader}
+																				<span {$CA5_orderlinkattrs}>
+											{$label main CA5}
+										</span>
+									{END CA5_fieldheader}
+									</th>
+									{END CA5_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN T_TPE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$T_TPE_class}" data-field=T_TPE>
+									{BEGIN T_TPE_fieldheader}
+																				<span {$T_TPE_orderlinkattrs}>
+											{$label main T_TPE}
+										</span>
+									{END T_TPE_fieldheader}
+									</th>
+									{END T_TPE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN T_OFAL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$T_OFAL_class}" data-field=T_OFAL>
+									{BEGIN T_OFAL_fieldheader}
+																				<span {$T_OFAL_orderlinkattrs}>
+											{$label main T_OFAL}
+										</span>
+									{END T_OFAL_fieldheader}
+									</th>
+									{END T_OFAL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN T_OFIW_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$T_OFIW_class}" data-field=T_OFIW>
+									{BEGIN T_OFIW_fieldheader}
+																				<span {$T_OFIW_orderlinkattrs}>
+											{$label main T_OFIW}
+										</span>
+									{END T_OFIW_fieldheader}
+									</th>
+									{END T_OFIW_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN T_OTL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$T_OTL_class}" data-field=T_OTL>
+									{BEGIN T_OTL_fieldheader}
+																				<span {$T_OTL_orderlinkattrs}>
+											{$label main T_OTL}
+										</span>
+									{END T_OTL_fieldheader}
+									</th>
+									{END T_OTL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN LO_other2_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$LO_other2_class}" data-field=LO_other2>
+									{BEGIN LO_other2_fieldheader}
+																				<span {$LO_other2_orderlinkattrs}>
+											{$label main LO_other2}
+										</span>
+									{END LO_other2_fieldheader}
+									</th>
+									{END LO_other2_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN LO_other1_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$LO_other1_class}" data-field=LO_other1>
+									{BEGIN LO_other1_fieldheader}
+																				<span {$LO_other1_orderlinkattrs}>
+											{$label main LO_other1}
+										</span>
+									{END LO_other1_fieldheader}
+									</th>
+									{END LO_other1_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN F_Exptot_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$F_Exptot_class}" data-field=F_Exptot>
+									{BEGIN F_Exptot_fieldheader}
+																				<span {$F_Exptot_orderlinkattrs}>
+											{$label main F_Exptot}
+										</span>
+									{END F_Exptot_fieldheader}
+									</th>
+									{END F_Exptot_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN F_Exp3_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$F_Exp3_class}" data-field=F_Exp3>
+									{BEGIN F_Exp3_fieldheader}
+																				<span {$F_Exp3_orderlinkattrs}>
+											{$label main F_Exp3}
+										</span>
+									{END F_Exp3_fieldheader}
+									</th>
+									{END F_Exp3_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN F_Exp2_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$F_Exp2_class}" data-field=F_Exp2>
+									{BEGIN F_Exp2_fieldheader}
+																				<span {$F_Exp2_orderlinkattrs}>
+											{$label main F_Exp2}
+										</span>
+									{END F_Exp2_fieldheader}
+									</th>
+									{END F_Exp2_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN F_Exp1_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$F_Exp1_class}" data-field=F_Exp1>
+									{BEGIN F_Exp1_fieldheader}
+																				<span {$F_Exp1_orderlinkattrs}>
+											{$label main F_Exp1}
+										</span>
+									{END F_Exp1_fieldheader}
+									</th>
+									{END F_Exp1_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Income2_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Income2_class}" data-field=Income2>
+									{BEGIN Income2_fieldheader}
+																				<span {$Income2_orderlinkattrs}>
+											{$label main Income2}
+										</span>
+									{END Income2_fieldheader}
+									</th>
+									{END Income2_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Income1_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Income1_class}" data-field=Income1>
+									{BEGIN Income1_fieldheader}
+																				<span {$Income1_orderlinkattrs}>
+											{$label main Income1}
+										</span>
+									{END Income1_fieldheader}
+									</th>
+									{END Income1_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN F_Exp4_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$F_Exp4_class}" data-field=F_Exp4>
+									{BEGIN F_Exp4_fieldheader}
+																				<span {$F_Exp4_orderlinkattrs}>
+											{$label main F_Exp4}
+										</span>
+									{END F_Exp4_fieldheader}
+									</th>
+									{END F_Exp4_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN ExDC4_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ExDC4_class}" data-field=ExDC4>
+									{BEGIN ExDC4_fieldheader}
+																				<span {$ExDC4_orderlinkattrs}>
+											{$label main ExDC4}
+										</span>
+									{END ExDC4_fieldheader}
+									</th>
+									{END ExDC4_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Remark_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Remark_class}" data-field=Remark>
+									{BEGIN Remark_fieldheader}
+																				<span {$Remark_orderlinkattrs}>
+											{$label main Remark}
+										</span>
+									{END Remark_fieldheader}
+									</th>
+									{END Remark_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN ExDC1_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ExDC1_class}" data-field=ExDC1>
+									{BEGIN ExDC1_fieldheader}
+																				<span {$ExDC1_orderlinkattrs}>
+											{$label main ExDC1}
+										</span>
+									{END ExDC1_fieldheader}
+									</th>
+									{END ExDC1_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN ExDC2_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ExDC2_class}" data-field=ExDC2>
+									{BEGIN ExDC2_fieldheader}
+																				<span {$ExDC2_orderlinkattrs}>
+											{$label main ExDC2}
+										</span>
+									{END ExDC2_fieldheader}
+									</th>
+									{END ExDC2_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN ExDC3_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ExDC3_class}" data-field=ExDC3>
+									{BEGIN ExDC3_fieldheader}
+																				<span {$ExDC3_orderlinkattrs}>
+											{$label main ExDC3}
+										</span>
+									{END ExDC3_fieldheader}
+									</th>
+									{END ExDC3_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Pre_L_Y_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Pre_L_Y_class}" data-field=Pre_L_Y>
+									{BEGIN Pre_L_Y_fieldheader}
+																				<span {$Pre_L_Y_orderlinkattrs}>
+											{$label main Pre_L_Y}
+										</span>
+									{END Pre_L_Y_fieldheader}
+									</th>
+									{END Pre_L_Y_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN L_O_Own_eqt_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$L_O_Own_eqt_class}" data-field=L_O_Own_eqt>
+									{BEGIN L_O_Own_eqt_fieldheader}
+																				<span {$L_O_Own_eqt_orderlinkattrs}>
+											{$label main L_O_Own_eqt}
+										</span>
+									{END L_O_Own_eqt_fieldheader}
+									</th>
+									{END L_O_Own_eqt_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN RDRS_Loan_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$RDRS_Loan_class}" data-field=RDRS_Loan>
+									{BEGIN RDRS_Loan_fieldheader}
+																				<span {$RDRS_Loan_orderlinkattrs}>
+											{$label main RDRS_Loan}
+										</span>
+									{END RDRS_Loan_fieldheader}
+									</th>
+									{END RDRS_Loan_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Oth_Sourc_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Oth_Sourc_class}" data-field=Oth_Sourc>
+									{BEGIN Oth_Sourc_fieldheader}
+																				<span {$Oth_Sourc_orderlinkattrs}>
+											{$label main Oth_Sourc}
+										</span>
+									{END Oth_Sourc_fieldheader}
+									</th>
+									{END Oth_Sourc_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Due_Purch_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Due_Purch_class}" data-field=Due_Purch>
+									{BEGIN Due_Purch_fieldheader}
+																				<span {$Due_Purch_orderlinkattrs}>
+											{$label main Due_Purch}
+										</span>
+									{END Due_Purch_fieldheader}
+									</th>
+									{END Due_Purch_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TLO_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TLO_class}" data-field=TLO>
+									{BEGIN TLO_fieldheader}
+																				<span {$TLO_orderlinkattrs}>
+											{$label main TLO}
+										</span>
+									{END TLO_fieldheader}
+									</th>
+									{END TLO_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN P_Asset_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$P_Asset_class}" data-field=P_Asset>
+									{BEGIN P_Asset_fieldheader}
+																				<span {$P_Asset_orderlinkattrs}>
+											{$label main P_Asset}
+										</span>
+									{END P_Asset_fieldheader}
+									</th>
+									{END P_Asset_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN L_stor_P_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$L_stor_P_class}" data-field=L_stor_P>
+									{BEGIN L_stor_P_fieldheader}
+																				<span {$L_stor_P_orderlinkattrs}>
+											{$label main L_stor_P}
+										</span>
+									{END L_stor_P_fieldheader}
+									</th>
+									{END L_stor_P_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Invest_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Invest_class}" data-field=Invest>
+									{BEGIN Invest_fieldheader}
+																				<span {$Invest_orderlinkattrs}>
+											{$label main Invest}
+										</span>
+									{END Invest_fieldheader}
+									</th>
+									{END Invest_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Due_sales_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Due_sales_class}" data-field=Due_sales>
+									{BEGIN Due_sales_fieldheader}
+																				<span {$Due_sales_orderlinkattrs}>
+											{$label main Due_sales}
+										</span>
+									{END Due_sales_fieldheader}
+									</th>
+									{END Due_sales_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Adv_Pay_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Adv_Pay_class}" data-field=Adv_Pay>
+									{BEGIN Adv_Pay_fieldheader}
+																				<span {$Adv_Pay_orderlinkattrs}>
+											{$label main Adv_Pay}
+										</span>
+									{END Adv_Pay_fieldheader}
+									</th>
+									{END Adv_Pay_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CashinHand_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CashinHand_class}" data-field=CashinHand>
+									{BEGIN CashinHand_fieldheader}
+																				<span {$CashinHand_orderlinkattrs}>
+											{$label main CashinHand}
+										</span>
+									{END CashinHand_fieldheader}
+									</th>
+									{END CashinHand_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CashAtBank_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CashAtBank_class}" data-field=CashAtBank>
+									{BEGIN CashAtBank_fieldheader}
+																				<span {$CashAtBank_orderlinkattrs}>
+											{$label main CashAtBank}
+										</span>
+									{END CashAtBank_fieldheader}
+									</th>
+									{END CashAtBank_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN RG_Name_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$RG_Name_class}" data-field=RG_Name>
+									{BEGIN RG_Name_fieldheader}
+																				<span {$RG_Name_orderlinkattrs}>
+											{$label main RG_Name}
+										</span>
+									{END RG_Name_fieldheader}
+									</th>
+									{END RG_Name_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN RG_Father_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$RG_Father_class}" data-field=RG_Father>
+									{BEGIN RG_Father_fieldheader}
+																				<span {$RG_Father_orderlinkattrs}>
+											{$label main RG_Father}
+										</span>
+									{END RG_Father_fieldheader}
+									</th>
+									{END RG_Father_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN RG_Pre_Add_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$RG_Pre_Add_class}" data-field=RG_Pre_Add>
+									{BEGIN RG_Pre_Add_fieldheader}
+																				<span {$RG_Pre_Add_orderlinkattrs}>
+											{$label main RG_Pre_Add}
+										</span>
+									{END RG_Pre_Add_fieldheader}
+									</th>
+									{END RG_Pre_Add_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN RG_Per_Add_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$RG_Per_Add_class}" data-field=RG_Per_Add>
+									{BEGIN RG_Per_Add_fieldheader}
+																				<span {$RG_Per_Add_orderlinkattrs}>
+											{$label main RG_Per_Add}
+										</span>
+									{END RG_Per_Add_fieldheader}
+									</th>
+									{END RG_Per_Add_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN RG_NID_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$RG_NID_class}" data-field=RG_NID>
+									{BEGIN RG_NID_fieldheader}
+																				<span {$RG_NID_orderlinkattrs}>
+											{$label main RG_NID}
+										</span>
+									{END RG_NID_fieldheader}
+									</th>
+									{END RG_NID_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN RG_Cell_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$RG_Cell_class}" data-field=RG_Cell>
+									{BEGIN RG_Cell_fieldheader}
+																				<span {$RG_Cell_orderlinkattrs}>
+											{$label main RG_Cell}
+										</span>
+									{END RG_Cell_fieldheader}
+									</th>
+									{END RG_Cell_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN RG_Year_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$RG_Year_class}" data-field=RG_Year>
+									{BEGIN RG_Year_fieldheader}
+																				<span {$RG_Year_orderlinkattrs}>
+											{$label main RG_Year}
+										</span>
+									{END RG_Year_fieldheader}
+									</th>
+									{END RG_Year_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN RG_Occup_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$RG_Occup_class}" data-field=RG_Occup>
+									{BEGIN RG_Occup_fieldheader}
+																				<span {$RG_Occup_orderlinkattrs}>
+											{$label main RG_Occup}
+										</span>
+									{END RG_Occup_fieldheader}
+									</th>
+									{END RG_Occup_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN RG_M_Income_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$RG_M_Income_class}" data-field=RG_M_Income>
+									{BEGIN RG_M_Income_fieldheader}
+																				<span {$RG_M_Income_orderlinkattrs}>
+											{$label main RG_M_Income}
+										</span>
+									{END RG_M_Income_fieldheader}
+									</th>
+									{END RG_M_Income_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN RG_M_Exp_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$RG_M_Exp_class}" data-field=RG_M_Exp>
+									{BEGIN RG_M_Exp_fieldheader}
+																				<span {$RG_M_Exp_orderlinkattrs}>
+											{$label main RG_M_Exp}
+										</span>
+									{END RG_M_Exp_fieldheader}
+									</th>
+									{END RG_M_Exp_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN RG_Pic_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$RG_Pic_class}" data-field=RG_Pic>
+									{BEGIN RG_Pic_fieldheader}
+																				{$label main RG_Pic}
+									{END RG_Pic_fieldheader}
+									</th>
+									{END RG_Pic_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN RF_Name_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$RF_Name_class}" data-field=RF_Name>
+									{BEGIN RF_Name_fieldheader}
+																				<span {$RF_Name_orderlinkattrs}>
+											{$label main RF_Name}
+										</span>
+									{END RF_Name_fieldheader}
+									</th>
+									{END RF_Name_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN RF_Father_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$RF_Father_class}" data-field=RF_Father>
+									{BEGIN RF_Father_fieldheader}
+																				<span {$RF_Father_orderlinkattrs}>
+											{$label main RF_Father}
+										</span>
+									{END RF_Father_fieldheader}
+									</th>
+									{END RF_Father_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN RF_Pre_Add_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$RF_Pre_Add_class}" data-field=RF_Pre_Add>
+									{BEGIN RF_Pre_Add_fieldheader}
+																				<span {$RF_Pre_Add_orderlinkattrs}>
+											{$label main RF_Pre_Add}
+										</span>
+									{END RF_Pre_Add_fieldheader}
+									</th>
+									{END RF_Pre_Add_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN RF_Per_Add_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$RF_Per_Add_class}" data-field=RF_Per_Add>
+									{BEGIN RF_Per_Add_fieldheader}
+																				<span {$RF_Per_Add_orderlinkattrs}>
+											{$label main RF_Per_Add}
+										</span>
+									{END RF_Per_Add_fieldheader}
+									</th>
+									{END RF_Per_Add_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN RF_NID_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$RF_NID_class}" data-field=RF_NID>
+									{BEGIN RF_NID_fieldheader}
+																				<span {$RF_NID_orderlinkattrs}>
+											{$label main RF_NID}
+										</span>
+									{END RF_NID_fieldheader}
+									</th>
+									{END RF_NID_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN RF_Cell_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$RF_Cell_class}" data-field=RF_Cell>
+									{BEGIN RF_Cell_fieldheader}
+																				<span {$RF_Cell_orderlinkattrs}>
+											{$label main RF_Cell}
+										</span>
+									{END RF_Cell_fieldheader}
+									</th>
+									{END RF_Cell_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN RF_Age_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$RF_Age_class}" data-field=RF_Age>
+									{BEGIN RF_Age_fieldheader}
+																				<span {$RF_Age_orderlinkattrs}>
+											{$label main RF_Age}
+										</span>
+									{END RF_Age_fieldheader}
+									</th>
+									{END RF_Age_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN RF_Relation_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$RF_Relation_class}" data-field=RF_Relation>
+									{BEGIN RF_Relation_fieldheader}
+																				<span {$RF_Relation_orderlinkattrs}>
+											{$label main RF_Relation}
+										</span>
+									{END RF_Relation_fieldheader}
+									</th>
+									{END RF_Relation_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN RF_Occup_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$RF_Occup_class}" data-field=RF_Occup>
+									{BEGIN RF_Occup_fieldheader}
+																				<span {$RF_Occup_orderlinkattrs}>
+											{$label main RF_Occup}
+										</span>
+									{END RF_Occup_fieldheader}
+									</th>
+									{END RF_Occup_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN RF_M_Income_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$RF_M_Income_class}" data-field=RF_M_Income>
+									{BEGIN RF_M_Income_fieldheader}
+																				<span {$RF_M_Income_orderlinkattrs}>
+											{$label main RF_M_Income}
+										</span>
+									{END RF_M_Income_fieldheader}
+									</th>
+									{END RF_M_Income_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN RF_M_Exp_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$RF_M_Exp_class}" data-field=RF_M_Exp>
+									{BEGIN RF_M_Exp_fieldheader}
+																				<span {$RF_M_Exp_orderlinkattrs}>
+											{$label main RF_M_Exp}
+										</span>
+									{END RF_M_Exp_fieldheader}
+									</th>
+									{END RF_M_Exp_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN RF_Pic_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$RF_Pic_class}" data-field=RF_Pic>
+									{BEGIN RF_Pic_fieldheader}
+																				{$label main RF_Pic}
+									{END RF_Pic_fieldheader}
+									</th>
+									{END RF_Pic_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN ExDC_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ExDC_class}" data-field=ExDC>
+									{BEGIN ExDC_fieldheader}
+																				<span {$ExDC_orderlinkattrs}>
+											{$label main ExDC}
+										</span>
+									{END ExDC_fieldheader}
+									</th>
+									{END ExDC_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN RDRSL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$RDRSL_class}" data-field=RDRSL>
+									{BEGIN RDRSL_fieldheader}
+																				<span {$RDRSL_orderlinkattrs}>
+											{$label main RDRSL}
+										</span>
+									{END RDRSL_fieldheader}
+									</th>
+									{END RDRSL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN RDRSL1_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$RDRSL1_class}" data-field=RDRSL1>
+									{BEGIN RDRSL1_fieldheader}
+																				<span {$RDRSL1_orderlinkattrs}>
+											{$label main RDRSL1}
+										</span>
+									{END RDRSL1_fieldheader}
+									</th>
+									{END RDRSL1_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN RDRSL2_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$RDRSL2_class}" data-field=RDRSL2>
+									{BEGIN RDRSL2_fieldheader}
+																				<span {$RDRSL2_orderlinkattrs}>
+											{$label main RDRSL2}
+										</span>
+									{END RDRSL2_fieldheader}
+									</th>
+									{END RDRSL2_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN RDRSL3_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$RDRSL3_class}" data-field=RDRSL3>
+									{BEGIN RDRSL3_fieldheader}
+																				<span {$RDRSL3_orderlinkattrs}>
+											{$label main RDRSL3}
+										</span>
+									{END RDRSL3_fieldheader}
+									</th>
+									{END RDRSL3_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN RDRSL4_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$RDRSL4_class}" data-field=RDRSL4>
+									{BEGIN RDRSL4_fieldheader}
+																				<span {$RDRSL4_orderlinkattrs}>
+											{$label main RDRSL4}
+										</span>
+									{END RDRSL4_fieldheader}
+									</th>
+									{END RDRSL4_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TRDRSL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TRDRSL_class}" data-field=TRDRSL>
+									{BEGIN TRDRSL_fieldheader}
+																				<span {$TRDRSL_orderlinkattrs}>
+											{$label main TRDRSL}
+										</span>
+									{END TRDRSL_fieldheader}
+									</th>
+									{END TRDRSL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN OTL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$OTL_class}" data-field=OTL>
+									{BEGIN OTL_fieldheader}
+																				<span {$OTL_orderlinkattrs}>
+											{$label main OTL}
+										</span>
+									{END OTL_fieldheader}
+									</th>
+									{END OTL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN OTL1_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$OTL1_class}" data-field=OTL1>
+									{BEGIN OTL1_fieldheader}
+																				<span {$OTL1_orderlinkattrs}>
+											{$label main OTL1}
+										</span>
+									{END OTL1_fieldheader}
+									</th>
+									{END OTL1_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN OTL2_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$OTL2_class}" data-field=OTL2>
+									{BEGIN OTL2_fieldheader}
+																				<span {$OTL2_orderlinkattrs}>
+											{$label main OTL2}
+										</span>
+									{END OTL2_fieldheader}
+									</th>
+									{END OTL2_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN OTL3_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$OTL3_class}" data-field=OTL3>
+									{BEGIN OTL3_fieldheader}
+																				<span {$OTL3_orderlinkattrs}>
+											{$label main OTL3}
+										</span>
+									{END OTL3_fieldheader}
+									</th>
+									{END OTL3_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN OTL4_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$OTL4_class}" data-field=OTL4>
+									{BEGIN OTL4_fieldheader}
+																				<span {$OTL4_orderlinkattrs}>
+											{$label main OTL4}
+										</span>
+									{END OTL4_fieldheader}
+									</th>
+									{END OTL4_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TOTL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TOTL_class}" data-field=TOTL>
+									{BEGIN TOTL_fieldheader}
+																				<span {$TOTL_orderlinkattrs}>
+											{$label main TOTL}
+										</span>
+									{END TOTL_fieldheader}
+									</th>
+									{END TOTL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN OFIW_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$OFIW_class}" data-field=OFIW>
+									{BEGIN OFIW_fieldheader}
+																				<span {$OFIW_orderlinkattrs}>
+											{$label main OFIW}
+										</span>
+									{END OFIW_fieldheader}
+									</th>
+									{END OFIW_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN OFIW1_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$OFIW1_class}" data-field=OFIW1>
+									{BEGIN OFIW1_fieldheader}
+																				<span {$OFIW1_orderlinkattrs}>
+											{$label main OFIW1}
+										</span>
+									{END OFIW1_fieldheader}
+									</th>
+									{END OFIW1_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN OFIW2_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$OFIW2_class}" data-field=OFIW2>
+									{BEGIN OFIW2_fieldheader}
+																				<span {$OFIW2_orderlinkattrs}>
+											{$label main OFIW2}
+										</span>
+									{END OFIW2_fieldheader}
+									</th>
+									{END OFIW2_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN OFIW3_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$OFIW3_class}" data-field=OFIW3>
+									{BEGIN OFIW3_fieldheader}
+																				<span {$OFIW3_orderlinkattrs}>
+											{$label main OFIW3}
+										</span>
+									{END OFIW3_fieldheader}
+									</th>
+									{END OFIW3_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN OFIW4_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$OFIW4_class}" data-field=OFIW4>
+									{BEGIN OFIW4_fieldheader}
+																				<span {$OFIW4_orderlinkattrs}>
+											{$label main OFIW4}
+										</span>
+									{END OFIW4_fieldheader}
+									</th>
+									{END OFIW4_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TOFIW_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TOFIW_class}" data-field=TOFIW>
+									{BEGIN TOFIW_fieldheader}
+																				<span {$TOFIW_orderlinkattrs}>
+											{$label main TOFIW}
+										</span>
+									{END TOFIW_fieldheader}
+									</th>
+									{END TOFIW_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN OFAL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$OFAL_class}" data-field=OFAL>
+									{BEGIN OFAL_fieldheader}
+																				<span {$OFAL_orderlinkattrs}>
+											{$label main OFAL}
+										</span>
+									{END OFAL_fieldheader}
+									</th>
+									{END OFAL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN OFAL1_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$OFAL1_class}" data-field=OFAL1>
+									{BEGIN OFAL1_fieldheader}
+																				<span {$OFAL1_orderlinkattrs}>
+											{$label main OFAL1}
+										</span>
+									{END OFAL1_fieldheader}
+									</th>
+									{END OFAL1_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN OFAL2_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$OFAL2_class}" data-field=OFAL2>
+									{BEGIN OFAL2_fieldheader}
+																				<span {$OFAL2_orderlinkattrs}>
+											{$label main OFAL2}
+										</span>
+									{END OFAL2_fieldheader}
+									</th>
+									{END OFAL2_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN OFAL3_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$OFAL3_class}" data-field=OFAL3>
+									{BEGIN OFAL3_fieldheader}
+																				<span {$OFAL3_orderlinkattrs}>
+											{$label main OFAL3}
+										</span>
+									{END OFAL3_fieldheader}
+									</th>
+									{END OFAL3_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN OFAL4_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$OFAL4_class}" data-field=OFAL4>
+									{BEGIN OFAL4_fieldheader}
+																				<span {$OFAL4_orderlinkattrs}>
+											{$label main OFAL4}
+										</span>
+									{END OFAL4_fieldheader}
+									</th>
+									{END OFAL4_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TOFAL_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TOFAL_class}" data-field=TOFAL>
+									{BEGIN TOFAL_fieldheader}
+																				<span {$TOFAL_orderlinkattrs}>
+											{$label main TOFAL}
+										</span>
+									{END TOFAL_fieldheader}
+									</th>
+									{END TOFAL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TPE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TPE_class}" data-field=TPE>
+									{BEGIN TPE_fieldheader}
+																				<span {$TPE_orderlinkattrs}>
+											{$label main TPE}
+										</span>
+									{END TPE_fieldheader}
+									</th>
+									{END TPE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TPE1_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TPE1_class}" data-field=TPE1>
+									{BEGIN TPE1_fieldheader}
+																				<span {$TPE1_orderlinkattrs}>
+											{$label main TPE1}
+										</span>
+									{END TPE1_fieldheader}
+									</th>
+									{END TPE1_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TPE2_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TPE2_class}" data-field=TPE2>
+									{BEGIN TPE2_fieldheader}
+																				<span {$TPE2_orderlinkattrs}>
+											{$label main TPE2}
+										</span>
+									{END TPE2_fieldheader}
+									</th>
+									{END TPE2_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TPE3_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TPE3_class}" data-field=TPE3>
+									{BEGIN TPE3_fieldheader}
+																				<span {$TPE3_orderlinkattrs}>
+											{$label main TPE3}
+										</span>
+									{END TPE3_fieldheader}
+									</th>
+									{END TPE3_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TPE4_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TPE4_class}" data-field=TPE4>
+									{BEGIN TPE4_fieldheader}
+																				<span {$TPE4_orderlinkattrs}>
+											{$label main TPE4}
+										</span>
+									{END TPE4_fieldheader}
+									</th>
+									{END TPE4_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TTPE_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TTPE_class}" data-field=TTPE>
+									{BEGIN TTPE_fieldheader}
+																				<span {$TTPE_orderlinkattrs}>
+											{$label main TTPE}
+										</span>
+									{END TTPE_fieldheader}
+									</th>
+									{END TTPE_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN OFEWHM_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$OFEWHM_class}" data-field=OFEWHM>
+									{BEGIN OFEWHM_fieldheader}
+																				<span {$OFEWHM_orderlinkattrs}>
+											{$label main OFEWHM}
+										</span>
+									{END OFEWHM_fieldheader}
+									</th>
+									{END OFEWHM_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN PLAF_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$PLAF_class}" data-field=PLAF>
+									{BEGIN PLAF_fieldheader}
+																				<span {$PLAF_orderlinkattrs}>
+											{$label main PLAF}
+										</span>
+									{END PLAF_fieldheader}
+									</th>
+									{END PLAF_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN PLAT_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$PLAT_class}" data-field=PLAT>
+									{BEGIN PLAT_fieldheader}
+																				<span {$PLAT_orderlinkattrs}>
+											{$label main PLAT}
+										</span>
+									{END PLAT_fieldheader}
+									</th>
+									{END PLAT_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN A_Y_A_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$A_Y_A_class}" data-field=A_Y_A>
+									{BEGIN A_Y_A_fieldheader}
+																				<span {$A_Y_A_orderlinkattrs}>
+											{$label main A_Y_A}
+										</span>
+									{END A_Y_A_fieldheader}
+									</th>
+									{END A_Y_A_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN B_Y_A_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$B_Y_A_class}" data-field=B_Y_A>
+									{BEGIN B_Y_A_fieldheader}
+																				<span {$B_Y_A_orderlinkattrs}>
+											{$label main B_Y_A}
+										</span>
+									{END B_Y_A_fieldheader}
+									</th>
+									{END B_Y_A_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN C_Y_A_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$C_Y_A_class}" data-field=C_Y_A>
+									{BEGIN C_Y_A_fieldheader}
+																				<span {$C_Y_A_orderlinkattrs}>
+											{$label main C_Y_A}
+										</span>
+									{END C_Y_A_fieldheader}
+									</th>
+									{END C_Y_A_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN D_Y_A_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$D_Y_A_class}" data-field=D_Y_A>
+									{BEGIN D_Y_A_fieldheader}
+																				<span {$D_Y_A_orderlinkattrs}>
+											{$label main D_Y_A}
+										</span>
+									{END D_Y_A_fieldheader}
+									</th>
+									{END D_Y_A_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN E_Y_A_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$E_Y_A_class}" data-field=E_Y_A>
+									{BEGIN E_Y_A_fieldheader}
+																				<span {$E_Y_A_orderlinkattrs}>
+											{$label main E_Y_A}
+										</span>
+									{END E_Y_A_fieldheader}
+									</th>
+									{END E_Y_A_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN F_Y_A_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$F_Y_A_class}" data-field=F_Y_A>
+									{BEGIN F_Y_A_fieldheader}
+																				<span {$F_Y_A_orderlinkattrs}>
+											{$label main F_Y_A}
+										</span>
+									{END F_Y_A_fieldheader}
+									</th>
+									{END F_Y_A_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN G_Y_A_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$G_Y_A_class}" data-field=G_Y_A>
+									{BEGIN G_Y_A_fieldheader}
+																				<span {$G_Y_A_orderlinkattrs}>
+											{$label main G_Y_A}
+										</span>
+									{END G_Y_A_fieldheader}
+									</th>
+									{END G_Y_A_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN H_Y_A_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$H_Y_A_class}" data-field=H_Y_A>
+									{BEGIN H_Y_A_fieldheader}
+																				<span {$H_Y_A_orderlinkattrs}>
+											{$label main H_Y_A}
+										</span>
+									{END H_Y_A_fieldheader}
+									</th>
+									{END H_Y_A_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN I_Y_A_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$I_Y_A_class}" data-field=I_Y_A>
+									{BEGIN I_Y_A_fieldheader}
+																				<span {$I_Y_A_orderlinkattrs}>
+											{$label main I_Y_A}
+										</span>
+									{END I_Y_A_fieldheader}
+									</th>
+									{END I_Y_A_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN J_Y_A_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$J_Y_A_class}" data-field=J_Y_A>
+									{BEGIN J_Y_A_fieldheader}
+																				<span {$J_Y_A_orderlinkattrs}>
+											{$label main J_Y_A}
+										</span>
+									{END J_Y_A_fieldheader}
+									</th>
+									{END J_Y_A_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN K_Y_A_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$K_Y_A_class}" data-field=K_Y_A>
+									{BEGIN K_Y_A_fieldheader}
+																				<span {$K_Y_A_orderlinkattrs}>
+											{$label main K_Y_A}
+										</span>
+									{END K_Y_A_fieldheader}
+									</th>
+									{END K_Y_A_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DSR_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DSR_class}" data-field=DSR>
+									{BEGIN DSR_fieldheader}
+																				<span {$DSR_orderlinkattrs}>
+											{$label main DSR}
+										</span>
+									{END DSR_fieldheader}
+									</th>
+									{END DSR_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DAR_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DAR_class}" data-field=DAR>
+									{BEGIN DAR_fieldheader}
+																				<span {$DAR_orderlinkattrs}>
+											{$label main DAR}
+										</span>
+									{END DAR_fieldheader}
+									</th>
+									{END DAR_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN GPMR_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$GPMR_class}" data-field=GPMR>
+									{BEGIN GPMR_fieldheader}
+																				<span {$GPMR_orderlinkattrs}>
+											{$label main GPMR}
+										</span>
+									{END GPMR_fieldheader}
+									</th>
+									{END GPMR_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN NPMR_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$NPMR_class}" data-field=NPMR>
+									{BEGIN NPMR_fieldheader}
+																				<span {$NPMR_orderlinkattrs}>
+											{$label main NPMR}
+										</span>
+									{END NPMR_fieldheader}
+									</th>
+									{END NPMR_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Cash_Flow_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Cash_Flow_class}" data-field=Cash_Flow>
+									{BEGIN Cash_Flow_fieldheader}
+																				<span {$Cash_Flow_orderlinkattrs}>
+											{$label main Cash_Flow}
+										</span>
+									{END Cash_Flow_fieldheader}
+									</th>
+									{END Cash_Flow_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN endrecordheader_block}
+									<th class="rnr-cs">&nbsp;</th>
+									
+									{END endrecordheader_block}
+									
+									{END record_header}
+									
+								</tr>
+								{END grid_header}
+
+	</thead>
+	<tbody>	
+		{BEGIN grid_row}
+<tr class="{$rowclass} bs-gridrow" {$rowattrs} {$rowstyle}>
+	{BEGIN grid_record}
+	{BEGIN listIcons_column}
+	<td class="bs-gridicons" iEditCont="all" {$rowstyle} {$recordattrs}>
+		{BEGIN edit_column}
+	{BEGIN edit_link}
+			<a class="glyphicon glyphicon-pencil" {$editlink_attrs} title="Edit"></a>
+	{END edit_link}
+	{END edit_column}
+
+	
+	
+		{BEGIN view_column}
+	{BEGIN view_link}
+			<a class="glyphicon glyphicon-search" {$viewlink_attrs} title="View"></a>
+	{END view_link}
+	{END view_column}
+	</td>	
+	{END listIcons_column}	
+
+		{BEGIN checkbox_column}
+	<td  iEditCont="checkBox" class="bs-gridcheckbox" {$rowstyle} {$recordattrs}>
+	{BEGIN checkbox}
+	<input type="checkbox" {$checkbox_attrs}>
+	{END checkbox}
+	</td>
+	{END checkbox_column}
+
+		{BEGIN main_dtable_column}
+	<td class="rnr-nowrap bs-griddetails" {$rowstyle} {$recordattrs}>
+	
+			{BEGIN dtables_link}
+		
+							
+				
+							
+				
+							
+				
+							
+				
+							
+				
+							
+				
+							
+				
+							
+				
+							
+				
+							
+				
+							
+				
+				<a {$dtables_link_attrs} class="glyphicon glyphicon-th-list {$dtables_link_class}" title="Show details"></a>
+								{BEGIN asset_des_childcount}
+				<a {$asset_des_link_attrs} class="{$asset_des_dlink_class}" title="Asset Des">
+					<span class="details-badge badge asset_des_badge" {$asset_des_childnumber_attr}>
+						{$asset_des_childnumber}
+					</span></a>
+				{END asset_des_childcount}
+								{BEGIN FM_Income_childcount}
+				<a {$FM_Income_link_attrs} class="{$FM_Income_dlink_class}" title="FM Income">
+					<span class="details-badge badge FM_Income_badge" {$FM_Income_childnumber_attr}>
+						{$FM_Income_childnumber}
+					</span></a>
+				{END FM_Income_childcount}
+								{BEGIN Approv_childcount}
+				<a {$Approv_link_attrs} class="{$Approv_dlink_class}" title="Approv">
+					<span class="details-badge badge Approv_badge" {$Approv_childnumber_attr}>
+						{$Approv_childnumber}
+					</span></a>
+				{END Approv_childcount}
+								{BEGIN inv_risk_childcount}
+				<a {$inv_risk_link_attrs} class="{$inv_risk_dlink_class}" title="Inv-risk">
+					<span class="details-badge badge inv_risk_badge" {$inv_risk_childnumber_attr}>
+						{$inv_risk_childnumber}
+					</span></a>
+				{END inv_risk_childcount}
+								{BEGIN Org_info_childcount}
+				<a {$Org_info_link_attrs} class="{$Org_info_dlink_class}" title="Org Info">
+					<span class="details-badge badge Org_info_badge" {$Org_info_childnumber_attr}>
+						{$Org_info_childnumber}
+					</span></a>
+				{END Org_info_childcount}
+								{BEGIN St_Info_childcount}
+				<a {$St_Info_link_attrs} class="{$St_Info_dlink_class}" title="St Info">
+					<span class="details-badge badge St_Info_badge" {$St_Info_childnumber_attr}>
+						{$St_Info_childnumber}
+					</span></a>
+				{END St_Info_childcount}
+								{BEGIN Req_childcount}
+				<a {$Req_link_attrs} class="{$Req_dlink_class}" title="Req">
+					<span class="details-badge badge Req_badge" {$Req_childnumber_attr}>
+						{$Req_childnumber}
+					</span></a>
+				{END Req_childcount}
+								{BEGIN Remitance_childcount}
+				<a {$Remitance_link_attrs} class="{$Remitance_dlink_class}" title="Remitance">
+					<span class="details-badge badge Remitance_badge" {$Remitance_childnumber_attr}>
+						{$Remitance_childnumber}
+					</span></a>
+				{END Remitance_childcount}
+								{BEGIN BRI_childcount}
+				<a {$BRI_link_attrs} class="{$BRI_dlink_class}" title="BRI">
+					<span class="details-badge badge BRI_badge" {$BRI_childnumber_attr}>
+						{$BRI_childnumber}
+					</span></a>
+				{END BRI_childcount}
+								{BEGIN PFLI_childcount}
+				<a {$PFLI_link_attrs} class="{$PFLI_dlink_class}" title="PFLI">
+					<span class="details-badge badge PFLI_badge" {$PFLI_childnumber_attr}>
+						{$PFLI_childnumber}
+					</span></a>
+				{END PFLI_childcount}
+								{BEGIN Month_sales_childcount}
+				<a {$Month_sales_link_attrs} class="{$Month_sales_dlink_class}" title="Month Sales">
+					<span class="details-badge badge Month_sales_badge" {$Month_sales_childnumber_attr}>
+						{$Month_sales_childnumber}
+					</span></a>
+				{END Month_sales_childcount}
+		{END dtables_link}
+	
+	
+	</td>
+	{END main_dtable_column}
+
+
+	{BEGIN MID_fieldcolumn}
+	<td class="bs-gridcell {$MID_class}"  data-field=MID {$rowstyle} {$recordattrs}>
+		{$MID_value}
+	</td>
+{END MID_fieldcolumn}
+
+
+	{BEGIN ad_Date_fieldcolumn}
+	<td class="bs-gridcell {$ad_Date_class}"  data-field=ad_Date {$rowstyle} {$recordattrs}>
+		{$ad_Date_value}
+	</td>
+{END ad_Date_fieldcolumn}
+
+
+	{BEGIN Prof_fieldcolumn}
+	<td class="bs-gridcell {$Prof_class}"  data-field=Prof {$rowstyle} {$recordattrs}>
+		{$Prof_value}
+	</td>
+{END Prof_fieldcolumn}
+
+
+	{BEGIN Br_Id_fieldcolumn}
+	<td class="bs-gridcell {$Br_Id_class}"  data-field=Br_Id {$rowstyle} {$recordattrs}>
+		{$Br_Id_value}
+	</td>
+{END Br_Id_fieldcolumn}
+
+
+	{BEGIN Br_name_fieldcolumn}
+	<td class="bs-gridcell {$Br_name_class}"  data-field=Br_name {$rowstyle} {$recordattrs}>
+		{$Br_name_value}
+	</td>
+{END Br_name_fieldcolumn}
+
+
+	{BEGIN Area_fieldcolumn}
+	<td class="bs-gridcell {$Area_class}"  data-field=Area {$rowstyle} {$recordattrs}>
+		{$Area_value}
+	</td>
+{END Area_fieldcolumn}
+
+
+	{BEGIN Region_fieldcolumn}
+	<td class="bs-gridcell {$Region_class}"  data-field=Region {$rowstyle} {$recordattrs}>
+		{$Region_value}
+	</td>
+{END Region_fieldcolumn}
+
+
+	{BEGIN Mem_Name_fieldcolumn}
+	<td class="bs-gridcell {$Mem_Name_class}"  data-field=Mem_Name {$rowstyle} {$recordattrs}>
+		{$Mem_Name_value}
+	</td>
+{END Mem_Name_fieldcolumn}
+
+
+	{BEGIN D_Birth_fieldcolumn}
+	<td class="bs-gridcell {$D_Birth_class}"  data-field=D_Birth {$rowstyle} {$recordattrs}>
+		{$D_Birth_value}
+	</td>
+{END D_Birth_fieldcolumn}
+
+
+	{BEGIN Age_fieldcolumn}
+	<td class="bs-gridcell {$Age_class}"  data-field=Age {$rowstyle} {$recordattrs}>
+		{$Age_value}
+	</td>
+{END Age_fieldcolumn}
+
+
+	{BEGIN Mem_No_fieldcolumn}
+	<td class="bs-gridcell {$Mem_No_class}"  data-field=Mem_No {$rowstyle} {$recordattrs}>
+		{$Mem_No_value}
+	</td>
+{END Mem_No_fieldcolumn}
+
+
+	{BEGIN KYC_fieldcolumn}
+	<td class="bs-gridcell {$KYC_class}"  data-field=KYC {$rowstyle} {$recordattrs}>
+		{$KYC_value}
+	</td>
+{END KYC_fieldcolumn}
+
+
+	{BEGIN Father_fieldcolumn}
+	<td class="bs-gridcell {$Father_class}"  data-field=Father {$rowstyle} {$recordattrs}>
+		{$Father_value}
+	</td>
+{END Father_fieldcolumn}
+
+
+	{BEGIN Mother_fieldcolumn}
+	<td class="bs-gridcell {$Mother_class}"  data-field=Mother {$rowstyle} {$recordattrs}>
+		{$Mother_value}
+	</td>
+{END Mother_fieldcolumn}
+
+
+	{BEGIN Sex_fieldcolumn}
+	<td class="bs-gridcell {$Sex_class}"  data-field=Sex {$rowstyle} {$recordattrs}>
+		{$Sex_value}
+	</td>
+{END Sex_fieldcolumn}
+
+
+	{BEGIN M_staus_fieldcolumn}
+	<td class="bs-gridcell {$M_staus_class}"  data-field=M_staus {$rowstyle} {$recordattrs}>
+		{$M_staus_value}
+	</td>
+{END M_staus_fieldcolumn}
+
+
+	{BEGIN M_staus_other_fieldcolumn}
+	<td class="bs-gridcell {$M_staus_other_class}"  data-field=M_staus_other {$rowstyle} {$recordattrs}>
+		{$M_staus_other_value}
+	</td>
+{END M_staus_other_fieldcolumn}
+
+
+	{BEGIN Ed_Backgr_fieldcolumn}
+	<td class="bs-gridcell {$Ed_Backgr_class}"  data-field=Ed_Backgr {$rowstyle} {$recordattrs}>
+		{$Ed_Backgr_value}
+	</td>
+{END Ed_Backgr_fieldcolumn}
+
+
+	{BEGIN Ed_other_fieldcolumn}
+	<td class="bs-gridcell {$Ed_other_class}"  data-field=Ed_other {$rowstyle} {$recordattrs}>
+		{$Ed_other_value}
+	</td>
+{END Ed_other_fieldcolumn}
+
+
+	{BEGIN FTM_fieldcolumn}
+	<td class="bs-gridcell {$FTM_class}"  data-field=FTM {$rowstyle} {$recordattrs}>
+		{$FTM_value}
+	</td>
+{END FTM_fieldcolumn}
+
+
+	{BEGIN FEM_fieldcolumn}
+	<td class="bs-gridcell {$FEM_class}"  data-field=FEM {$rowstyle} {$recordattrs}>
+		{$FEM_value}
+	</td>
+{END FEM_fieldcolumn}
+
+
+	{BEGIN Pr_adr_fieldcolumn}
+	<td class="bs-gridcell {$Pr_adr_class}"  data-field=Pr_adr {$rowstyle} {$recordattrs}>
+		{$Pr_adr_value}
+	</td>
+{END Pr_adr_fieldcolumn}
+
+
+	{BEGIN Per_adr_fieldcolumn}
+	<td class="bs-gridcell {$Per_adr_class}"  data-field=Per_adr {$rowstyle} {$recordattrs}>
+		{$Per_adr_value}
+	</td>
+{END Per_adr_fieldcolumn}
+
+
+	{BEGIN NID_fieldcolumn}
+	<td class="bs-gridcell {$NID_class}"  data-field=NID {$rowstyle} {$recordattrs}>
+		{$NID_value}
+	</td>
+{END NID_fieldcolumn}
+
+
+	{BEGIN cell_no_fieldcolumn}
+	<td class="bs-gridcell {$cell_no_class}"  data-field=cell_no {$rowstyle} {$recordattrs}>
+		{$cell_no_value}
+	</td>
+{END cell_no_fieldcolumn}
+
+
+	{BEGIN E_Tin_fieldcolumn}
+	<td class="bs-gridcell {$E_Tin_class}"  data-field=E_Tin {$rowstyle} {$recordattrs}>
+		{$E_Tin_value}
+	</td>
+{END E_Tin_fieldcolumn}
+
+
+	{BEGIN ENFMN_fieldcolumn}
+	<td class="bs-gridcell {$ENFMN_class}"  data-field=ENFMN {$rowstyle} {$recordattrs}>
+		{$ENFMN_value}
+	</td>
+{END ENFMN_fieldcolumn}
+
+
+	{BEGIN ENFMN_Rel_fieldcolumn}
+	<td class="bs-gridcell {$ENFMN_Rel_class}"  data-field=ENFMN_Rel {$rowstyle} {$recordattrs}>
+		{$ENFMN_Rel_value}
+	</td>
+{END ENFMN_Rel_fieldcolumn}
+
+
+	{BEGIN ALT_fieldcolumn}
+	<td class="bs-gridcell {$ALT_class}"  data-field=ALT {$rowstyle} {$recordattrs}>
+		{$ALT_value}
+	</td>
+{END ALT_fieldcolumn}
+
+
+	{BEGIN MALT_fieldcolumn}
+	<td class="bs-gridcell {$MALT_class}"  data-field=MALT {$rowstyle} {$recordattrs}>
+		{$MALT_value}
+	</td>
+{END MALT_fieldcolumn}
+
+
+	{BEGIN LFC_fieldcolumn}
+	<td class="bs-gridcell {$LFC_class}"  data-field=LFC {$rowstyle} {$recordattrs}>
+		{$LFC_value}
+	</td>
+{END LFC_fieldcolumn}
+
+
+	{BEGIN LS_fieldcolumn}
+	<td class="bs-gridcell {$LS_class}"  data-field=LS {$rowstyle} {$recordattrs}>
+		{$LS_value}
+	</td>
+{END LS_fieldcolumn}
+
+
+	{BEGIN SCH_fieldcolumn}
+	<td class="bs-gridcell {$SCH_class}"  data-field=SCH {$rowstyle} {$recordattrs}>
+		{$SCH_value}
+	</td>
+{END SCH_fieldcolumn}
+
+
+	{BEGIN SCL_fieldcolumn}
+	<td class="bs-gridcell {$SCL_class}"  data-field=SCL {$rowstyle} {$recordattrs}>
+		{$SCL_value}
+	</td>
+{END SCL_fieldcolumn}
+
+
+	{BEGIN Inst_Size_fieldcolumn}
+	<td class="bs-gridcell {$Inst_Size_class}"  data-field=Inst_Size {$rowstyle} {$recordattrs}>
+		{$Inst_Size_value}
+	</td>
+{END Inst_Size_fieldcolumn}
+
+
+	{BEGIN Inst_Amt_fieldcolumn}
+	<td class="bs-gridcell {$Inst_Amt_class}"  data-field=Inst_Amt {$rowstyle} {$recordattrs}>
+		{$Inst_Amt_value}
+	</td>
+{END Inst_Amt_fieldcolumn}
+
+
+	{BEGIN B_name_fieldcolumn}
+	<td class="bs-gridcell {$B_name_class}"  data-field=B_name {$rowstyle} {$recordattrs}>
+		{$B_name_value}
+	</td>
+{END B_name_fieldcolumn}
+
+
+	{BEGIN B_Des_fieldcolumn}
+	<td class="bs-gridcell {$B_Des_class}"  data-field=B_Des {$rowstyle} {$recordattrs}>
+		{$B_Des_value}
+	</td>
+{END B_Des_fieldcolumn}
+
+
+	{BEGIN B_Type_fieldcolumn}
+	<td class="bs-gridcell {$B_Type_class}"  data-field=B_Type {$rowstyle} {$recordattrs}>
+		{$B_Type_value}
+	</td>
+{END B_Type_fieldcolumn}
+
+
+	{BEGIN Stabl_fieldcolumn}
+	<td class="bs-gridcell {$Stabl_class}"  data-field=Stabl {$rowstyle} {$recordattrs}>
+		{$Stabl_value}
+	</td>
+{END Stabl_fieldcolumn}
+
+
+	{BEGIN Emp_No_fieldcolumn}
+	<td class="bs-gridcell {$Emp_No_class}"  data-field=Emp_No {$rowstyle} {$recordattrs}>
+		{$Emp_No_value}
+	</td>
+{END Emp_No_fieldcolumn}
+
+
+	{BEGIN Trade_Lic_fieldcolumn}
+	<td class="bs-gridcell {$Trade_Lic_class}"  data-field=Trade_Lic {$rowstyle} {$recordattrs}>
+		{$Trade_Lic_value}
+	</td>
+{END Trade_Lic_fieldcolumn}
+
+
+	{BEGIN Exp_Date_fieldcolumn}
+	<td class="bs-gridcell {$Exp_Date_class}"  data-field=Exp_Date {$rowstyle} {$recordattrs}>
+		{$Exp_Date_value}
+	</td>
+{END Exp_Date_fieldcolumn}
+
+
+	{BEGIN Certifi_Payer_fieldcolumn}
+	<td class="bs-gridcell {$Certifi_Payer_class}"  data-field=Certifi_Payer {$rowstyle} {$recordattrs}>
+		{$Certifi_Payer_value}
+	</td>
+{END Certifi_Payer_fieldcolumn}
+
+
+	{BEGIN B_style_fieldcolumn}
+	<td class="bs-gridcell {$B_style_class}"  data-field=B_style {$rowstyle} {$recordattrs}>
+		{$B_style_value}
+	</td>
+{END B_style_fieldcolumn}
+
+
+	{BEGIN B_Addr_fieldcolumn}
+	<td class="bs-gridcell {$B_Addr_class}"  data-field=B_Addr {$rowstyle} {$recordattrs}>
+		{$B_Addr_value}
+	</td>
+{END B_Addr_fieldcolumn}
+
+
+	{BEGIN Other_B_fieldcolumn}
+	<td class="bs-gridcell {$Other_B_class}"  data-field=Other_B {$rowstyle} {$recordattrs}>
+		{$Other_B_value}
+	</td>
+{END Other_B_fieldcolumn}
+
+
+	{BEGIN M_name1_fieldcolumn}
+	<td class="bs-gridcell {$M_name1_class}"  data-field=M_name1 {$rowstyle} {$recordattrs}>
+		{$M_name1_value}
+	</td>
+{END M_name1_fieldcolumn}
+
+
+	{BEGIN M_Name2_fieldcolumn}
+	<td class="bs-gridcell {$M_Name2_class}"  data-field=M_Name2 {$rowstyle} {$recordattrs}>
+		{$M_Name2_value}
+	</td>
+{END M_Name2_fieldcolumn}
+
+
+	{BEGIN M_Name3_fieldcolumn}
+	<td class="bs-gridcell {$M_Name3_class}"  data-field=M_Name3 {$rowstyle} {$recordattrs}>
+		{$M_Name3_value}
+	</td>
+{END M_Name3_fieldcolumn}
+
+
+	{BEGIN Y_S_1_fieldcolumn}
+	<td class="bs-gridcell {$Y_S_1_class}"  data-field=Y_S_1 {$rowstyle} {$recordattrs}>
+		{$Y_S_1_value}
+	</td>
+{END Y_S_1_fieldcolumn}
+
+
+	{BEGIN Y_S_2_fieldcolumn}
+	<td class="bs-gridcell {$Y_S_2_class}"  data-field=Y_S_2 {$rowstyle} {$recordattrs}>
+		{$Y_S_2_value}
+	</td>
+{END Y_S_2_fieldcolumn}
+
+
+	{BEGIN Y_S_3_fieldcolumn}
+	<td class="bs-gridcell {$Y_S_3_class}"  data-field=Y_S_3 {$rowstyle} {$recordattrs}>
+		{$Y_S_3_value}
+	</td>
+{END Y_S_3_fieldcolumn}
+
+
+	{BEGIN Y_A_A1_fieldcolumn}
+	<td class="bs-gridcell {$Y_A_A1_class}"  data-field=Y_A_A1 {$rowstyle} {$recordattrs}>
+		{$Y_A_A1_value}
+	</td>
+{END Y_A_A1_fieldcolumn}
+
+
+	{BEGIN Y_A_A2_fieldcolumn}
+	<td class="bs-gridcell {$Y_A_A2_class}"  data-field=Y_A_A2 {$rowstyle} {$recordattrs}>
+		{$Y_A_A2_value}
+	</td>
+{END Y_A_A2_fieldcolumn}
+
+
+	{BEGIN Y_A_A3_fieldcolumn}
+	<td class="bs-gridcell {$Y_A_A3_class}"  data-field=Y_A_A3 {$rowstyle} {$recordattrs}>
+		{$Y_A_A3_value}
+	</td>
+{END Y_A_A3_fieldcolumn}
+
+
+	{BEGIN Y_Sal1_fieldcolumn}
+	<td class="bs-gridcell {$Y_Sal1_class}"  data-field=Y_Sal1 {$rowstyle} {$recordattrs}>
+		{$Y_Sal1_value}
+	</td>
+{END Y_Sal1_fieldcolumn}
+
+
+	{BEGIN Y_sal2_fieldcolumn}
+	<td class="bs-gridcell {$Y_sal2_class}"  data-field=Y_sal2 {$rowstyle} {$recordattrs}>
+		{$Y_sal2_value}
+	</td>
+{END Y_sal2_fieldcolumn}
+
+
+	{BEGIN Y_Sal3_fieldcolumn}
+	<td class="bs-gridcell {$Y_Sal3_class}"  data-field=Y_Sal3 {$rowstyle} {$recordattrs}>
+		{$Y_Sal3_value}
+	</td>
+{END Y_Sal3_fieldcolumn}
+
+
+	{BEGIN Y_Y_T_fieldcolumn}
+	<td class="bs-gridcell {$Y_Y_T_class}"  data-field=Y_Y_T {$rowstyle} {$recordattrs}>
+		{$Y_Y_T_value}
+	</td>
+{END Y_Y_T_fieldcolumn}
+
+
+	{BEGIN Y_A_T_fieldcolumn}
+	<td class="bs-gridcell {$Y_A_T_class}"  data-field=Y_A_T {$rowstyle} {$recordattrs}>
+		{$Y_A_T_value}
+	</td>
+{END Y_A_T_fieldcolumn}
+
+
+	{BEGIN Income_Expen_fieldcolumn}
+	<td class="bs-gridcell {$Income_Expen_class}"  data-field=Income_Expen {$rowstyle} {$recordattrs}>
+		{$Income_Expen_value}
+	</td>
+{END Income_Expen_fieldcolumn}
+
+
+	{BEGIN Income_tot_fieldcolumn}
+	<td class="bs-gridcell {$Income_tot_class}"  data-field=Income_tot {$rowstyle} {$recordattrs}>
+		{$Income_tot_value}
+	</td>
+{END Income_tot_fieldcolumn}
+
+
+	{BEGIN Expen_1_fieldcolumn}
+	<td class="bs-gridcell {$Expen_1_class}"  data-field=Expen_1 {$rowstyle} {$recordattrs}>
+		{$Expen_1_value}
+	</td>
+{END Expen_1_fieldcolumn}
+
+
+	{BEGIN Expen_2_fieldcolumn}
+	<td class="bs-gridcell {$Expen_2_class}"  data-field=Expen_2 {$rowstyle} {$recordattrs}>
+		{$Expen_2_value}
+	</td>
+{END Expen_2_fieldcolumn}
+
+
+	{BEGIN Expen_3_fieldcolumn}
+	<td class="bs-gridcell {$Expen_3_class}"  data-field=Expen_3 {$rowstyle} {$recordattrs}>
+		{$Expen_3_value}
+	</td>
+{END Expen_3_fieldcolumn}
+
+
+	{BEGIN Expen_4_fieldcolumn}
+	<td class="bs-gridcell {$Expen_4_class}"  data-field=Expen_4 {$rowstyle} {$recordattrs}>
+		{$Expen_4_value}
+	</td>
+{END Expen_4_fieldcolumn}
+
+
+	{BEGIN Expen_5_fieldcolumn}
+	<td class="bs-gridcell {$Expen_5_class}"  data-field=Expen_5 {$rowstyle} {$recordattrs}>
+		{$Expen_5_value}
+	</td>
+{END Expen_5_fieldcolumn}
+
+
+	{BEGIN Expen_6_fieldcolumn}
+	<td class="bs-gridcell {$Expen_6_class}"  data-field=Expen_6 {$rowstyle} {$recordattrs}>
+		{$Expen_6_value}
+	</td>
+{END Expen_6_fieldcolumn}
+
+
+	{BEGIN Expen_7_fieldcolumn}
+	<td class="bs-gridcell {$Expen_7_class}"  data-field=Expen_7 {$rowstyle} {$recordattrs}>
+		{$Expen_7_value}
+	</td>
+{END Expen_7_fieldcolumn}
+
+
+	{BEGIN Expen_8_fieldcolumn}
+	<td class="bs-gridcell {$Expen_8_class}"  data-field=Expen_8 {$rowstyle} {$recordattrs}>
+		{$Expen_8_value}
+	</td>
+{END Expen_8_fieldcolumn}
+
+
+	{BEGIN Expen_tot_fieldcolumn}
+	<td class="bs-gridcell {$Expen_tot_class}"  data-field=Expen_tot {$rowstyle} {$recordattrs}>
+		{$Expen_tot_value}
+	</td>
+{END Expen_tot_fieldcolumn}
+
+
+	{BEGIN T_Exp_Tot_fieldcolumn}
+	<td class="bs-gridcell {$T_Exp_Tot_class}"  data-field=T_Exp_Tot {$rowstyle} {$recordattrs}>
+		{$T_Exp_Tot_value}
+	</td>
+{END T_Exp_Tot_fieldcolumn}
+
+
+	{BEGIN Ano_inc_sour_fieldcolumn}
+	<td class="bs-gridcell {$Ano_inc_sour_class}"  data-field=Ano_inc_sour {$rowstyle} {$recordattrs}>
+		{$Ano_inc_sour_value}
+	</td>
+{END Ano_inc_sour_fieldcolumn}
+
+
+	{BEGIN Ano_inc_sour_month_fieldcolumn}
+	<td class="bs-gridcell {$Ano_inc_sour_month_class}"  data-field=Ano_inc_sour_month {$rowstyle} {$recordattrs}>
+		{$Ano_inc_sour_month_value}
+	</td>
+{END Ano_inc_sour_month_fieldcolumn}
+
+
+	{BEGIN Expen_9_fieldcolumn}
+	<td class="bs-gridcell {$Expen_9_class}"  data-field=Expen_9 {$rowstyle} {$recordattrs}>
+		{$Expen_9_value}
+	</td>
+{END Expen_9_fieldcolumn}
+
+
+	{BEGIN Income_other_fieldcolumn}
+	<td class="bs-gridcell {$Income_other_class}"  data-field=Income_other {$rowstyle} {$recordattrs}>
+		{$Income_other_value}
+	</td>
+{END Income_other_fieldcolumn}
+
+
+	{BEGIN Income_Expen_From_fieldcolumn}
+	<td class="bs-gridcell {$Income_Expen_From_class}"  data-field=Income_Expen_From {$rowstyle} {$recordattrs}>
+		{$Income_Expen_From_value}
+	</td>
+{END Income_Expen_From_fieldcolumn}
+
+
+	{BEGIN T_RDRSL_fieldcolumn}
+	<td class="bs-gridcell {$T_RDRSL_class}"  data-field=T_RDRSL {$rowstyle} {$recordattrs}>
+		{$T_RDRSL_value}
+	</td>
+{END T_RDRSL_fieldcolumn}
+
+
+	{BEGIN FaCaTT_fieldcolumn}
+	<td class="bs-gridcell {$FaCaTT_class}"  data-field=FaCaTT {$rowstyle} {$recordattrs}>
+		{$FaCaTT_value}
+	</td>
+{END FaCaTT_fieldcolumn}
+
+
+	{BEGIN CATT_fieldcolumn}
+	<td class="bs-gridcell {$CATT_class}"  data-field=CATT {$rowstyle} {$recordattrs}>
+		{$CATT_value}
+	</td>
+{END CATT_fieldcolumn}
+
+
+	{BEGIN CAT5_fieldcolumn}
+	<td class="bs-gridcell {$CAT5_class}"  data-field=CAT5 {$rowstyle} {$recordattrs}>
+		{$CAT5_value}
+	</td>
+{END CAT5_fieldcolumn}
+
+
+	{BEGIN CAT4_fieldcolumn}
+	<td class="bs-gridcell {$CAT4_class}"  data-field=CAT4 {$rowstyle} {$recordattrs}>
+		{$CAT4_value}
+	</td>
+{END CAT4_fieldcolumn}
+
+
+	{BEGIN CAT3_fieldcolumn}
+	<td class="bs-gridcell {$CAT3_class}"  data-field=CAT3 {$rowstyle} {$recordattrs}>
+		{$CAT3_value}
+	</td>
+{END CAT3_fieldcolumn}
+
+
+	{BEGIN CAT2_fieldcolumn}
+	<td class="bs-gridcell {$CAT2_class}"  data-field=CAT2 {$rowstyle} {$recordattrs}>
+		{$CAT2_value}
+	</td>
+{END CAT2_fieldcolumn}
+
+
+	{BEGIN CAT1_fieldcolumn}
+	<td class="bs-gridcell {$CAT1_class}"  data-field=CAT1 {$rowstyle} {$recordattrs}>
+		{$CAT1_value}
+	</td>
+{END CAT1_fieldcolumn}
+
+
+	{BEGIN CAU5_fieldcolumn}
+	<td class="bs-gridcell {$CAU5_class}"  data-field=CAU5 {$rowstyle} {$recordattrs}>
+		{$CAU5_value}
+	</td>
+{END CAU5_fieldcolumn}
+
+
+	{BEGIN CAU4_fieldcolumn}
+	<td class="bs-gridcell {$CAU4_class}"  data-field=CAU4 {$rowstyle} {$recordattrs}>
+		{$CAU4_value}
+	</td>
+{END CAU4_fieldcolumn}
+
+
+	{BEGIN CAU3_fieldcolumn}
+	<td class="bs-gridcell {$CAU3_class}"  data-field=CAU3 {$rowstyle} {$recordattrs}>
+		{$CAU3_value}
+	</td>
+{END CAU3_fieldcolumn}
+
+
+	{BEGIN FAU5_fieldcolumn}
+	<td class="bs-gridcell {$FAU5_class}"  data-field=FAU5 {$rowstyle} {$recordattrs}>
+		{$FAU5_value}
+	</td>
+{END FAU5_fieldcolumn}
+
+
+	{BEGIN CAU2_fieldcolumn}
+	<td class="bs-gridcell {$CAU2_class}"  data-field=CAU2 {$rowstyle} {$recordattrs}>
+		{$CAU2_value}
+	</td>
+{END CAU2_fieldcolumn}
+
+
+	{BEGIN CAU1_fieldcolumn}
+	<td class="bs-gridcell {$CAU1_class}"  data-field=CAU1 {$rowstyle} {$recordattrs}>
+		{$CAU1_value}
+	</td>
+{END CAU1_fieldcolumn}
+
+
+	{BEGIN CAN5_fieldcolumn}
+	<td class="bs-gridcell {$CAN5_class}"  data-field=CAN5 {$rowstyle} {$recordattrs}>
+		{$CAN5_value}
+	</td>
+{END CAN5_fieldcolumn}
+
+
+	{BEGIN CAN4_fieldcolumn}
+	<td class="bs-gridcell {$CAN4_class}"  data-field=CAN4 {$rowstyle} {$recordattrs}>
+		{$CAN4_value}
+	</td>
+{END CAN4_fieldcolumn}
+
+
+	{BEGIN CAN3_fieldcolumn}
+	<td class="bs-gridcell {$CAN3_class}"  data-field=CAN3 {$rowstyle} {$recordattrs}>
+		{$CAN3_value}
+	</td>
+{END CAN3_fieldcolumn}
+
+
+	{BEGIN CAN2_fieldcolumn}
+	<td class="bs-gridcell {$CAN2_class}"  data-field=CAN2 {$rowstyle} {$recordattrs}>
+		{$CAN2_value}
+	</td>
+{END CAN2_fieldcolumn}
+
+
+	{BEGIN CAN1_fieldcolumn}
+	<td class="bs-gridcell {$CAN1_class}"  data-field=CAN1 {$rowstyle} {$recordattrs}>
+		{$CAN1_value}
+	</td>
+{END CAN1_fieldcolumn}
+
+
+	{BEGIN CA4_fieldcolumn}
+	<td class="bs-gridcell {$CA4_class}"  data-field=CA4 {$rowstyle} {$recordattrs}>
+		{$CA4_value}
+	</td>
+{END CA4_fieldcolumn}
+
+
+	{BEGIN CA3_fieldcolumn}
+	<td class="bs-gridcell {$CA3_class}"  data-field=CA3 {$rowstyle} {$recordattrs}>
+		{$CA3_value}
+	</td>
+{END CA3_fieldcolumn}
+
+
+	{BEGIN FAT1_fieldcolumn}
+	<td class="bs-gridcell {$FAT1_class}"  data-field=FAT1 {$rowstyle} {$recordattrs}>
+		{$FAT1_value}
+	</td>
+{END FAT1_fieldcolumn}
+
+
+	{BEGIN CA2_fieldcolumn}
+	<td class="bs-gridcell {$CA2_class}"  data-field=CA2 {$rowstyle} {$recordattrs}>
+		{$CA2_value}
+	</td>
+{END CA2_fieldcolumn}
+
+
+	{BEGIN CA1_fieldcolumn}
+	<td class="bs-gridcell {$CA1_class}"  data-field=CA1 {$rowstyle} {$recordattrs}>
+		{$CA1_value}
+	</td>
+{END CA1_fieldcolumn}
+
+
+	{BEGIN CA_fieldcolumn}
+	<td class="bs-gridcell {$CA_class}"  data-field=CA {$rowstyle} {$recordattrs}>
+		{$CA_value}
+	</td>
+{END CA_fieldcolumn}
+
+
+	{BEGIN FATT_fieldcolumn}
+	<td class="bs-gridcell {$FATT_class}"  data-field=FATT {$rowstyle} {$recordattrs}>
+		{$FATT_value}
+	</td>
+{END FATT_fieldcolumn}
+
+
+	{BEGIN FAR_fieldcolumn}
+	<td class="bs-gridcell {$FAR_class}"  data-field=FAR {$rowstyle} {$recordattrs}>
+		{$FAR_value}
+	</td>
+{END FAR_fieldcolumn}
+
+
+	{BEGIN FAT5_fieldcolumn}
+	<td class="bs-gridcell {$FAT5_class}"  data-field=FAT5 {$rowstyle} {$recordattrs}>
+		{$FAT5_value}
+	</td>
+{END FAT5_fieldcolumn}
+
+
+	{BEGIN CAR_fieldcolumn}
+	<td class="bs-gridcell {$CAR_class}"  data-field=CAR {$rowstyle} {$recordattrs}>
+		{$CAR_value}
+	</td>
+{END CAR_fieldcolumn}
+
+
+	{BEGIN FAT4_fieldcolumn}
+	<td class="bs-gridcell {$FAT4_class}"  data-field=FAT4 {$rowstyle} {$recordattrs}>
+		{$FAT4_value}
+	</td>
+{END FAT4_fieldcolumn}
+
+
+	{BEGIN FAT3_fieldcolumn}
+	<td class="bs-gridcell {$FAT3_class}"  data-field=FAT3 {$rowstyle} {$recordattrs}>
+		{$FAT3_value}
+	</td>
+{END FAT3_fieldcolumn}
+
+
+	{BEGIN FAT2_fieldcolumn}
+	<td class="bs-gridcell {$FAT2_class}"  data-field=FAT2 {$rowstyle} {$recordattrs}>
+		{$FAT2_value}
+	</td>
+{END FAT2_fieldcolumn}
+
+
+	{BEGIN TAss_fieldcolumn}
+	<td class="bs-gridcell {$TAss_class}"  data-field=TAss {$rowstyle} {$recordattrs}>
+		{$TAss_value}
+	</td>
+{END TAss_fieldcolumn}
+
+
+	{BEGIN FA1_fieldcolumn}
+	<td class="bs-gridcell {$FA1_class}"  data-field=FA1 {$rowstyle} {$recordattrs}>
+		{$FA1_value}
+	</td>
+{END FA1_fieldcolumn}
+
+
+	{BEGIN FA2_fieldcolumn}
+	<td class="bs-gridcell {$FA2_class}"  data-field=FA2 {$rowstyle} {$recordattrs}>
+		{$FA2_value}
+	</td>
+{END FA2_fieldcolumn}
+
+
+	{BEGIN FA3_fieldcolumn}
+	<td class="bs-gridcell {$FA3_class}"  data-field=FA3 {$rowstyle} {$recordattrs}>
+		{$FA3_value}
+	</td>
+{END FA3_fieldcolumn}
+
+
+	{BEGIN FA4_fieldcolumn}
+	<td class="bs-gridcell {$FA4_class}"  data-field=FA4 {$rowstyle} {$recordattrs}>
+		{$FA4_value}
+	</td>
+{END FA4_fieldcolumn}
+
+
+	{BEGIN FA5_fieldcolumn}
+	<td class="bs-gridcell {$FA5_class}"  data-field=FA5 {$rowstyle} {$recordattrs}>
+		{$FA5_value}
+	</td>
+{END FA5_fieldcolumn}
+
+
+	{BEGIN FAN1_fieldcolumn}
+	<td class="bs-gridcell {$FAN1_class}"  data-field=FAN1 {$rowstyle} {$recordattrs}>
+		{$FAN1_value}
+	</td>
+{END FAN1_fieldcolumn}
+
+
+	{BEGIN FAN2_fieldcolumn}
+	<td class="bs-gridcell {$FAN2_class}"  data-field=FAN2 {$rowstyle} {$recordattrs}>
+		{$FAN2_value}
+	</td>
+{END FAN2_fieldcolumn}
+
+
+	{BEGIN FAN3_fieldcolumn}
+	<td class="bs-gridcell {$FAN3_class}"  data-field=FAN3 {$rowstyle} {$recordattrs}>
+		{$FAN3_value}
+	</td>
+{END FAN3_fieldcolumn}
+
+
+	{BEGIN FAN4_fieldcolumn}
+	<td class="bs-gridcell {$FAN4_class}"  data-field=FAN4 {$rowstyle} {$recordattrs}>
+		{$FAN4_value}
+	</td>
+{END FAN4_fieldcolumn}
+
+
+	{BEGIN FAN5_fieldcolumn}
+	<td class="bs-gridcell {$FAN5_class}"  data-field=FAN5 {$rowstyle} {$recordattrs}>
+		{$FAN5_value}
+	</td>
+{END FAN5_fieldcolumn}
+
+
+	{BEGIN FAU1_fieldcolumn}
+	<td class="bs-gridcell {$FAU1_class}"  data-field=FAU1 {$rowstyle} {$recordattrs}>
+		{$FAU1_value}
+	</td>
+{END FAU1_fieldcolumn}
+
+
+	{BEGIN FAU2_fieldcolumn}
+	<td class="bs-gridcell {$FAU2_class}"  data-field=FAU2 {$rowstyle} {$recordattrs}>
+		{$FAU2_value}
+	</td>
+{END FAU2_fieldcolumn}
+
+
+	{BEGIN FAU3_fieldcolumn}
+	<td class="bs-gridcell {$FAU3_class}"  data-field=FAU3 {$rowstyle} {$recordattrs}>
+		{$FAU3_value}
+	</td>
+{END FAU3_fieldcolumn}
+
+
+	{BEGIN FAU4_fieldcolumn}
+	<td class="bs-gridcell {$FAU4_class}"  data-field=FAU4 {$rowstyle} {$recordattrs}>
+		{$FAU4_value}
+	</td>
+{END FAU4_fieldcolumn}
+
+
+	{BEGIN CA5_fieldcolumn}
+	<td class="bs-gridcell {$CA5_class}"  data-field=CA5 {$rowstyle} {$recordattrs}>
+		{$CA5_value}
+	</td>
+{END CA5_fieldcolumn}
+
+
+	{BEGIN T_TPE_fieldcolumn}
+	<td class="bs-gridcell {$T_TPE_class}"  data-field=T_TPE {$rowstyle} {$recordattrs}>
+		{$T_TPE_value}
+	</td>
+{END T_TPE_fieldcolumn}
+
+
+	{BEGIN T_OFAL_fieldcolumn}
+	<td class="bs-gridcell {$T_OFAL_class}"  data-field=T_OFAL {$rowstyle} {$recordattrs}>
+		{$T_OFAL_value}
+	</td>
+{END T_OFAL_fieldcolumn}
+
+
+	{BEGIN T_OFIW_fieldcolumn}
+	<td class="bs-gridcell {$T_OFIW_class}"  data-field=T_OFIW {$rowstyle} {$recordattrs}>
+		{$T_OFIW_value}
+	</td>
+{END T_OFIW_fieldcolumn}
+
+
+	{BEGIN T_OTL_fieldcolumn}
+	<td class="bs-gridcell {$T_OTL_class}"  data-field=T_OTL {$rowstyle} {$recordattrs}>
+		{$T_OTL_value}
+	</td>
+{END T_OTL_fieldcolumn}
+
+
+	{BEGIN LO_other2_fieldcolumn}
+	<td class="bs-gridcell {$LO_other2_class}"  data-field=LO_other2 {$rowstyle} {$recordattrs}>
+		{$LO_other2_value}
+	</td>
+{END LO_other2_fieldcolumn}
+
+
+	{BEGIN LO_other1_fieldcolumn}
+	<td class="bs-gridcell {$LO_other1_class}"  data-field=LO_other1 {$rowstyle} {$recordattrs}>
+		{$LO_other1_value}
+	</td>
+{END LO_other1_fieldcolumn}
+
+
+	{BEGIN F_Exptot_fieldcolumn}
+	<td class="bs-gridcell {$F_Exptot_class}"  data-field=F_Exptot {$rowstyle} {$recordattrs}>
+		{$F_Exptot_value}
+	</td>
+{END F_Exptot_fieldcolumn}
+
+
+	{BEGIN F_Exp3_fieldcolumn}
+	<td class="bs-gridcell {$F_Exp3_class}"  data-field=F_Exp3 {$rowstyle} {$recordattrs}>
+		{$F_Exp3_value}
+	</td>
+{END F_Exp3_fieldcolumn}
+
+
+	{BEGIN F_Exp2_fieldcolumn}
+	<td class="bs-gridcell {$F_Exp2_class}"  data-field=F_Exp2 {$rowstyle} {$recordattrs}>
+		{$F_Exp2_value}
+	</td>
+{END F_Exp2_fieldcolumn}
+
+
+	{BEGIN F_Exp1_fieldcolumn}
+	<td class="bs-gridcell {$F_Exp1_class}"  data-field=F_Exp1 {$rowstyle} {$recordattrs}>
+		{$F_Exp1_value}
+	</td>
+{END F_Exp1_fieldcolumn}
+
+
+	{BEGIN Income2_fieldcolumn}
+	<td class="bs-gridcell {$Income2_class}"  data-field=Income2 {$rowstyle} {$recordattrs}>
+		{$Income2_value}
+	</td>
+{END Income2_fieldcolumn}
+
+
+	{BEGIN Income1_fieldcolumn}
+	<td class="bs-gridcell {$Income1_class}"  data-field=Income1 {$rowstyle} {$recordattrs}>
+		{$Income1_value}
+	</td>
+{END Income1_fieldcolumn}
+
+
+	{BEGIN F_Exp4_fieldcolumn}
+	<td class="bs-gridcell {$F_Exp4_class}"  data-field=F_Exp4 {$rowstyle} {$recordattrs}>
+		{$F_Exp4_value}
+	</td>
+{END F_Exp4_fieldcolumn}
+
+
+	{BEGIN ExDC4_fieldcolumn}
+	<td class="bs-gridcell {$ExDC4_class}"  data-field=ExDC4 {$rowstyle} {$recordattrs}>
+		{$ExDC4_value}
+	</td>
+{END ExDC4_fieldcolumn}
+
+
+	{BEGIN Remark_fieldcolumn}
+	<td class="bs-gridcell {$Remark_class}"  data-field=Remark {$rowstyle} {$recordattrs}>
+		{$Remark_value}
+	</td>
+{END Remark_fieldcolumn}
+
+
+	{BEGIN ExDC1_fieldcolumn}
+	<td class="bs-gridcell {$ExDC1_class}"  data-field=ExDC1 {$rowstyle} {$recordattrs}>
+		{$ExDC1_value}
+	</td>
+{END ExDC1_fieldcolumn}
+
+
+	{BEGIN ExDC2_fieldcolumn}
+	<td class="bs-gridcell {$ExDC2_class}"  data-field=ExDC2 {$rowstyle} {$recordattrs}>
+		{$ExDC2_value}
+	</td>
+{END ExDC2_fieldcolumn}
+
+
+	{BEGIN ExDC3_fieldcolumn}
+	<td class="bs-gridcell {$ExDC3_class}"  data-field=ExDC3 {$rowstyle} {$recordattrs}>
+		{$ExDC3_value}
+	</td>
+{END ExDC3_fieldcolumn}
+
+
+	{BEGIN Pre_L_Y_fieldcolumn}
+	<td class="bs-gridcell {$Pre_L_Y_class}"  data-field=Pre_L_Y {$rowstyle} {$recordattrs}>
+		{$Pre_L_Y_value}
+	</td>
+{END Pre_L_Y_fieldcolumn}
+
+
+	{BEGIN L_O_Own_eqt_fieldcolumn}
+	<td class="bs-gridcell {$L_O_Own_eqt_class}"  data-field=L_O_Own_eqt {$rowstyle} {$recordattrs}>
+		{$L_O_Own_eqt_value}
+	</td>
+{END L_O_Own_eqt_fieldcolumn}
+
+
+	{BEGIN RDRS_Loan_fieldcolumn}
+	<td class="bs-gridcell {$RDRS_Loan_class}"  data-field=RDRS_Loan {$rowstyle} {$recordattrs}>
+		{$RDRS_Loan_value}
+	</td>
+{END RDRS_Loan_fieldcolumn}
+
+
+	{BEGIN Oth_Sourc_fieldcolumn}
+	<td class="bs-gridcell {$Oth_Sourc_class}"  data-field=Oth_Sourc {$rowstyle} {$recordattrs}>
+		{$Oth_Sourc_value}
+	</td>
+{END Oth_Sourc_fieldcolumn}
+
+
+	{BEGIN Due_Purch_fieldcolumn}
+	<td class="bs-gridcell {$Due_Purch_class}"  data-field=Due_Purch {$rowstyle} {$recordattrs}>
+		{$Due_Purch_value}
+	</td>
+{END Due_Purch_fieldcolumn}
+
+
+	{BEGIN TLO_fieldcolumn}
+	<td class="bs-gridcell {$TLO_class}"  data-field=TLO {$rowstyle} {$recordattrs}>
+		{$TLO_value}
+	</td>
+{END TLO_fieldcolumn}
+
+
+	{BEGIN P_Asset_fieldcolumn}
+	<td class="bs-gridcell {$P_Asset_class}"  data-field=P_Asset {$rowstyle} {$recordattrs}>
+		{$P_Asset_value}
+	</td>
+{END P_Asset_fieldcolumn}
+
+
+	{BEGIN L_stor_P_fieldcolumn}
+	<td class="bs-gridcell {$L_stor_P_class}"  data-field=L_stor_P {$rowstyle} {$recordattrs}>
+		{$L_stor_P_value}
+	</td>
+{END L_stor_P_fieldcolumn}
+
+
+	{BEGIN Invest_fieldcolumn}
+	<td class="bs-gridcell {$Invest_class}"  data-field=Invest {$rowstyle} {$recordattrs}>
+		{$Invest_value}
+	</td>
+{END Invest_fieldcolumn}
+
+
+	{BEGIN Due_sales_fieldcolumn}
+	<td class="bs-gridcell {$Due_sales_class}"  data-field=Due_sales {$rowstyle} {$recordattrs}>
+		{$Due_sales_value}
+	</td>
+{END Due_sales_fieldcolumn}
+
+
+	{BEGIN Adv_Pay_fieldcolumn}
+	<td class="bs-gridcell {$Adv_Pay_class}"  data-field=Adv_Pay {$rowstyle} {$recordattrs}>
+		{$Adv_Pay_value}
+	</td>
+{END Adv_Pay_fieldcolumn}
+
+
+	{BEGIN CashinHand_fieldcolumn}
+	<td class="bs-gridcell {$CashinHand_class}"  data-field=CashinHand {$rowstyle} {$recordattrs}>
+		{$CashinHand_value}
+	</td>
+{END CashinHand_fieldcolumn}
+
+
+	{BEGIN CashAtBank_fieldcolumn}
+	<td class="bs-gridcell {$CashAtBank_class}"  data-field=CashAtBank {$rowstyle} {$recordattrs}>
+		{$CashAtBank_value}
+	</td>
+{END CashAtBank_fieldcolumn}
+
+
+	{BEGIN RG_Name_fieldcolumn}
+	<td class="bs-gridcell {$RG_Name_class}"  data-field=RG_Name {$rowstyle} {$recordattrs}>
+		{$RG_Name_value}
+	</td>
+{END RG_Name_fieldcolumn}
+
+
+	{BEGIN RG_Father_fieldcolumn}
+	<td class="bs-gridcell {$RG_Father_class}"  data-field=RG_Father {$rowstyle} {$recordattrs}>
+		{$RG_Father_value}
+	</td>
+{END RG_Father_fieldcolumn}
+
+
+	{BEGIN RG_Pre_Add_fieldcolumn}
+	<td class="bs-gridcell {$RG_Pre_Add_class}"  data-field=RG_Pre_Add {$rowstyle} {$recordattrs}>
+		{$RG_Pre_Add_value}
+	</td>
+{END RG_Pre_Add_fieldcolumn}
+
+
+	{BEGIN RG_Per_Add_fieldcolumn}
+	<td class="bs-gridcell {$RG_Per_Add_class}"  data-field=RG_Per_Add {$rowstyle} {$recordattrs}>
+		{$RG_Per_Add_value}
+	</td>
+{END RG_Per_Add_fieldcolumn}
+
+
+	{BEGIN RG_NID_fieldcolumn}
+	<td class="bs-gridcell {$RG_NID_class}"  data-field=RG_NID {$rowstyle} {$recordattrs}>
+		{$RG_NID_value}
+	</td>
+{END RG_NID_fieldcolumn}
+
+
+	{BEGIN RG_Cell_fieldcolumn}
+	<td class="bs-gridcell {$RG_Cell_class}"  data-field=RG_Cell {$rowstyle} {$recordattrs}>
+		{$RG_Cell_value}
+	</td>
+{END RG_Cell_fieldcolumn}
+
+
+	{BEGIN RG_Year_fieldcolumn}
+	<td class="bs-gridcell {$RG_Year_class}"  data-field=RG_Year {$rowstyle} {$recordattrs}>
+		{$RG_Year_value}
+	</td>
+{END RG_Year_fieldcolumn}
+
+
+	{BEGIN RG_Occup_fieldcolumn}
+	<td class="bs-gridcell {$RG_Occup_class}"  data-field=RG_Occup {$rowstyle} {$recordattrs}>
+		{$RG_Occup_value}
+	</td>
+{END RG_Occup_fieldcolumn}
+
+
+	{BEGIN RG_M_Income_fieldcolumn}
+	<td class="bs-gridcell {$RG_M_Income_class}"  data-field=RG_M_Income {$rowstyle} {$recordattrs}>
+		{$RG_M_Income_value}
+	</td>
+{END RG_M_Income_fieldcolumn}
+
+
+	{BEGIN RG_M_Exp_fieldcolumn}
+	<td class="bs-gridcell {$RG_M_Exp_class}"  data-field=RG_M_Exp {$rowstyle} {$recordattrs}>
+		{$RG_M_Exp_value}
+	</td>
+{END RG_M_Exp_fieldcolumn}
+
+
+	{BEGIN RG_Pic_fieldcolumn}
+	<td class="bs-gridcell {$RG_Pic_class}"  data-field=RG_Pic {$rowstyle} {$recordattrs}>
+		{$RG_Pic_value}
+	</td>
+{END RG_Pic_fieldcolumn}
+
+
+	{BEGIN RF_Name_fieldcolumn}
+	<td class="bs-gridcell {$RF_Name_class}"  data-field=RF_Name {$rowstyle} {$recordattrs}>
+		{$RF_Name_value}
+	</td>
+{END RF_Name_fieldcolumn}
+
+
+	{BEGIN RF_Father_fieldcolumn}
+	<td class="bs-gridcell {$RF_Father_class}"  data-field=RF_Father {$rowstyle} {$recordattrs}>
+		{$RF_Father_value}
+	</td>
+{END RF_Father_fieldcolumn}
+
+
+	{BEGIN RF_Pre_Add_fieldcolumn}
+	<td class="bs-gridcell {$RF_Pre_Add_class}"  data-field=RF_Pre_Add {$rowstyle} {$recordattrs}>
+		{$RF_Pre_Add_value}
+	</td>
+{END RF_Pre_Add_fieldcolumn}
+
+
+	{BEGIN RF_Per_Add_fieldcolumn}
+	<td class="bs-gridcell {$RF_Per_Add_class}"  data-field=RF_Per_Add {$rowstyle} {$recordattrs}>
+		{$RF_Per_Add_value}
+	</td>
+{END RF_Per_Add_fieldcolumn}
+
+
+	{BEGIN RF_NID_fieldcolumn}
+	<td class="bs-gridcell {$RF_NID_class}"  data-field=RF_NID {$rowstyle} {$recordattrs}>
+		{$RF_NID_value}
+	</td>
+{END RF_NID_fieldcolumn}
+
+
+	{BEGIN RF_Cell_fieldcolumn}
+	<td class="bs-gridcell {$RF_Cell_class}"  data-field=RF_Cell {$rowstyle} {$recordattrs}>
+		{$RF_Cell_value}
+	</td>
+{END RF_Cell_fieldcolumn}
+
+
+	{BEGIN RF_Age_fieldcolumn}
+	<td class="bs-gridcell {$RF_Age_class}"  data-field=RF_Age {$rowstyle} {$recordattrs}>
+		{$RF_Age_value}
+	</td>
+{END RF_Age_fieldcolumn}
+
+
+	{BEGIN RF_Relation_fieldcolumn}
+	<td class="bs-gridcell {$RF_Relation_class}"  data-field=RF_Relation {$rowstyle} {$recordattrs}>
+		{$RF_Relation_value}
+	</td>
+{END RF_Relation_fieldcolumn}
+
+
+	{BEGIN RF_Occup_fieldcolumn}
+	<td class="bs-gridcell {$RF_Occup_class}"  data-field=RF_Occup {$rowstyle} {$recordattrs}>
+		{$RF_Occup_value}
+	</td>
+{END RF_Occup_fieldcolumn}
+
+
+	{BEGIN RF_M_Income_fieldcolumn}
+	<td class="bs-gridcell {$RF_M_Income_class}"  data-field=RF_M_Income {$rowstyle} {$recordattrs}>
+		{$RF_M_Income_value}
+	</td>
+{END RF_M_Income_fieldcolumn}
+
+
+	{BEGIN RF_M_Exp_fieldcolumn}
+	<td class="bs-gridcell {$RF_M_Exp_class}"  data-field=RF_M_Exp {$rowstyle} {$recordattrs}>
+		{$RF_M_Exp_value}
+	</td>
+{END RF_M_Exp_fieldcolumn}
+
+
+	{BEGIN RF_Pic_fieldcolumn}
+	<td class="bs-gridcell {$RF_Pic_class}"  data-field=RF_Pic {$rowstyle} {$recordattrs}>
+		{$RF_Pic_value}
+	</td>
+{END RF_Pic_fieldcolumn}
+
+
+	{BEGIN ExDC_fieldcolumn}
+	<td class="bs-gridcell {$ExDC_class}"  data-field=ExDC {$rowstyle} {$recordattrs}>
+		{$ExDC_value}
+	</td>
+{END ExDC_fieldcolumn}
+
+
+	{BEGIN RDRSL_fieldcolumn}
+	<td class="bs-gridcell {$RDRSL_class}"  data-field=RDRSL {$rowstyle} {$recordattrs}>
+		{$RDRSL_value}
+	</td>
+{END RDRSL_fieldcolumn}
+
+
+	{BEGIN RDRSL1_fieldcolumn}
+	<td class="bs-gridcell {$RDRSL1_class}"  data-field=RDRSL1 {$rowstyle} {$recordattrs}>
+		{$RDRSL1_value}
+	</td>
+{END RDRSL1_fieldcolumn}
+
+
+	{BEGIN RDRSL2_fieldcolumn}
+	<td class="bs-gridcell {$RDRSL2_class}"  data-field=RDRSL2 {$rowstyle} {$recordattrs}>
+		{$RDRSL2_value}
+	</td>
+{END RDRSL2_fieldcolumn}
+
+
+	{BEGIN RDRSL3_fieldcolumn}
+	<td class="bs-gridcell {$RDRSL3_class}"  data-field=RDRSL3 {$rowstyle} {$recordattrs}>
+		{$RDRSL3_value}
+	</td>
+{END RDRSL3_fieldcolumn}
+
+
+	{BEGIN RDRSL4_fieldcolumn}
+	<td class="bs-gridcell {$RDRSL4_class}"  data-field=RDRSL4 {$rowstyle} {$recordattrs}>
+		{$RDRSL4_value}
+	</td>
+{END RDRSL4_fieldcolumn}
+
+
+	{BEGIN TRDRSL_fieldcolumn}
+	<td class="bs-gridcell {$TRDRSL_class}"  data-field=TRDRSL {$rowstyle} {$recordattrs}>
+		{$TRDRSL_value}
+	</td>
+{END TRDRSL_fieldcolumn}
+
+
+	{BEGIN OTL_fieldcolumn}
+	<td class="bs-gridcell {$OTL_class}"  data-field=OTL {$rowstyle} {$recordattrs}>
+		{$OTL_value}
+	</td>
+{END OTL_fieldcolumn}
+
+
+	{BEGIN OTL1_fieldcolumn}
+	<td class="bs-gridcell {$OTL1_class}"  data-field=OTL1 {$rowstyle} {$recordattrs}>
+		{$OTL1_value}
+	</td>
+{END OTL1_fieldcolumn}
+
+
+	{BEGIN OTL2_fieldcolumn}
+	<td class="bs-gridcell {$OTL2_class}"  data-field=OTL2 {$rowstyle} {$recordattrs}>
+		{$OTL2_value}
+	</td>
+{END OTL2_fieldcolumn}
+
+
+	{BEGIN OTL3_fieldcolumn}
+	<td class="bs-gridcell {$OTL3_class}"  data-field=OTL3 {$rowstyle} {$recordattrs}>
+		{$OTL3_value}
+	</td>
+{END OTL3_fieldcolumn}
+
+
+	{BEGIN OTL4_fieldcolumn}
+	<td class="bs-gridcell {$OTL4_class}"  data-field=OTL4 {$rowstyle} {$recordattrs}>
+		{$OTL4_value}
+	</td>
+{END OTL4_fieldcolumn}
+
+
+	{BEGIN TOTL_fieldcolumn}
+	<td class="bs-gridcell {$TOTL_class}"  data-field=TOTL {$rowstyle} {$recordattrs}>
+		{$TOTL_value}
+	</td>
+{END TOTL_fieldcolumn}
+
+
+	{BEGIN OFIW_fieldcolumn}
+	<td class="bs-gridcell {$OFIW_class}"  data-field=OFIW {$rowstyle} {$recordattrs}>
+		{$OFIW_value}
+	</td>
+{END OFIW_fieldcolumn}
+
+
+	{BEGIN OFIW1_fieldcolumn}
+	<td class="bs-gridcell {$OFIW1_class}"  data-field=OFIW1 {$rowstyle} {$recordattrs}>
+		{$OFIW1_value}
+	</td>
+{END OFIW1_fieldcolumn}
+
+
+	{BEGIN OFIW2_fieldcolumn}
+	<td class="bs-gridcell {$OFIW2_class}"  data-field=OFIW2 {$rowstyle} {$recordattrs}>
+		{$OFIW2_value}
+	</td>
+{END OFIW2_fieldcolumn}
+
+
+	{BEGIN OFIW3_fieldcolumn}
+	<td class="bs-gridcell {$OFIW3_class}"  data-field=OFIW3 {$rowstyle} {$recordattrs}>
+		{$OFIW3_value}
+	</td>
+{END OFIW3_fieldcolumn}
+
+
+	{BEGIN OFIW4_fieldcolumn}
+	<td class="bs-gridcell {$OFIW4_class}"  data-field=OFIW4 {$rowstyle} {$recordattrs}>
+		{$OFIW4_value}
+	</td>
+{END OFIW4_fieldcolumn}
+
+
+	{BEGIN TOFIW_fieldcolumn}
+	<td class="bs-gridcell {$TOFIW_class}"  data-field=TOFIW {$rowstyle} {$recordattrs}>
+		{$TOFIW_value}
+	</td>
+{END TOFIW_fieldcolumn}
+
+
+	{BEGIN OFAL_fieldcolumn}
+	<td class="bs-gridcell {$OFAL_class}"  data-field=OFAL {$rowstyle} {$recordattrs}>
+		{$OFAL_value}
+	</td>
+{END OFAL_fieldcolumn}
+
+
+	{BEGIN OFAL1_fieldcolumn}
+	<td class="bs-gridcell {$OFAL1_class}"  data-field=OFAL1 {$rowstyle} {$recordattrs}>
+		{$OFAL1_value}
+	</td>
+{END OFAL1_fieldcolumn}
+
+
+	{BEGIN OFAL2_fieldcolumn}
+	<td class="bs-gridcell {$OFAL2_class}"  data-field=OFAL2 {$rowstyle} {$recordattrs}>
+		{$OFAL2_value}
+	</td>
+{END OFAL2_fieldcolumn}
+
+
+	{BEGIN OFAL3_fieldcolumn}
+	<td class="bs-gridcell {$OFAL3_class}"  data-field=OFAL3 {$rowstyle} {$recordattrs}>
+		{$OFAL3_value}
+	</td>
+{END OFAL3_fieldcolumn}
+
+
+	{BEGIN OFAL4_fieldcolumn}
+	<td class="bs-gridcell {$OFAL4_class}"  data-field=OFAL4 {$rowstyle} {$recordattrs}>
+		{$OFAL4_value}
+	</td>
+{END OFAL4_fieldcolumn}
+
+
+	{BEGIN TOFAL_fieldcolumn}
+	<td class="bs-gridcell {$TOFAL_class}"  data-field=TOFAL {$rowstyle} {$recordattrs}>
+		{$TOFAL_value}
+	</td>
+{END TOFAL_fieldcolumn}
+
+
+	{BEGIN TPE_fieldcolumn}
+	<td class="bs-gridcell {$TPE_class}"  data-field=TPE {$rowstyle} {$recordattrs}>
+		{$TPE_value}
+	</td>
+{END TPE_fieldcolumn}
+
+
+	{BEGIN TPE1_fieldcolumn}
+	<td class="bs-gridcell {$TPE1_class}"  data-field=TPE1 {$rowstyle} {$recordattrs}>
+		{$TPE1_value}
+	</td>
+{END TPE1_fieldcolumn}
+
+
+	{BEGIN TPE2_fieldcolumn}
+	<td class="bs-gridcell {$TPE2_class}"  data-field=TPE2 {$rowstyle} {$recordattrs}>
+		{$TPE2_value}
+	</td>
+{END TPE2_fieldcolumn}
+
+
+	{BEGIN TPE3_fieldcolumn}
+	<td class="bs-gridcell {$TPE3_class}"  data-field=TPE3 {$rowstyle} {$recordattrs}>
+		{$TPE3_value}
+	</td>
+{END TPE3_fieldcolumn}
+
+
+	{BEGIN TPE4_fieldcolumn}
+	<td class="bs-gridcell {$TPE4_class}"  data-field=TPE4 {$rowstyle} {$recordattrs}>
+		{$TPE4_value}
+	</td>
+{END TPE4_fieldcolumn}
+
+
+	{BEGIN TTPE_fieldcolumn}
+	<td class="bs-gridcell {$TTPE_class}"  data-field=TTPE {$rowstyle} {$recordattrs}>
+		{$TTPE_value}
+	</td>
+{END TTPE_fieldcolumn}
+
+
+	{BEGIN OFEWHM_fieldcolumn}
+	<td class="bs-gridcell {$OFEWHM_class}"  data-field=OFEWHM {$rowstyle} {$recordattrs}>
+		{$OFEWHM_value}
+	</td>
+{END OFEWHM_fieldcolumn}
+
+
+	{BEGIN PLAF_fieldcolumn}
+	<td class="bs-gridcell {$PLAF_class}"  data-field=PLAF {$rowstyle} {$recordattrs}>
+		{$PLAF_value}
+	</td>
+{END PLAF_fieldcolumn}
+
+
+	{BEGIN PLAT_fieldcolumn}
+	<td class="bs-gridcell {$PLAT_class}"  data-field=PLAT {$rowstyle} {$recordattrs}>
+		{$PLAT_value}
+	</td>
+{END PLAT_fieldcolumn}
+
+
+	{BEGIN A_Y_A_fieldcolumn}
+	<td class="bs-gridcell {$A_Y_A_class}"  data-field=A_Y_A {$rowstyle} {$recordattrs}>
+		{$A_Y_A_value}
+	</td>
+{END A_Y_A_fieldcolumn}
+
+
+	{BEGIN B_Y_A_fieldcolumn}
+	<td class="bs-gridcell {$B_Y_A_class}"  data-field=B_Y_A {$rowstyle} {$recordattrs}>
+		{$B_Y_A_value}
+	</td>
+{END B_Y_A_fieldcolumn}
+
+
+	{BEGIN C_Y_A_fieldcolumn}
+	<td class="bs-gridcell {$C_Y_A_class}"  data-field=C_Y_A {$rowstyle} {$recordattrs}>
+		{$C_Y_A_value}
+	</td>
+{END C_Y_A_fieldcolumn}
+
+
+	{BEGIN D_Y_A_fieldcolumn}
+	<td class="bs-gridcell {$D_Y_A_class}"  data-field=D_Y_A {$rowstyle} {$recordattrs}>
+		{$D_Y_A_value}
+	</td>
+{END D_Y_A_fieldcolumn}
+
+
+	{BEGIN E_Y_A_fieldcolumn}
+	<td class="bs-gridcell {$E_Y_A_class}"  data-field=E_Y_A {$rowstyle} {$recordattrs}>
+		{$E_Y_A_value}
+	</td>
+{END E_Y_A_fieldcolumn}
+
+
+	{BEGIN F_Y_A_fieldcolumn}
+	<td class="bs-gridcell {$F_Y_A_class}"  data-field=F_Y_A {$rowstyle} {$recordattrs}>
+		{$F_Y_A_value}
+	</td>
+{END F_Y_A_fieldcolumn}
+
+
+	{BEGIN G_Y_A_fieldcolumn}
+	<td class="bs-gridcell {$G_Y_A_class}"  data-field=G_Y_A {$rowstyle} {$recordattrs}>
+		{$G_Y_A_value}
+	</td>
+{END G_Y_A_fieldcolumn}
+
+
+	{BEGIN H_Y_A_fieldcolumn}
+	<td class="bs-gridcell {$H_Y_A_class}"  data-field=H_Y_A {$rowstyle} {$recordattrs}>
+		{$H_Y_A_value}
+	</td>
+{END H_Y_A_fieldcolumn}
+
+
+	{BEGIN I_Y_A_fieldcolumn}
+	<td class="bs-gridcell {$I_Y_A_class}"  data-field=I_Y_A {$rowstyle} {$recordattrs}>
+		{$I_Y_A_value}
+	</td>
+{END I_Y_A_fieldcolumn}
+
+
+	{BEGIN J_Y_A_fieldcolumn}
+	<td class="bs-gridcell {$J_Y_A_class}"  data-field=J_Y_A {$rowstyle} {$recordattrs}>
+		{$J_Y_A_value}
+	</td>
+{END J_Y_A_fieldcolumn}
+
+
+	{BEGIN K_Y_A_fieldcolumn}
+	<td class="bs-gridcell {$K_Y_A_class}"  data-field=K_Y_A {$rowstyle} {$recordattrs}>
+		{$K_Y_A_value}
+	</td>
+{END K_Y_A_fieldcolumn}
+
+
+	{BEGIN DSR_fieldcolumn}
+	<td class="bs-gridcell {$DSR_class}"  data-field=DSR {$rowstyle} {$recordattrs}>
+		{$DSR_value}
+	</td>
+{END DSR_fieldcolumn}
+
+
+	{BEGIN DAR_fieldcolumn}
+	<td class="bs-gridcell {$DAR_class}"  data-field=DAR {$rowstyle} {$recordattrs}>
+		{$DAR_value}
+	</td>
+{END DAR_fieldcolumn}
+
+
+	{BEGIN GPMR_fieldcolumn}
+	<td class="bs-gridcell {$GPMR_class}"  data-field=GPMR {$rowstyle} {$recordattrs}>
+		{$GPMR_value}
+	</td>
+{END GPMR_fieldcolumn}
+
+
+	{BEGIN NPMR_fieldcolumn}
+	<td class="bs-gridcell {$NPMR_class}"  data-field=NPMR {$rowstyle} {$recordattrs}>
+		{$NPMR_value}
+	</td>
+{END NPMR_fieldcolumn}
+
+
+	{BEGIN Cash_Flow_fieldcolumn}
+	<td class="bs-gridcell {$Cash_Flow_class}"  data-field=Cash_Flow {$rowstyle} {$recordattrs}>
+		{$Cash_Flow_value}
+	</td>
+{END Cash_Flow_fieldcolumn}
+
+	{BEGIN endrecord_block}
+	<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+	{END endrecord_block}
+									
+	{END grid_record}
+
+</tr>
+{END grid_row}
+	</tbody>
+	<tfoot>
+										
+	</tfoot>
+</table>
+
+
+
+{END grid_block}
+
+
+
+</div>
+{END container_grid}
+
+
+
+
+
+
+</div>
+{END container_center}
+
+
+
+{BEGIN container_pagination}
+<div {$pagination_chiddenattr} data-pageid="{$pageid}" data-container="pagination" class="  text-center col-md-12 "> 
+
+{BEGIN pagination_block}
+<div {$pagination_hiddenattr} data-pageid="{$pageid}" data-brick="pagination">
+{$pagination}
+</div>
+{END pagination_block}
+
+
+
+</div>
+{END container_pagination}
+
+
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>
